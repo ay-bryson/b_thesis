@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: apacann.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: sources.bib
+apacann.bst [2013/07/21 v6.03 APA annotated bibliography style]
+You've used 13 entries,
+            7021 wiz_defined-function locations,
+            1370 strings with 13565 characters,
+and the built_in function-call counts, 23335 in all, are:
+= -- 2838
+> -- 201
+< -- 1029
++ -- 979
+- -- 32
+* -- 1472
+:= -- 4127
+add.period$ -- 55
+call.type$ -- 13
+change.case$ -- 242
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 602
+empty$ -- 1045
+format.name$ -- 319
+if$ -- 4535
+int.to.chr$ -- 0
+int.to.str$ -- 39
+missing$ -- 0
+newline$ -- 358
+num.names$ -- 104
+pop$ -- 560
+preamble$ -- 1
+purify$ -- 72
+quote$ -- 0
+skip$ -- 1465
+stack$ -- 0
+substring$ -- 1067
+swap$ -- 366
+text.length$ -- 56
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1168
+warning$ -- 0
+while$ -- 131
+width$ -- 0
+write$ -- 432
