@@ -1,0 +1,33 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node[functions] (center) {};
+
+        \node[below=0em of center, font=\scriptsize, text width=3em] {Activation function};
+        \draw[thick] (0.6em,0.6em) -- (0,0em) -- (-0.75em,0em);
+        \draw (0em,0.75em) -- (0em,-0.75em);
+        \draw (0.75em,0em) -- (-0.75em,0em);
+        \node[right=2em of center] (right) {};
+            \path[draw,->] (center) -- (right);
+
+        \node[functions,left=2em of center,minimum size=4em] (left) {\(b,\, \sum\)};
+            \path[draw,->] (left) -- (center);
+        \node[weights,left=4em of left] (2) {\(w_3\)} -- (2) node[input,left=1.5em of 2] (l2) {\(x_3\)};
+            \path[draw,->] (l2) -- (2);
+            \path[draw,->] (2) -- (left);
+        \node[below=1.5em of 2] (dots) {\(\vdots\)} -- (dots) node[left=3.3em of dots] (ldots) {\(\vdots\)};
+        \node[weights,below=1.5em of dots] (n) {\(w_{n}\)} -- (n) node[input,left=1.5em of n] (ln) {\(x_{n}\)};
+            \path[draw,->] (ln) -- (n);
+            \path[draw,->] (n) -- (left);
+        \node[weights,above=2em of 2] (1) {\(w_2\)} -- (1) node[input,left=1.5em of 1] (l1) {\(x_2\)};
+            \path[draw,->] (l1) -- (1);
+            \path[draw,->] (1) -- (left);
+        \node[weights,above=2em of 1] (0) {\(w_1\)} -- (0) node[input,left=1.5em of 0] (l0) {\(x_1\)};
+            \path[draw,->] (l0) -- (0);
+            \path[draw,->] (0) -- (left);
+
+        \node[below of=ln,font=\scriptsize] {inputs};
+        \node[below of=n,font=\scriptsize] {weights};
+    \end{tikzpicture}
+    \caption{\label{fig:perceptron}A perceptron takes the sum of the values \(x_i\) multiplied with their respective weights \(w_i\), adds to this a bias \(b\) and plugs this into an activation function \(f\); the output value is sent to the next layer of the \ac{mlp}.}
+\end{figure}
