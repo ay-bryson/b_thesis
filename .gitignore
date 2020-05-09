@@ -11,3 +11,4 @@ other/
 *.out
 *.synctex.gz
 img/xcf/
+img/draw/regression*

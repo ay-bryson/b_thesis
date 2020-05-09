@@ -1,4 +1,5 @@
 \usepackage[utf8]{inputenc}
+\usepackage[UKenglish]{babel}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage[font=small, labelfont=bf]{caption}
@@ -15,7 +16,27 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{textcomp}
 \usepackage{setspace}
-% \usepackage{siunits}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{titlesec}
+
+% For numbered \paragraph subsubsubsections
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usetikzlibrary{positioning}
+
+\tikzset{basic/.style={draw,text width=2em,text centered}}
+\tikzset{input/.style={basic,circle}}
+\tikzset{weights/.style={basic,rectangle}}
+\tikzset{functions/.style={basic,circle}}
+\tikzstyle{node}=[draw,circle,minimum size=10pt,inner sep=0pt]
+\tikzstyle{transition}=[-stealth]
 
 \graphicspath{{img/}}

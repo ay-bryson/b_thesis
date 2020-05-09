@@ -1,11 +1,76 @@
-\section{Model Implementation}
+\section{Model Implementation} \label{sec:practical}
+To investigate the research question, seven \ac{ml} and \ac{dl} models were trained and validated on the three dataset sizes described in Section \ref{sec:data_sizes}.
 
-\subsection{Polynomial Regression}
+Two types of supervised problems were considered: regression and classification. Due to the fundamental difference in the output values of models for these two tasks (a decimal number in regression and several binary class predictions for classification), the terms \textit{hit} and \textit{hit rate} were introduced to enable comparison between the models.
+
+For classification models, a hit is simply a correct label prediction. A hit by a regression model was defined as a damage prediction correct within a tolerance of \(\pm0.15\) cycles from the Cycle Counter value, often referred to as \(y_\text{true}\) in the following. The hit rate is determined by dividing the number of hits by the total number of predictions. The value of 0.15 is somewhat arbitrary and by no means an acceptable tolerance for a model in production, but in these initial stages is a challenging but achievable goal.
+
+The Python programming language (version 3.7.5) was used for developing the models. For the machine learning methods and \ac{mlp} models, the \texttt{scikit-learn} package (version 0.22.1) was put to use. The \ac{cnn}s were developed using \texttt{Keras} (version 2.3.1) and \texttt{tensorflow} (version 1.15.0).
+
+\subsection{Polynomial Regression on Key Values}
+The first model presented is a supervised machine learning method using the \texttt{PolynomialFeatures} class from \texttt{scikit-learn}, which is based on the polynomial regression method as described in Section \ref{sec:polyreg}.
+
+- supervised ML method
+
+- key value regression: max(), exchange rate (should description of ER go in theory?), taxiout/climb/cruise length
+
+- scikitlearn `PolynomialFeatures' transforms a polynomial regression into linear regression
+
+- usual linear regression performance measure is \(R^2\); for comparability, using MSE and ``hits''
+
+\subsection{MLP: Key Value Regression}
+Using the \texttt{MLPRegressor} class from \texttt{scikit-learn},
+
+TODO: One model with, one without F1, F4, F6
+
+- Same values as polynomial, plus F1, F3, F7 (3 should have been 4!)
+
+- Some feature vals included as a few are OK to calculate if these improve the results significantly.
 
 \subsection{MLP: Time Series Regression}
+- supervised DL
+
+- time series regression over entire, unfiltered time series
+
+- tentatively expecting good predictions: Due to downsampling, manoeuvres tend to take place at the same points in TS, so shapes can be learned. However, MLP is not time-invariant as each perceptron has its own weights and biases, so if manoeuvres such as in Flight 6014 are to be recognised, MLP not suitable.
 
 \subsection{Convolutional Neural Network: Time Series Classification}
 
-\subsection{Convolutional Neural Network: Time Series Regression}
+TODO: How many predictions landed in jeweiliger Klasse??
 
-\subsection{MLP: Key Value Regression}
+- Damage for each feature divided into classes of equal size
+
+- Equal size classes necessary to avoid model defaulting to the most common class, to avoid empty classes, and to spread out values close to median to emphasise differences
+
+\subsubsection{Four classes}
+- What bin boundaries?
+
+- Suffers from point in \ref{sec:tsc}
+
+\subsubsection{Four classes with gap}
+- Essentially binary choice between ``good'' and ``bad'' flights.
+
+- High success expected (see visual difference in f3\_NH\_high\_low\_dmg\_500.png, also violin plot) but with only limited applicability due to training model on only 50\% of data.
+
+- Also restricted in scalability by having to separate flights by feature
+
+- More an explorative model due to impracticability
+
+- Point in \ref{sec:tsc} not relevant here as binary choice
+
+\subsubsection{Ten classes}
+- Bin boundaries
+
+- Should this be included? No better than TS Regression... Also very similar.
+
+- Less of a classification problem, more a rounded regression problem!
+
+\subsection{Convolutional Neural Network: Time Series Regression}
+- SotA research on UCR archive by hfawaz showed InceptionTime as current frontrunner, marginally in terms of accuracy but significantly in terms of training time.
+
+- Codebase (footnote link) already accepts MTS; minimal changes required to turn this into a regression.
+
+\subsubsection{Time Series Regression}
+By changing the activation function of the output layer from softmax to \ac{relu}, a classifier can be changed into a regressor. Naturally, the input data must follow suit, and the model can only be trained if the given output data is at the very least ordinal.
+
+% Expect promising results with large datasets but to be taken with a pinch of salt: we now have infinite/continuous inputs AND outputs, therefore probably unscalable!

@@ -1,0 +1,56 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node[node] (in1) at (6, 0.75) {};
+        \node[node] (in2) at (6, 0) {};
+        \node[node] (in3) at (6, -0.75) {};
+
+        \node[node] (hid1) at (8.5, 1.5) {};
+        \node[node] (hid2) at (8.5, 0.75) {};
+        \node[node] (hid3) at (8.5, 0) {};
+        \node[node] (hid4) at (8.5, -0.75) {};
+        \node[node] (hid5) at (8.5, -1.5) {};
+
+        \node[node] (out1) at (11, 0.75) {};
+        \node[node] (out2) at (11, -0.75) {};
+
+        \draw[transition] (5, 0.75) -- node[above] {$I_1$} (in1);
+        \draw[transition] (5, 0) -- node[above] {$I_2$} (in2);
+        \draw[transition] (5, -0.75) -- node[above] {$I_3$} (in3);
+
+        \draw[transition] (in1) -- (hid1);
+        \draw[transition] (in1) -- (hid2);
+        \draw[transition] (in1) -- (hid3);
+        \draw[transition] (in1) -- (hid4);
+        \draw[transition] (in1) -- (hid5);
+        \draw[transition] (in2) -- (hid1);
+        \draw[transition] (in2) -- (hid2);
+        \draw[transition] (in2) -- (hid3);
+        \draw[transition] (in2) -- (hid4);
+        \draw[transition] (in2) -- (hid5);
+        \draw[transition] (in3) -- (hid1);
+        \draw[transition] (in3) -- (hid2);
+        \draw[transition] (in3) -- (hid3);
+        \draw[transition] (in3) -- (hid4);
+        \draw[transition] (in3) -- (hid5);
+
+        \draw[transition] (hid1) -- (out1);
+        \draw[transition] (hid1) -- (out2);
+        \draw[transition] (hid2) -- (out1);
+        \draw[transition] (hid2) -- (out2);
+        \draw[transition] (hid3) -- (out1);
+        \draw[transition] (hid3) -- (out2);
+        \draw[transition] (hid4) -- (out1);
+        \draw[transition] (hid4) -- (out2);
+        \draw[transition] (hid5) -- (out1);
+        \draw[transition] (hid5) -- (out2);
+
+        \node[above=of in1, align=center] (l1) {Input \\ layer};
+        \node[right=2.3em of l1, align=center] (l2) {Hidden \\ layer};
+        \node[right=2.3em of l2, align=center] (l3) {Output \\ layer};
+
+        \draw[transition] (out1) -- node[above] {$O_1$} (12, 0.75);
+        \draw[transition] (out2) -- node[above] {$O_2$} (12, -0.75);
+    \end{tikzpicture}
+    \caption{\label{fig:mlp}A multilayer perceptron with three nodes in the input layer, five fully-connected perceptrons in one hidden layer and three fully-connected output perceptrons in the output layer}
+\end{figure}

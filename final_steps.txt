@@ -1,0 +1,1 @@
+- {Rolls-Royce plc} -> {{Rolls-Royce plc}} in sources.bib (to avoid Author: "plc")
