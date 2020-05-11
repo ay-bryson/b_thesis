@@ -7,9 +7,9 @@ A \textbf{univariate time series} \(X\) of length \(l\) is a sequential collecti
     X = \left[x_{1}, x_{2}, \ldots, x_{l}\right]
 \]
 
-where \(x_{i} \in \mathbb{R},\,i \in \mathbb{N}\) with \(i \in \left[1, l\right]\).
+where \(x_{i} \in \mathbb{R}\) with \(i \in \left[1, l\right]\) (see Section \ref{sec:notation} for notation).
 
-An \textbf{\(m\)-dimensional \ac{mts}} \(X\) of length \(l\) is a collection of \(m\) time series of length \(l\). % Each of the \(m\) dimensions of the \ac{mts} can also be called a channel.
+An \textbf{\(m\)-dimensional \ac{mts}} \(X\) of length \(l\) is a collection of \(m\) time series of length \(l\). Each of the \(m\) dimensions of the \ac{mts} can also be called a channel.
 \cite[]{ismail_fawaz_deep_2019}
 
 In the practical part of this thesis, a \textbf{dataset} \(D\) of length \(n\) is a set of \(n\) pairs of input data \(X_i\) and corresponding output data \(Y_i\), i.e.:
@@ -25,6 +25,13 @@ A \textbf{sample} is a single pair \(\left(X_i,\,Y_i\right)\) for some \(i \in \
 In a classification task, for some sample with index \(i\), \(Y_i\) will have length \(k\) where \(k\) is the number of possible classes that could be attributed to \(X_i\). Additionally, all \(Y_{i,j} = 0\) for each class index \(j \in \left[1, k\right]\) except where \(j\) is given as the class of \(X_i\), in which case \(Y_{i,j} = 1\).
 
 In a regression task, \(Y_i\) has length \(k\) where \(k\) is the number of output values desired and each \(Y_{i,j} \in \mathbb{R}\) for \(j \in \left[1, k\right]\).
+
+\subsubsection{Notation} \label{sec:notation}
+The notation \(i \in \left[m, n\right]\) is used to denote a finite set of consecutive integer values \(i,\,m,\,n \in \mathbb{N}\) with \(m \leq i \leq n\), i.e.
+
+\[
+    i = \left[m,\,m+1,\,m+2,\,\ldots,\,n-2,\,n-1,\,n\right].
+\]
 
 \subsection{Big Data}
 The term \textit{Big Data} describes enormous datasets have become the norm over the past two decades due to the ubiquity of data-collecting devices and their increasing connectivity. It covers datasets of such great size that new methods are required to organise and extract useful information from them, as the data is often unstructured and noisy \cite[]{fan_mining_2013,chen_big_2014}.
@@ -146,7 +153,7 @@ The more epochs for which a neural network is trained, the better it becomes at 
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{overfitting_val}
-    \caption{\label{fig:overfitting} A polynomial regression fitted to random data with polynomials of order 1 (left, underfitting), 4 (centre, suitable) and 20 (right, overfitting). Training data is shown in blue, validation data in red. Overfitting leads to better predictions on training data, but poor predictions on validation data (based on \protect\cite[]{vanderplas_python_2016}).}
+    \caption{\label{fig:overfitting} A polynomial regression fitted to random data with polynomials of order 1 (left, underfitting), 4 (centre, suitable) and 20 (right, overfitting). Training data is shown in blue, validation data in red. Overfitting leads to better predictions on training data, but poor predictions on validation data (based on \protect\citet{vanderplas_python_2016}).}
 \end{figure}
 
 Similarly, in the context of a polynomial regression (Figure \ref{fig:overfitting}), overfitting can be caused by attempting to fit the model using an overly high-order polynomial, while underfitting is caused by using an insufficiently high-order polynomial. \cite[p. 365]{vanderplas_python_2016}
@@ -163,7 +170,7 @@ Many modern civil aircraft engines are equipped with two concentric shafts, spli
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{triple_spool}
-    \caption{\label{fig:triple_spool} A schematic diagram of a triple-spool high-bypass engine with \ac{lp}, \ac{ip} and \ac{hp} components shown in red, blue and green, respectively (based on \protect\cite[]{rolls-royce_plc_jet_2015}).}
+    \caption{\label{fig:triple_spool} A schematic diagram of a triple-spool high-bypass engine with \ac{lp}, \ac{ip} and \ac{hp} components shown in red, blue and green, respectively (based on \protect\citet{rolls-royce_plc_jet_2015}).}
 \end{figure}
 
 A multi-spool configuration can greatly improve the efficiency of an engine, but comes with some drawbacks. The overall efficiency of an engine, \(\eta_{overall}\), is the product of its thermal and propulsive efficiencies:
