@@ -1,1 +1,20 @@
-\section{Conclusion}
+\chapter{Conclusion} \label{sec:conclusion}
+In this thesis, theory and state-of-the-art methods were researched with a view to identifying a supervised \ac{ml} or \ac{dl} approach capable of predicting damage from flight data with sufficient accuracy. Three approaches were selected to achieve this goal: Polynomial regression, the multilayer perceptron and the convolutional neural network. \ac{ehm} data was analysed and processed in various ways to fit these models.
+
+The models were implemented and validated on three dataset sizes. Based on these results, the polynomial regression model was identified as the best approach for the task.
+
+We return to the research question from Section \ref{sec:research_q}:
+
+\begin{quote}
+    Using the methods described in [Section \ref{sec:theory}], can a supervised \ac{ml} or \ac{dl} approach be identified that offers a sufficiently robust, verifiable, scalable, fast and accurate means of processing \ac{ehm} data to determine the extent of damage incurred by surface nodes of a component during real flight missions?
+\end{quote}
+
+A model can be considered \textbf{robust} if it does not fail under anomalous conditions. The model identified shows very few significant outliers in its predictions for both the complete dataset with a training size of 10\,534 flights and the greatly reduced dataset with only 909 training samples. Though already suitably robust, with some adjustments and additions to the input dataset, the model's robustness could be improved.
+
+The model can also be considered \textbf{verifiable} as its high accuracy was shown not just on the training data it had already seen, but also on the the validation dataset which it had never seen before.
+
+As its scores in \(R^2\) and mean hit rate change only slightly across three dataset sizes, and since its training takes less than one second on a medium-high performance CPU, the model is without any doubt \textbf{scalable}.
+
+Where Cycle Counter values for the input data have already been calculated, the model is extremely \textbf{fast}. When the model is applied to new \ac{ehm} data, the speed of the data pipeline will be mostly dependent on the Cycle Counter, but even with this step, output values are generated within an acceptable amount of time.
+
+Finally, with a mean hit rate of over 96\% across all three dataset sizes, the model can also be considered sufficiently \textbf{accurate} for this research stage, although the most room for improvement lies here.

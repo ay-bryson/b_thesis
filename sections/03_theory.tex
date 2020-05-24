@@ -1,23 +1,26 @@
-\section{Theoretical Background}
+\chapter{Theoretical Background} \label{sec:theory}
+The current section will begin with definitions of terms used throughout the thesis. Then, an introduction to some key areas of \ac{ml} and \ac{dl} will be given alongside a short overview of state-of-the-art \ac{dl} methods. Finally, the principle functionality of a jet engine will be described, followed by an explanation of damage in the context of the certified service life of an engine.
 
-\subsection{Definitions}
-A \textbf{univariate time series} \(X\) of length \(l\) is a sequential collection of values \(x_{i}\) given by
+\section{Definitions}
+The notation \(i \in \left[m, n\right]\) is used to denote a finite set of consecutive integer values \(i\) with \(m \leq i \leq n\), where \(i,\,m,\,n \in \mathbb{N}\), i.e.
+\begin{align}
+    i = \left[m,\,m+1,\,m+2,\,\ldots,\,n-2,\,n-1,\,n\right].
+\end{align}
+Individual values are represented by lower-case letters, e.g. \(y\), while their upper-case counterparts \(Y\) represent a collection of values in two or more dimensions.
 
-\[
-    X = \left[x_{1}, x_{2}, \ldots, x_{l}\right]
-\]
+A \textbf{\ac{uts}} \(X\) of length \(l\) is a sequential collection of values \(x_{i}\) given by
+\begin{align}
+    X = \left[x_{1},\,x_{2},\,\ldots,\,x_{l}\right]
+\end{align}
+where \(x_{i} \in \mathbb{R}\) with \(i \in \left[1, l\right]\).
 
-where \(x_{i} \in \mathbb{R}\) with \(i \in \left[1, l\right]\) (see Section \ref{sec:notation} for notation).
-
-An \textbf{\(m\)-dimensional \ac{mts}} \(X\) of length \(l\) is a collection of \(m\) time series of length \(l\). Each of the \(m\) dimensions of the \ac{mts} can also be called a channel.
+An \(m\)-dimensional \textbf{\ac{mts}} \(X\) of length \(l\) is a collection of \(m\) time series of length \(l\). Each of the \(m\) dimensions of the \ac{mts} can also be called a channel.
 \cite[]{ismail_fawaz_deep_2019}
 
 In the practical part of this thesis, a \textbf{dataset} \(D\) of length \(n\) is a set of \(n\) pairs of input data \(X_i\) and corresponding output data \(Y_i\), i.e.:
-
-\[
+\begin{align}
     D = \left\{\left(X_1,\,Y_1\right), \left(X_2,\,Y_2\right), \ldots, \left(X_n,\,Y_n\right)\right\}
-\]
-
+\end{align}
 where for all \(i \in \left[1, n\right]\), \(X_i\) is a univariate or multivariate time series, and \(Y_i\) contains the given output values corresponding to \(X_i\).
 
 A \textbf{sample} is a single pair \(\left(X_i,\,Y_i\right)\) for some \(i \in \left[1, l\right]\), and \(i\) is referred to as its \textbf{index}.
@@ -26,86 +29,67 @@ In a classification task, for some sample with index \(i\), \(Y_i\) will have le
 
 In a regression task, \(Y_i\) has length \(k\) where \(k\) is the number of output values desired and each \(Y_{i,j} \in \mathbb{R}\) for \(j \in \left[1, k\right]\).
 
-\subsubsection{Notation} \label{sec:notation}
-The notation \(i \in \left[m, n\right]\) is used to denote a finite set of consecutive integer values \(i,\,m,\,n \in \mathbb{N}\) with \(m \leq i \leq n\), i.e.
-
-\[
-    i = \left[m,\,m+1,\,m+2,\,\ldots,\,n-2,\,n-1,\,n\right].
-\]
-
-\subsection{Big Data}
+\section{Big Data}
 The term \textit{Big Data} describes enormous datasets have become the norm over the past two decades due to the ubiquity of data-collecting devices and their increasing connectivity. It covers datasets of such great size that new methods are required to organise and extract useful information from them, as the data is often unstructured and noisy \cite[]{fan_mining_2013,chen_big_2014}.
 
 One increasingly important, as well as highly challenging \cite[]{yang_10_2006}, data type is that of time series. A time series is a set of values ordered chronologically. It is often used in analyses for detecting trends and making predictions (on financial data, for example \cite[]{krollner_financial_2010}), but, within a \ac{ml} context, has in recent years been used for classification \cite[]{dau_ucr_2019,ismail_fawaz_deep_2019} and, in this thesis, regression.
 
-\subsection{Machine Learning}
+\section{Machine Learning}
 The desire to extract value from such datasets has led to an enormous increase in the popularity of machine learning (ML).
 
 \ac{ml} is a subfield of \ac{ai}, the field of research that occupies itself with giving machines the ability to think and learn. In \ac{ml}, machines attempt to extract information and patterns from data without thorough or explicit instructions, often making use of highly contrived data. Classifying objects based on a finite set of selected input values (e.g. birds based on their weight, wingspan, the colour of their back and whether they have webbed feet \cite[]{harrington_machine_2012}) is a task for which machine learning is regularly used.
 
 \ac{ml} tasks are generally split into two categories: supervised and unsupervised learning. The former involves training a model to associate input data with known output data in order to use the model on previously unseen data; in the latter, a model is given data and instructed to find patterns or groups based on input data alone \cite[]{goodfellow_deep_2016,kelleher_fundamentals_2015}.
 
-\subsubsection{Polynomial Regression} \label{sec:polyreg}
+\subsection{Polynomial Regression} \label{sec:polyreg}
 Although regression analysis has its roots in statistics, it has great overlaps with \ac{ml} due to its root objective: to map a number of inputs (the independent variables \(x_1,\,x_2,\,\ldots,\,x_n\)) to a given continuous output (the dependent variables \(y_1,\,y_2,\,\ldots,\,y_n\)), and to predict outputs for previously unseen input data. Since the dependent variable data is known in the training data, regression analysis is a type of supervised machine learning.
 
 A (\(n\)-dimensional) linear regression maps a linear model
-
-\[
+\begin{align}
     y = a_0 + a_1 x_1 + a_2 x_2 + \ldots + a_n x_n
-\]
-
-to given data and attempts to find the parameters \(a_i\), \(i \in \left[0, n\right]\) that provide the best fit. In the Python library \texttt{scikit-learn}, the \texttt{LinearRegression} class\footnote{\url{https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html}} determines these by minimising the residual sum of squares between the given samples and the values predicted by the fitted model.
+\end{align}
+to given data and attempts to find the parameters \(a_i\), \(i \in \left[0, n\right]\) that provide the best fit. In the Python library \texttt{scikit-learn} \cite[]{scikit-learn}, the \texttt{LinearRegression} class\footnote{\url{https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html}} determines these by minimising the residual sum of squares between the given samples and the values predicted by the fitted model.
 
 For non-linear relationships, each \(x_i\) can be transformed using some basis function \(g_i\) after which the coefficients \(a_i\) can be determined in the same way as in the linear case. A polynomial regression is carried out by defining the basis function as \(g(x_i) = x^i\), leading to the polynomial function
-
-\[
+\begin{align}
     f(x) = y = a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n.
-\]
-
+\end{align}
 It should be noted that, although the function is now polynomial, the model is still linear since the basis function only serves to transform the input data to a higher dimension; after the transformation using \texttt{scikit-learn}'s \texttt{PolynomialFeatures} class, the \texttt{LinearRegression} class will determine the coefficients \(a_1,\,\ldots,\,a_n\) as before.
 
 The performance of a regression is usually measured using the coefficient of determination, \(R^2\), which compares the predicted output values to the mean of the expected output data \(\bar{y}\), and is given by
-
-\[
+\begin{align}
     R^2 = 1 - \frac{SS_{\text{res}}}{SS_{\text{tot}}}
-\]
-
+\end{align}
 where
-
-\[
+\begin{align}
     SS_{\text{res}} = \sum_{i=1}^{n}{\left(y_i - f(x_i)\right)}^2
-\]
-
+\end{align}
 is the residual sum of squares, and
-
-\[
+\begin{align}
     SS_{\text{tot}} = \sum_{i=1}^{n}{\left(y_i - \bar{y}\right)}^2
-\]
-
+\end{align}
 is the total sum of squares. According to this measure, a perfect fit is indicated by a performance of \(R^2 = 1\), a fit that is no better than the mean of the output data by \(R^2 = 0\), and a fit that is even worse than the mean by \(R^2 < 0\).
 
-\subsection{Deep Learning}
+\section{Deep Learning}
 \ac{dl} is an application of \ac{ml} that employs more complex models capable of making sense of noisier, largely unprocessed data, such as sound signals and images \cite[]{goodfellow_deep_2016}. A bird classification problem could in this case involve training a model to extract necessary information from an image of a bird and associating this with the bird's label, requiring only the correct labelling of the image with no manual measurements.
 
 The great advantage of \ac{dl} over \ac{ml} is its ability to make sense of complex data using simpler representations in a hierarchical system \cite[]{goodfellow_deep_2016}. Returning to the example of bird classification: To extract information on a bird from a photo, a trained model might analyse an input image for contours and corners; in the next layer, these could be combined to recognise edges, which a subsequent layer could recognise as beaks or wings, and so on. To reach this stage, however, the architecture of the model must be suitable and the model itself must be trained using enough input data of sufficient quality. To achieve an acceptable level of accuracy, models should be trained on roughly 5\,000 samples per class, with several orders of magnitude more required to achieve human-level accuracy \cite[p. 20]{goodfellow_deep_2016}.
 
 \ac{dl} has seen a huge rise in popularity in recent years, with applications including speech recognition \cite[]{deng_machine_2013}, medical diagnoses \cite[]{lee_diagnosis_2018}, stock market prediction \cite[]{krollner_financial_2010} and many others \cite[]{kelleher_fundamentals_2015}. One particular challenge among the \ac{dl} research community is time series data \cite[]{yang_10_2006}, a sequential collection of values recorded over time. Time series data remains a great challenge due to its noisy, multidimensional nature \cite[]{kelleher_fundamentals_2015} and the dfficulties involved in developing algorithms that can also interpret the temporal information it holds \cite[]{bagnall_great_2017}.
 
-\subsubsection{Neural Networks}
+\subsection{Neural Networks}
 Two types of neural networks are relevant to this thesis: the \ac{mlp} and the \ac{cnn}. The fundamental element of the both of these is the perceptron.
 
-\paragraph{Perceptron}
+\paragraph*{Perceptron}
 The perceptron is a simple mathematical function somewhat inspired by biological neurons \cite{rosenblatt_perceptron_1958}. A perceptron (Figure \ref{fig:perceptron}) takes the sum of \(n\) values \(x_{1},\,x_{2},\,\ldots,\,x_{n}\) multiplied with their respective weights \(w_{1},\,w_{2},\,\ldots,\,w_{n}\) as its input. This input value is added to the perceptron's bias \(b\) and fed into its activation function \(f\). The result of this function is the perceptron's output value \(z\) which is fed into the next layer of the network. This is described by the following formula:
-
-\[
+\begin{align}
     z = f\left(b + \sum_{i = 1}^{n}x_{i}w_{i}\right)
-\]
-
+\end{align}
 \input{tikz/perceptron}
 
 The activation function \(f\) is set during the definition of the network and can take many forms, such as the identity (\(f\left(x\right) = x\)), sigmoid (\(f\left(x\right) = 1 / \left(1 + e^{-x}\right)\)) and \ac{relu} (\(f\left(x\right) = \max\left(0, x\right)\)) \cite[]{hahnloser_digital_2000}. \ac{relu} has been found to produce the best results \cite[]{jarrett_what_2009} and is used in all hidden layers of \ac{mlp}s in the models built in this thesis.
 
-\paragraph{Multilayer perceptron}
+\paragraph*{Multilayer Perceptron}
 The \ac{mlp}, also known as a feedforward neural network or deep neural network, is the quintessential \ac{dl} network. It comprises three main stages: an input layer, one or several hidden layers, and an output layer (see Figure \ref{fig:mlp}).
 
 \input{tikz/mlp}
@@ -118,7 +102,7 @@ The activation function of the output layer is determined by the task. In a clas
 
 In a regression task, each predicted output value should be a decimal value corresponding to the network's interpretation of the input data.
 
-\paragraph{Convolutional neural network}
+\paragraph*{Convolutional Neural Network}
 A \ac{cnn} is a neural network that makes use of convolutions and, in most models, pooling operations. Its qualities make it ideal for handling sequential, grid-like data such as temporal sensor data (one-dimensional grids of equally spaced readings) or images (two-dimensional grids of pixels). In particular, convolutions and pooling make it highly suitable for time-invariant (or space-invariant) pattern detection. \cite[]{goodfellow_deep_2016}
 
 A convolution is a non-linear transformation of the sequential data that is used for feature detection. It can be thought of as sliding filter moving across the input data whose values are learned and optimised in a similar way to the weights and bias of perceptrons. However, while each element of an \ac{mlp} has one weight value for each connection to the next layer, the convolution introduces the great advantage of \textit{parameter sharing} as each filter value is used on all input data. Using convolutions means that a significantly lower number of parameters require training and storing, and improves efficiency by several orders of magnitude \cite[]{goodfellow_deep_2016}.
@@ -127,14 +111,21 @@ Pooling is also a transformation used for statistical summaries of output values
 
 One further type of neural network is a Recurrent Neural Network. While these are generally associated with time series data, they are used for forecasting future time series based on preceding data, which is not relevant to this thesis.
 
-\subsubsection{Time Series Classification}\label{sec:tsc}
+\paragraph*{The Inception Module}
+In 2014, a deep convolutional neural network codenamed Inception \cite[]{szegedy_going_2014} set the state of the art for image classification on the ImageNet dataset \cite[]{russakovsky_imagenet_2015}. The fundamental building block of this network is the Inception module (Figure \ref{fig:inception}), which makes use of many convolutions and one pooling transformation, followed by a concatenation of the output data, which forms the module's output data.
+
+\input{tikz/inception_module}
+
+The Inception network is an ensemble of many of these modules.
+
+\subsection{Time Series Classification}\label{sec:tsc}
 \ac{tsc} involves reading time series data and applying one or several labels to each instance \cite{fawaz_inceptiontime_2019}. The UCR Archive \cite{dau_ucr_2019} is a large collection of \ac{tsc} datasets released to serve as a benchmark dataset for evaluating newly proposed \ac{dl} approaches to \ac{tsc}.
 
-The greatest breakthroughs in \ac{tsc} have only come about within the past few years since the publication of the Inception module \cite[]{szegedy_going_2014} and its subsequent adaptation for application in further \ac{dl} fields \cite{ismail_fawaz_deep_2019, fawaz_inceptiontime_2019}.
+The greatest breakthroughs in \ac{tsc} have only come about within the past few years since the development of the Inception Module and its subsequent adaptation for application in further \ac{dl} fields \cite{ismail_fawaz_deep_2019, fawaz_inceptiontime_2019}.
 
-It should be noted at this point that the various labels predicted in classification problems bear no relation to one another. Specifically, they are not ordinal: In an output layer with three output nodes (predicting the probability of five different labels), the first label is no more ``similar'' to the second than it is to the fifth.
+It should be noted at this point that the various labels predicted in classification problems bear are in no way relative to one another. Specifically, they are not ordinal: In an output layer with three output nodes (predicting the probability of five different labels), the first label is no more ``similar'' to the second than it is to the fifth.
 
-\subsubsection{Training and Validating a Neural Network}
+\subsection{Training and Validating a Neural Network}
 For supervised learning tasks, a dataset \(D\) of length \(n\) is split into two pairs: the training dataset \(D_{\text{train}} = \left(X_{\text{train}},\,Y_{\text{train}}\right)\) of length \(n_{\text{train}}\), and the validation dataset \(D_{\text{val}} = \left(X_{\text{val}},\,Y_{\text{val}}\right)\) of length \(n_{\text{val}}\), with \(n_{\text{train}} + n_{\text{val}} = n\), whereby \(D_{\text{train}}\) and \(D_{\text{val}}\) are disjoint. (To avoid overcomplicating the study design, it was decided not to implement cross-validation in this thesis.)
 
 Training a model involves iterating through all samples in \(D_{\text{train}}\) in batches of a defined batch size \(b\). Each sample \(X_{\text{train}, i}\) is entered into the input layer and fed through the model to generate output values \(Y_{\text{pred}, i}\) as predicted by the parameters (weights, biases, filter values, etc.) within the model. These output values are then compared with the given output values \(Y_{\text{train}, i}\) by means of a loss function.
@@ -147,7 +138,7 @@ Training is carried out for a defined number of epochs. After each epoch, the mo
 
 The lengths of the training and validation datasets, \(n_{\text{train}}\) and \(n_{\text{val}}\), can be freely defined but, in general, increasing the number of training samples will lead to better model performance. However, if the number of validation samples \(n_{\text{val}}\) is too low, the reliability of the validation will be questionable. In the model implementation for this thesis (Section \ref{sec:practical}), models were trained on a training dataset of length \(\frac{2}{3} \cdot n\) and validated using a validation dataset of length \(\frac{1}{3} \cdot n\), rounding where necessary.
 
-\subsubsection{Overfitting and Underfitting}
+\subsection{Overfitting and Underfitting}
 The more epochs for which a neural network is trained, the better it becomes at predicting the output on the training dataset. However, if the number of epochs is set too high and no perfect fit is achievable for the entire dataset (due to, for example, some element of randomness or noise), the model can become overly optimised for the training data to the detriment of its accuracy in predicting unseen data.
 
 \begin{figure}
@@ -160,10 +151,10 @@ Similarly, in the context of a polynomial regression (Figure \ref{fig:overfittin
 
 Success in \ac{ml} tasks requires finding a balance between undercomplexity and overcomplexity in the model. To avoid overfitting (or underfitting) on neural networks, a suitable number of training epochs (among other hyperparameters) should be found.
 
-\subsection{The Engine}
+\section{The Engine}
 Companies active within civil aerospace companies design and manufactures high-bypass turbofan jet engines, which offer an ideal arrangement for civil aircraft flying below the speed of sound \cite[]{rolls-royce_plc_jet_2015}.
 
-Engines consist of four main components (fan, compressor, combustion chamber and turbine) which correspond approximately to the four stages of a Brayton cycle (intake, compression, combustion, expansion). The engine draws in air, compresses it and burns fuel in the compressed air to further increase the pressure. In this high-pressure, high-temperature state, the air expands and is blown out of the nozzle, driving the turbine on its way which in turn powers the fan and compressor \cite[]{rolls-royce_plc_jet_2015}.
+Engines consist of four main components (fan, compressor, combustion chamber and turbine) which correspond approximately to the four stages of a Brayton cycle (intake, compression, combustion, expansion). The engine draws in air, compresses it and burns fuel in the compressed air to further increase the temperature. In this high-pressure, high-temperature state, the air expands and is blown out of the nozzle, driving the turbine on its way which, in turn, powers the fan and compressor and allows the process to continue \cite[]{rolls-royce_plc_jet_2015}.
 
 Many modern civil aircraft engines are equipped with two concentric shafts, split into \ac{lp} and \ac{hp}, which connect respective sets of compressors and turbines \cite[]{spittle_gas_2003}. Some, including the Rolls-Royce Trent family of engines, also have a third shaft, coupling the \ac{ip} compressor and turbine. Figure \ref{fig:triple_spool} shows the configuration of such an engine.
 
@@ -174,23 +165,19 @@ Many modern civil aircraft engines are equipped with two concentric shafts, spli
 \end{figure}
 
 A multi-spool configuration can greatly improve the efficiency of an engine, but comes with some drawbacks. The overall efficiency of an engine, \(\eta_{overall}\), is the product of its thermal and propulsive efficiencies:
-
-\[
+\begin{align}
     \eta_{overall} = \eta_{thermal} \cdot \eta_{propulsive}
-\]
-
+\end{align}
 Assuming an ideal Carnot cycle, the thermal efficiency is given by
-
-\[
+\begin{align}
     \eta_{thermal} = 1 - \frac{T_{min}}{T_{max}}
-\]
-
+\end{align}
 whereby \(T_{min}\) is the engine entry temperature (assumed constant) and \(T_{max}\) the maximum temperature (reached within the combustion chamber). A higher \(T_{max}\) therefore leads to greater thermal efficiency. Increasing the temperature, however, requires %burning more fuel and more oxygen in which to burn the fuel, which in turn necessitates
 higher compression. When the engine's overall pressure ratio (the ratio of stagnation pressure between the end and the beginning of the compressor stage) reaches values of 8 to 10, additional shafts become necessary \cite[p. 58]{braunling_flugzeugtriebwerke_2015} in order to enable sufficiently high rotational speeds.
 
 These requirements and developments have led to an average increase in \ac{tet} of 10 K per year over the past 80 years \cite[]{kyprianidis_future_2011}, and in modern engines has reached temperatures far above the melting point of \ac{hpt} blades, requiring great improvements in the materials, structures and systems used \cite[]{spittle_gas_2003}. With this improvement in thermal efficiency, the arrangement comes with the compromise of significantly increased thermomechanical (due to higher temperature) and mechanical loads (due to higher rotational speeds) within the engine, particularly as the air passes from the combustion chamber to the \ac{hpt}.
 
-\subsection{Damage}\label{damage}
+\section{Damage}\label{damage}
 Components used in such extreme conditions experience degradation. They therefore cannot be used indefinitely and must be removed from service after a certain amount of time to avoid potentially catastrophic failure. The amount of time for which the component is permitted for service, referred to as its Approved Life, is determined in safety analyses \cite[]{easa_certification_2015}. Approved Life is measured in Engine Flight Cycles, to be referred to as \textit{cycles} in the following.
 
 The degradation of the engine through its use is referred to as damage. The extent of damage is dependent on many parameters: Since operators use their aircraft for different purposes, flight parameters such as duration, altitude and outside temperature vary greatly and result in different levels of damage. This idea can be quantified with the aforementioned cycles.
@@ -200,7 +187,7 @@ In a \ac{fe} context, components are modelled digitally and separated into a fin
 Within Rolls-Royce, damage from flight missions is currently calculated using one of two internal tools for flight profile analysis: SA66 and Perseus. %(see Sections \ref{sa66} and \ref{pers}, respectively)
 The former is ideal for processing many flights in a short amount of time, but is restricted to a low number of features due to the time involved in manually setting up the surrogate \ac{fe} model for each feature. The latter can be described as a brute-force method that determines damage for all surface nodes, but is currently restricted by the amount of time required to process a single flight.
 
-\subsubsection{Certification}
+\subsection{Certification}
 Certification of a new engine includes a thorough safety analysis as described in \cite{easa_certification_2015}.
 
 Of primary concern is the \ac{hpt} disk due to the extreme conditions under which it operates and the risk of Hazardous Engine Effects. The latter is defined to include (among others) \textquote{non-containment of high-energy debris}, \textquote{uncontrolled fire} and \textquote{complete inability to shut the engine down} according to the \ac{easa} and the \ac{faa} \cite{easa_certification_2015, faa_guidance_2007}. A safety analysis must show that Hazardous Engine Effects are expected to occur with a probability no greater than \(10^{-7}\) per flight hour.
@@ -209,26 +196,22 @@ Engine parts whose failure is likely to result in Hazardous Engine Effects are l
 
 Determining a part's Approved Life, commonly referred to as lifing, is a complex process, the majority of which involves \textquote{defining the duty the part is required to sustain} \cite{corran_lifing_2007}, i.e. the design and refinement of the Engine Flight Cycle. One lifing philosophy is that of \ac{ltfc}, which involves determining the \ac{pscl} by means of statistically-determined safety factors.
 
-\subsubsection{Exchange Rate}
-One value calculated from the \ac{ehm} flight data and used as input data for regression models in this thesis is the exchange rate \(ER\). This value is derived from the Palmgren-Miner rule \cite[]{palmgren_lebensdauer_1924} which states that a material will fail when the accumulated damage \(D\), determined by the formula
-
-\[
-    D = \sum_{i}{\frac{n_i}{N_i}},
-\]
-
+\subsection{Exchange Rate}
+One value calculated from the \ac{ehm} flight data and used as input data for regression models in this thesis is the exchange rate \(ER\). This value is derived from the Palmgren-Miner rule \cite[]{palmgren_lebensdauer_1924} which states that a material will fail when the accumulated damage \(U\), determined by the formula
+\begin{align}
+    U = \sum_{i}{\frac{n_i}{N_i}},
+\end{align}
 reaches the value of 1. Here, \(n_i\) is the number of cycles at a certain amplitude \(\sigma_i\) in a stress spectrum \(S\), while \(N_i\) is the number of cycles to failure at \(\sigma_i\) as defined by the material's SN-curve.
 
-The exchange rate is the proportion of \(D\) to the damage from the flight's major cycle, i.e. \(n_{\text{max}} / N_{\text{max}}\) where the subscript \({}_\text{max}\) denotes the index of the maximum stress amplitude in \(S\). Therefore,
-
-\[
+The exchange rate is the proportion of \(U\) to the damage from the flight's major cycle, i.e. \(n_{\text{max}} / N_{\text{max}}\) where the subscript \(\text{max}\) denotes the index of the maximum stress amplitude in \(S\). Therefore,
+\begin{align}
     ER = \sum_{i}{\frac{n_i}{N_i}} \Big/ {\frac{n_{\text{max}}}{N_{\text{max}}}}.
-\]
-
-\subsection{Research Question}
+\end{align}
+\section{Research Question} \label{sec:research_q}
 Damage as computed by the Cycle Counter or Perseus can be subtracted from the component's Approved Life in order to monitor the remaining life of the component, and remove it from service when this reaches zero. With a view to improving current company processes, this thesis aims to address the following research question:
 
 Using the methods described in this section, can a supervised \ac{ml} or \ac{dl} approach be identified that offers a sufficiently robust, verifiable, comprehensive, scalable, fast and accurate means of processing \ac{ehm} data to determine the extent of damage incurred by surface nodes of a component during real flight missions?
 
-The given input data is \ac{ehm} data containing a number of real flight missions (Section \ref{sec:ehm}), coupled with corresponding Cycle Counter damage values (Section \ref{sec:cyclecounter}) for each of the seven features (Section \ref{sec:features}) as the given output data.
+The given input data is \ac{ehm} data from 14\,045 real flight missions (Section \ref{sec:ehm}), coupled with corresponding Cycle Counter damage values (Section \ref{sec:cyclecounter}) for each of the seven features (Section \ref{sec:features}) as the given output data.
 
-Models based on \ac{ml} and \ac{dl} methods will be trained on the complete dataset as well as two subsets (Section \ref{sec:data_sizes}). The aim is to use the trained model to reproduce given output data on corresponding unseen input data with the highest possible accuracy. Further, due to the time and effort involved in gathering the given output data (on which the model is trained), training data.
+Models based on \ac{ml} and \ac{dl} methods will be trained on the complete dataset as well as two subsets (Section \ref{sec:data_sizes}). The aim is to use the trained model to reproduce given output data on unseen input data with the highest possible accuracy. Further, due to the substantial time involved in gathering the given output data, scalability is of great importance. A model is considered scalable if it performs well on a given dataset of minimal length in comparison to a much larger dataset.

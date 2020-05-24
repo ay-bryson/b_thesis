@@ -1,0 +1,72 @@
+% For numbered \paragraph subsubsubsections
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usetikzlibrary{positioning}
+
+\tikzset{basic/.style={draw,text width=2em,text centered}}
+\tikzset{input/.style={basic,circle}}
+\tikzset{weights/.style={basic,rectangle}}
+\tikzset{functions/.style={basic,circle}}
+
+\tikzstyle{node} = [draw, circle,minimum size=10pt,inner sep=0pt]
+\tikzstyle{transition} = [-stealth]
+
+\tikzstyle{io_layer} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{cat_layer} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{conv_layer} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{pool_layer} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\graphicspath{{img/}}
+
+\linespread{1.15}
+% \setlength{\parskip}{0ex plus 0ex minus 0ex}
+
+\clearscrplain
+\setkomafont{pagenumber}{\small}
+\setkomafont{pageheadfoot}{\small}
+\cfoot[\pagemark]{}
+\pagestyle{scrheadings}
+
+\geometry{
+    includehead,
+    paper       = a4paper,
+    top         = 15 mm,
+    bottom      = 30 mm,
+    inner       = 27 mm,
+    outer       = 25 mm,
+    footskip    = 13 mm
+}
+
+\definecolor{lcol}{rgb}{0,0,0.6}
+%\definecolor{lcol}{rgb}{0,0,0}
+\hypersetup{
+    colorlinks=true,                 %
+    linktocpage=true,                %
+    bookmarksnumbered=true,          %
+    linkcolor=lcol,                  %
+    citecolor=lcol,                  %
+    urlcolor=lcol,                   %
+    plainpages=false,                %
+    pdfpagelabels=true
+}
+
+\deffootnote[1em]{1em}{1em}{\textsuperscript{\thefootnotemark}}
+\addtokomafont{footnote}{\linespread{1.0}\selectfont\small\footnotesize}
+
+\setkomafont{disposition}{\linespread{1.0}\selectfont\bfseries}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+
+\setkomafont{captionlabel}{\linespread{1.0}\selectfont \small \bfseries}
+\setkomafont{caption}{\linespread{1.0}\selectfont \small}
+\setcapindent{1em}
+
+\newcommand{\tmatter}{\frontmatter\pagenumbering{roman}}
+\newcommand{\fmatter}{\pagenumbering{Roman}}
+\newcommand{\mmatter}{\mainmatter}
+\newcommand{\bmatter}{\backmatter}

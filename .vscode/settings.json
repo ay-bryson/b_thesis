@@ -1,4 +1,5 @@
 {
     "editor.parameterHints.enabled": false,
-    "editor.quickSuggestions": false
+    "editor.quickSuggestions": false,
+    "python.pythonPath": "/usr/bin/python3.7"
 }

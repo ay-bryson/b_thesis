@@ -1,0 +1,31 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \node [io_layer] (input) at (0, 0) {previous layer};
+
+        \node [conv_layer] (conv12) at (4, 0.75) {1x1 convolutions};
+        \node [conv_layer] (conv13) at (4, -0.75) {1x1 convolutions};
+        \node [pool_layer] (pool14) at (4, -2.25) {3x3 max pooling};
+
+        \node [conv_layer] (conv11) at (6, 2.25) {1x1 convolutions};
+
+        \node [conv_layer] (conv22) at (8, 0.75) {3x3 convolutions};
+        \node [conv_layer] (conv23) at (8, -0.75) {5x5 convolutions};
+        \node [conv_layer] (conv24) at (8, -2.25) {1x1 convolutions};
+
+        \node [cat_layer] (output) at (12.5, 0) {filter concatenation};
+
+        \draw [arrow] (input) -- (conv12);
+        \draw [arrow] (input) -- (conv13);
+        \draw [arrow] (input) -- (pool14);
+        \draw [arrow] (input) |- (conv11);
+        \draw [arrow] (conv11) -| (output);
+        \draw [arrow] (conv12) -- (conv22);
+        \draw [arrow] (conv13) -- (conv23);
+        \draw [arrow] (pool14) -- (conv24);
+        \draw [arrow] (conv22) -- (output);
+        \draw [arrow] (conv23) -- (output);
+        \draw [arrow] (conv24) -- (output);
+    \end{tikzpicture}
+    \caption{\label{fig:inception} Inception module: The fundamental building block of the deep convolutional neural network \textit{Inception}}
+\end{figure}
