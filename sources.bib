@@ -1,289 +1,129 @@
 
-@article{barbounis_long-term_2006,
-	title = {Long-term wind speed and power forecasting using local recurrent neural network models},
-	volume = {21},
-	issn = {1558-0059},
-	doi = {10.1109/TEC.2005.847954},
-	abstract = {This paper deals with the problem of long-term wind speed and power forecasting based on meteorological information. Hourly forecasts up to 72-h ahead are produced for a wind park on the Greek island of Crete. As inputs our models use the numerical forecasts of wind speed and direction provided by atmospheric modeling system SKIRON for four nearby positions up to 30 km away from the wind turbine cluster. Three types of local recurrent neural networks are employed as forecasting models, namely, the infinite impulse response multilayer perceptron (IIR-MLP), the local activation feedback multilayer network (LAF-MLN), and the diagonal recurrent neural network (RNN). These networks contain internal feedback paths, with the neuron connections implemented by means of IIR synaptic filters. Two novel and optimal on-line learning schemes are suggested for the update of the recurrent network's weights based on the recursive prediction error algorithm. The methods assure continuous stability of the network during the learning phase and exhibit improved performance compared to the conventional dynamic back propagation. Extensive experimentation is carried out where the three recurrent networks are additionally compared to two static models, a finite-impulse response NN (FIR-NN) and a conventional static-MLP network. Simulation results demonstrate that the recurrent models, trained by the suggested methods, outperform the static ones while they exhibit significant improvement over the persistent method.},
-	number = {1},
-	journal = {IEEE Transactions on Energy Conversion},
-	author = {Barbounis, T.G. and Theocharis, J.B. and Alexiadis, M.C. and Dokopoulos, P.S.},
-	month = mar,
-	year = {2006},
-	note = {Conference Name: IEEE Transactions on Energy Conversion},
-	keywords = {Atmospheric modeling, atmospheric modeling system, diagonal recurrent neural network, FIR filters, IIR filters, infinite impulse response multilayer perceptron, load forecasting, local activation feedback multilayer network, local recurrent neural network models, Local recurrent neural networks, long-term wind power forecasting, long-term wind speed numerical forecasting, meteorological information, Meteorology, multilayer perceptrons, Neurofeedback, nonlinear recursive least square learning, Numerical models, optimal online learning schemes, power engineering computing, power forecasting, Predictive models, real time learning, recurrent neural nets, Recurrent neural networks, recursive prediction error algorithm, turbine cluster, Weather forecasting, Wind forecasting, wind park, Wind speed, wind turbines},
-	pages = {273--284},
-	file = {IEEE Xplore Abstract Record:/home/samuelob/snap/zotero-snap/common/Zotero/storage/PM68RKS7/1597347.html:text/html;IEEE Xplore Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/DT28Q3M4/Barbounis et al. - 2006 - Long-term wind speed and power forecasting using l.pdf:application/pdf}
-}
-
-@inproceedings{zhou_computation_1988,
-	title = {Computation of optical flow using a neural network},
-	doi = {10.1109/ICNN.1988.23914},
-	abstract = {A method for computing optical flow using a neural network is presented. Usually, the measurement primitives used for computing optical flow from successive image frames are the image-intensity values and their spatial and temporal derivatives, and tokens such as edges, corners, and linear features. Conventional methods based on such primitives suffer from edge sparsity, noise distortion, or sensitivity to rotation. The authors first fit a 2-D polynomial to find a smooth continuous image-intensity function in a window and estimate the subpixel intensity values and their principal curvatures. Under the local rigidity assumption and smoothness constraints, a neural network is then used to implement the computing procedure based on the estimated intensity values and their principal curvatures. Owing to the dense measured primitives, a dense optical flow with subpixel accuracy is obtained with only a few iterations. Since intensity values and their principle curvatures are rotation-invariant, this method can detect both rotating and translating objects in the scene. Experimental results using synthetic image sequences demonstrate the efficacy of the method.{\textless}{\textgreater}},
-	booktitle = {{IEEE} 1988 {International} {Conference} on {Neural} {Networks}},
-	author = {Zhou and Chellappa},
+@article{ismail_fawaz_deep_2019,
+	title = {Deep learning for time series classification: a review},
+	volume = {33},
+	issn = {1573-756X},
+	shorttitle = {Deep learning for time series classification},
+	url = {https://doi.org/10.1007/s10618-019-00619-1},
+	doi = {10.1007/s10618-019-00619-1},
+	abstract = {Time Series Classification (TSC) is an important and challenging problem in data mining. With the increase of time series data availability, hundreds of TSC algorithms have been proposed. Among these methods, only a few have considered Deep Neural Networks (DNNs) to perform this task. This is surprising as deep learning has seen very successful applications in the last years. DNNs have indeed revolutionized the field of computer vision especially with the advent of novel deeper architectures such as Residual and Convolutional Neural Networks. Apart from images, sequential data such as text and audio can also be processed with DNNs to reach state-of-the-art performance for document classification and speech recognition. In this article, we study the current state-of-the-art performance of deep learning algorithms for TSC by presenting an empirical study of the most recent DNN architectures for TSC. We give an overview of the most successful deep learning applications in various time series domains under a unified taxonomy of DNNs for TSC. We also provide an open source deep learning framework to the TSC community where we implemented each of the compared approaches and evaluated them on a univariate TSC benchmark (the UCR/UEA archive) and 12 multivariate time series datasets. By training 8730 deep learning models on 97 time series datasets, we propose the most exhaustive study of DNNs for TSC to date.},
+	language = {en},
+	number = {4},
+	urldate = {2020-03-18},
+	journal = {Data Mining and Knowledge Discovery},
+	author = {Ismail Fawaz, Hassan and Forestier, Germain and Weber, Jonathan and Idoumghar, Lhassane and Muller, Pierre-Alain},
 	month = jul,
-	year = {1988},
-	keywords = {2-D polynomial, computerised picture processing, Image processing, neural nets, neural network, Neural networks, optical flow, smooth continuous image-intensity function, synthetic image sequences},
-	pages = {71--78 vol.2},
-	file = {IEEE Xplore Abstract Record:/home/samuelob/snap/zotero-snap/common/Zotero/storage/N49MCGKG/23914.html:text/html;IEEE Xplore Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/LXHHAA3C/Zhou and Chellappa - 1988 - Computation of optical flow using a neural network.pdf:application/pdf}
+	year = {2019},
+	pages = {917--963},
+	file = {Springer Full Text PDF:/home/samuel/Zotero/storage/F5HAV6JC/Ismail Fawaz et al. - 2019 - Deep learning for time series classification a re.pdf:application/pdf}
 }
 
-@article{shaohua_kevin_zhou_visual_2004,
-	title = {Visual tracking and recognition using appearance-adaptive models in particle filters},
-	volume = {13},
-	issn = {1941-0042},
-	doi = {10.1109/TIP.2004.836152},
-	abstract = {We present an approach that incorporates appearance-adaptive models in a particle filter to realize robust visual tracking and recognition algorithms. Tracking needs modeling interframe motion and appearance changes, whereas recognition needs modeling appearance changes between frames and gallery images. In conventional tracking algorithms, the appearance model is either fixed or rapidly changing, and the motion model is simply a random walk with fixed noise variance. Also, the number of particles is typically fixed. All these factors make the visual tracker unstable. To stabilize the tracker, we propose the following modifications: an observation model arising from an adaptive appearance model, an adaptive velocity motion model with adaptive noise variance, and an adaptive number of particles. The adaptive-velocity model is derived using a first-order linear predictor based on the appearance difference between the incoming observation and the previous particle configuration. Occlusion analysis is implemented using robust statistics. Experimental results on tracking visual objects in long outdoor and indoor video sequences demonstrate the effectiveness and robustness of our tracking algorithm. We then perform simultaneous tracking and recognition by embedding them in a particle filter. For recognition purposes, we model the appearance changes between frames and gallery images by constructing the intra- and extrapersonal spaces. Accurate recognition is achieved when confronted by pose and view variations.},
-	number = {11},
-	journal = {IEEE Transactions on Image Processing},
-	author = {Shaohua Kevin Zhou and Chellappa, R. and Moghaddam, B.},
-	month = nov,
-	year = {2004},
-	note = {Conference Name: IEEE Transactions on Image Processing},
-	keywords = {Predictive models, adaptive filters, adaptive noise variance, Algorithms, appearance-adaptive model, Artificial Intelligence, Cluster Analysis, Computer Graphics, Computer Simulation, Feedback, Filtering, first-order linear predictor, hidden feature removal, Humans, Image Enhancement, Image Interpretation, Computer-Assisted, image recognition, Image recognition, Information Storage and Retrieval, Kinematics, Laboratories, Male, Models, Biological, Models, Statistical, Motion, Movement, Noise robustness, Numerical Analysis, Computer-Assisted, occlusion analysis, Particle filters, Particle tracking, Pattern Recognition, Automated, Reproducibility of Results, robust statistics, Sensitivity and Specificity, Signal Processing, Computer-Assisted, State estimation, statistical analysis, Subtraction Technique, tracking, Training data, visual recognition, visual tracking},
-	pages = {1491--1506},
-	file = {IEEE Xplore Abstract Record:/home/samuelob/snap/zotero-snap/common/Zotero/storage/T6P7PSLB/1344039.html:text/html;IEEE Xplore Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/X8EZ3WEL/Shaohua Kevin Zhou et al. - 2004 - Visual tracking and recognition using appearance-a.pdf:application/pdf}
-}
-
-@incollection{navathe_deep_2016,
-	address = {Cham},
-	title = {Deep {Convolutional} {Neural} {Network} {Based} {Regression} {Approach} for {Estimation} of {Remaining} {Useful} {Life}},
-	volume = {9642},
-	isbn = {978-3-319-32024-3 978-3-319-32025-0},
-	url = {http://link.springer.com/10.1007/978-3-319-32025-0_14},
-	abstract = {Prognostics technique aims to accurately estimate the Remaining Useful Life (RUL) of a subsystem or a component using sensor data, which has many real world applications. However, many of the existing algorithms are based on linear models, which cannot capture the complex relationship between the sensor data and RUL. Although Multilayer Perceptron (MLP) has been applied to predict RUL, it cannot learn salient features automatically, because of its network structure. A novel deep Convolutional Neural Network (CNN) based regression approach for estimating the RUL is proposed in this paper. Although CNN has been applied on tasks such as computer vision, natural language processing, speech recognition etc, this is the ﬁrst attempt to adopt CNN for RUL estimation in prognostics. Different from the existing CNN structure for computer vision, the convolution and pooling ﬁlters in our approach are applied along the temporal dimension over the multi-channel sensor data to incorporate automated feature learning from raw sensor signals in a systematic way. Through the deep architecture, the learned features are the higher-level abstract representation of low-level raw sensor signals. Furthermore, feature learning and RUL estimation are mutually enhanced by the supervised feedback. We compared with several state-of-the-art algorithms on two publicly available data sets to evaluate the effectiveness of this proposed approach. The encouraging results demonstrate that our proposed deep convolutional neural network based regression approach for RUL estimation is not only more efﬁcient but also more accurate.},
+@article{fawaz_inceptiontime_2019,
+	title = {{InceptionTime}: {Finding} {AlexNet} for {Time} {Series} {Classification}},
+	shorttitle = {{InceptionTime}},
+	url = {http://arxiv.org/abs/1909.04939},
+	abstract = {Time series classiﬁcation (TSC) is the area of machine learning interested in learning how to assign labels to time series. The last few decades of work in this area have led to signiﬁcant progress in the accuracy of classiﬁers, with the state of the art now represented by the HIVE-COTE algorithm. While extremely accurate, HIVE-COTE is infeasible to use in many applications because of its very high training time complexity in O(N 2 · T 4) for a dataset with N time series of length T . For example, it takes HIVE-COTE more than 72,000s to learn from a small dataset with N = 700 time series of short length T = 46. Deep learning, on the other hand, has now received enormous attention because of its high scalability and state-of-the-art accuracy in computer vision and natural language processing tasks. Deep learning for TSC has only very recently started to be explored, with the ﬁrst few architectures developed over the last 3 years only. The accuracy of deep learning for TSC has been raised to a competitive level, but has not quite reached the level of HIVE-COTE. This is what this paper achieves: outperforming HIVE-COTE’s accuracy together with scalability. We take an important step towards ﬁnding the AlexNet network for TSC by presenting InceptionTime—an ensemble of deep Convolutional Neural Network (CNN) models, inspired by the Inception-v4 architecture. Our experiments show that InceptionTime slightly outperforms HIVE-COTE with a win/draw/loss on the UCR archive of 40/6/39. Not only is InceptionTime more accurate, but it is much faster: InceptionTime learns from that same dataset with 700 time series in 2,300s but can also learn from a dataset with 8M time series in 13 hours, a quantity of data that is fully out of reach of HIVE-COTE.},
 	language = {en},
-	urldate = {2020-04-27},
-	booktitle = {Database {Systems} for {Advanced} {Applications}},
-	publisher = {Springer International Publishing},
-	author = {Sateesh Babu, Giduthuri and Zhao, Peilin and Li, Xiao-Li},
-	editor = {Navathe, Shamkant B. and Wu, Weili and Shekhar, Shashi and Du, Xiaoyong and Wang, X. Sean and Xiong, Hui},
-	year = {2016},
-	doi = {10.1007/978-3-319-32025-0_14},
-	note = {Series Title: Lecture Notes in Computer Science},
-	pages = {214--228},
-	file = {Sateesh Babu et al. - 2016 - Deep Convolutional Neural Network Based Regression.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/MDF6JMQ2/Sateesh Babu et al. - 2016 - Deep Convolutional Neural Network Based Regression.pdf:application/pdf}
-}
-
-@misc{noauthor_ucr_nodate,
-	title = {The {UCR} {Time} {Series} {Classification} {Archive}},
-	url = {https://www.cs.ucr.edu/%7Eeamonn/time_series_data_2018/},
-	urldate = {2020-04-27},
-	file = {Welcome to the UCR Time Series Classification/Clustering Page:/home/samuelob/snap/zotero-snap/common/Zotero/storage/KV6H628C/time_series_data_2018.html:text/html}
-}
-
-@inproceedings{jarrett_what_2009,
-	address = {Kyoto},
-	title = {What is the best multi-stage architecture for object recognition?},
-	isbn = {978-1-4244-4420-5},
-	url = {http://ieeexplore.ieee.org/document/5459469/},
-	doi = {10.1109/ICCV.2009.5459469},
-	abstract = {In many recent object recognition systems, feature extraction stages are generally composed of a ﬁlter bank, a non-linear transformation, and some sort of feature pooling layer. Most systems use only one stage of feature extraction in which the ﬁlters are hard-wired, or two stages where the ﬁlters in one or both stages are learned in supervised or unsupervised mode. This paper addresses three questions: 1. How does the non-linearities that follow the ﬁlter banks inﬂuence the recognition accuracy? 2. does learning the ﬁlter banks in an unsupervised or supervised manner improve the performance over random ﬁlters or hardwired ﬁlters? 3. Is there any advantage to using an architecture with two stages of feature extraction, rather than one? We show that using non-linearities that include rectiﬁcation and local contrast normalization is the single most important ingredient for good accuracy on object recognition benchmarks. We show that two stages of feature extraction yield better accuracy than one. Most surprisingly, we show that a two-stage system with random ﬁlters can yield almost 63\% recognition rate on Caltech-101, provided that the proper non-linearities and pooling layers are used. Finally, we show that with supervised reﬁnement, the system achieves state-of-the-art performance on NORB dataset (5.6\%) and unsupervised pre-training followed by supervised reﬁnement produces good accuracy on Caltech-101 ({\textgreater} 65\%), and the lowest known error rate on the undistorted, unprocessed MNIST dataset (0.53\%).},
-	language = {en},
-	urldate = {2020-04-26},
-	booktitle = {2009 {IEEE} 12th {International} {Conference} on {Computer} {Vision}},
-	publisher = {IEEE},
-	author = {Jarrett, Kevin and Kavukcuoglu, Koray and Ranzato, Marc' Aurelio and LeCun, Yann},
+	urldate = {2020-03-18},
+	journal = {arXiv:1909.04939 [cs, stat]},
+	author = {Fawaz, Hassan Ismail and Lucas, Benjamin and Forestier, Germain and Pelletier, Charlotte and Schmidt, Daniel F. and Weber, Jonathan and Webb, Geoffrey I. and Idoumghar, Lhassane and Muller, Pierre-Alain and Petitjean, François},
 	month = sep,
-	year = {2009},
-	pages = {2146--2153},
-	file = {Jarrett et al. - 2009 - What is the best multi-stage architecture for obje.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/F7RV3VW7/Jarrett et al. - 2009 - What is the best multi-stage architecture for obje.pdf:application/pdf}
+	year = {2019},
+	note = {arXiv: 1909.04939},
+	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+	file = {Fawaz et al. - 2019 - InceptionTime Finding AlexNet for Time Series Cla.pdf:/home/samuel/Zotero/storage/8KZGK62T/Fawaz et al. - 2019 - InceptionTime Finding AlexNet for Time Series Cla.pdf:application/pdf}
 }
 
-@article{hahnloser_digital_2000,
-	title = {Digital selection and analogue ampli®cation coexist in a cortex-inspired silicon circuit},
-	volume = {405},
+@article{boyd-lee_evaluation_2001,
+	title = {Evaluation of standard life assessment procedures and life extension methodologies for fracture-critical components},
+	volume = {23},
+	issn = {0142-1123},
+	url = {http://www.sciencedirect.com/science/article/pii/S0142112301001165},
+	doi = {10.1016/S0142-1123(01)00116-5},
+	abstract = {Endeavors to maximize the safe service lives of aeroengine components have led to a variety of life assessment methodologies. The following are reviewed in the paper: Life-to-first-crack, Databank Lifing, Damage Tolerance and Damage Mechanism based procedures. Their service implementation involves a variety of aspects of which the following are briefly discussed: stress analysis, defects and component life extension methods. Building on several of the concepts discussed, a lifing methodology based on risk regulation of inspection is then introduced. By varying the inspection intervals over time, the number of inspections can be minimized while ensuring that the risk of a failure does not exceed an acceptable level. Given inspection, it is shown that the actual safe service life of a component can be more strongly determined by the probability of crack detection than by the minimum detectable crack size.},
 	language = {en},
-	author = {Hahnloser, Richard H R and Sarpeshkar, Rahul and Mahowald, Misha A and Douglas, Rodney J and Seung, H Sebastian},
-	year = {2000},
-	pages = {5},
-	file = {Hahnloser et al. - 2000 - Digital selection and analogue ampli®cation coexis.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/BEEX5HVL/Hahnloser et al. - 2000 - Digital selection and analogue ampli®cation coexis.pdf:application/pdf}
+	urldate = {2020-03-18},
+	journal = {International Journal of Fatigue},
+	author = {Boyd-Lee, A. D and Harrison, G. F and Henderson, M. B},
+	month = jan,
+	year = {2001},
+	keywords = {Inspection, Lifing methodologies, Risk assessment},
+	pages = {11--19},
+	file = {Boyd-Lee et al. - 2001 - Evaluation of standard life assessment procedures .pdf:/home/samuel/Zotero/storage/6KTDH74K/Boyd-Lee et al. - 2001 - Evaluation of standard life assessment procedures .pdf:application/pdf}
 }
 
-@article{rosenblatt_perceptron_1958,
-	title = {The perceptron: {A} probabilistic model for information storage and organization in the brain.},
-	volume = {65},
-	issn = {1939-1471, 0033-295X},
-	shorttitle = {The perceptron},
-	url = {http://doi.apa.org/getdoi.cfm?doi=10.1037/h0042519},
-	doi = {10.1037/h0042519},
+@article{spittle_gas_2003,
+	title = {Gas turbine technology},
+	volume = {38},
+	issn = {0031-9120, 1361-6552},
+	url = {http://stacks.iop.org/0031-9120/38/i=6/a=002?key=crossref.5d4ad51e02e416f47faed1970f94d375},
+	doi = {10.1088/0031-9120/38/6/002},
+	abstract = {Gas turbine engines power most commercial ﬂights operating today. Yet many people are ignorant of the cutting-edge technologies used in the creation and operation of these engines. This article explains some of the principles involved with emphasis on the selection of materials for fan blades and turbine blades, which have to operate reliably in exceedingly hostile environments.},
 	language = {en},
 	number = {6},
-	urldate = {2020-04-26},
-	journal = {Psychological Review},
-	author = {Rosenblatt, F.},
-	year = {1958},
-	pages = {386--408},
-	file = {Rosenblatt - 1958 - The perceptron A probabilistic model for informat.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/UASVSH3D/Rosenblatt - 1958 - The perceptron A probabilistic model for informat.pdf:application/pdf}
+	urldate = {2020-03-18},
+	journal = {Physics Education},
+	author = {Spittle, Peter},
+	month = nov,
+	year = {2003},
+	pages = {504--511},
+	file = {Spittle - 2003 - Gas turbine technology.pdf:/home/samuel/Zotero/storage/AN65WWU3/Spittle - 2003 - Gas turbine technology.pdf:application/pdf}
 }
 
-@article{cheng_polynomial_2019,
-	title = {Polynomial {Regression} {As} an {Alternative} to {Neural} {Nets}},
-	url = {http://arxiv.org/abs/1806.06850},
-	abstract = {Despite the success of neural networks (NNs), there is still a concern among many over their “black box” nature. Why do they work? Yes, we have Universal Approximation Theorems, but these concern statistical consistency, a very weak property, not enough to explain the exceptionally strong performance reports of the method. Here we present a simple analytic argument that NNs are in fact essentially polynomial regression models (PR), with the eﬀective degree of the polynomial growing at each hidden layer. This view will have various implications for NNs, e.g. providing an explanation for why convergence problems arise in NNs, and it gives rough guidance on avoiding overﬁtting. In addition, we use this phenomenon to predict and conﬁrm a multicollinearity property of NNs not previously reported in the literature. Most importantly, this NN ↔ PR correspondence suggests routinely using polynomial models instead of NNs, thus avoiding some major problems of the latter, such as having to set many hyperparameters and deal with convergence issues. We present a number of empirical results; in all cases, the accuracy of the polynomial approach matches, and often exceeds, that of NN approaches. A many-featured, open-source software package, polyreg, is available.},
+@article{rajaraman_big_2016,
+	title = {Big data analytics},
+	volume = {21},
+	issn = {0973-712X},
+	url = {https://doi.org/10.1007/s12045-016-0376-7},
+	doi = {10.1007/s12045-016-0376-7},
+	abstract = {The volume and variety of data being generated using computers is doubling every two years. It is estimated that in 2015, 8 Zettabytes (Zetta=1021) were generated which consisted mostly of unstructured data such as emails, blogs, Twitter, Facebook posts, images, and videos. This is called big data. It is possible to analyse such huge data collections with clusters of thousands of inexpensive computers to discover patterns in the data that have many applications. But analysing massive amounts of data available in the Internet has the potential of impinging on our privacy. Inappropriate analysis of big data can lead to misleading conclusions. In this article, we explain what is big data, how it is analysed, and give some case studies illustrating the potentials and pitfalls of big data analytics.},
 	language = {en},
-	urldate = {2020-04-24},
-	journal = {arXiv:1806.06850 [cs, stat]},
-	author = {Cheng, Xi and Khomtchouk, Bohdan and Matloff, Norman and Mohanty, Pete},
-	month = apr,
-	year = {2019},
-	note = {arXiv: 1806.06850},
-	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
-	annote = {Comment: 23 pages, 1 figure, 13 tables},
-	file = {Cheng et al. - 2019 - Polynomial Regression As an Alternative to Neural .pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/D3DCI4A6/Cheng et al. - 2019 - Polynomial Regression As an Alternative to Neural .pdf:application/pdf}
+	number = {8},
+	urldate = {2020-03-18},
+	journal = {Resonance},
+	author = {Rajaraman, V.},
+	month = aug,
+	year = {2016},
+	pages = {695--716},
+	file = {Springer Full Text PDF:/home/samuel/Zotero/storage/MRCPNZB6/Rajaraman - 2016 - Big data analytics.pdf:application/pdf}
 }
 
-@book{braunling_flugzeugtriebwerke_2015,
-	title = {Flugzeugtriebwerke: {Grundlagen}, {Aero}-{Thermodynamik}, ideale und reale {Kreisprozesse}, {Thermische} {Turbomaschinen}, {Komponenten}, {Emissionen} und {Systeme}},
-	shorttitle = {Flugzeugtriebwerke},
-	publisher = {Springer-Verlag},
-	author = {Bräunling, Willy JG},
-	year = {2015},
-	file = {Bräunling - 2015 - Flugzeugtriebwerke Grundlagen, Aero-Thermodynamik.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/DPMFVU3T/Bräunling - 2015 - Flugzeugtriebwerke Grundlagen, Aero-Thermodynamik.pdf:application/pdf}
-}
-
-@article{szegedy_going_2014,
-	title = {Going {Deeper} with {Convolutions}},
-	url = {http://arxiv.org/abs/1409.4842},
-	abstract = {We propose a deep convolutional neural network architecture codenamed "Inception", which was responsible for setting the new state of the art for classification and detection in the ImageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC 2014). The main hallmark of this architecture is the improved utilization of the computing resources inside the network. This was achieved by a carefully crafted design that allows for increasing the depth and width of the network while keeping the computational budget constant. To optimize quality, the architectural decisions were based on the Hebbian principle and the intuition of multi-scale processing. One particular incarnation used in our submission for ILSVRC 2014 is called GoogLeNet, a 22 layers deep network, the quality of which is assessed in the context of classification and detection.},
-	urldate = {2020-04-17},
-	journal = {arXiv:1409.4842 [cs]},
-	author = {Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew},
-	month = sep,
-	year = {2014},
-	note = {arXiv: 1409.4842},
-	keywords = {Computer Science - Computer Vision and Pattern Recognition},
-	file = {arXiv.org Snapshot:/home/samuelob/snap/zotero-snap/common/Zotero/storage/7XHXGZ2K/1409.html:text/html;arXiv Fulltext PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/F83Q4YPL/Szegedy et al. - 2014 - Going Deeper with Convolutions.pdf:application/pdf}
-}
-
-@book{kirk_thoughtful_2017,
-	title = {Thoughtful {Machine} {Learning} with {Python}: {A} {Test}-{Driven} {Approach}},
-	isbn = {978-1-4919-2410-5},
-	shorttitle = {Thoughtful {Machine} {Learning} with {Python}},
-	abstract = {Gain the confidence you need to apply machine learning in your daily work. With this practical guide, author Matthew Kirk shows you how to integrate and test machine learning algorithms in your code, without the academic subtext.Featuring graphs and highlighted code examples throughout, the book features tests with Python’s Numpy, Pandas, Scikit-Learn, and SciPy data science libraries. If you’re a software engineer or business analyst interested in data science, this book will help you:Reference real-world examples to test each algorithm through engaging, hands-on exercisesApply test-driven development (TDD) to write and run tests before you start codingExplore techniques for improving your machine-learning models with data extraction and feature developmentWatch out for the risks of machine learning, such as underfitting or overfitting dataWork with K-Nearest Neighbors, neural networks, clustering, and other algorithms},
-	language = {en},
-	publisher = {"O'Reilly Media, Inc."},
-	author = {Kirk, Matthew},
-	month = jan,
-	year = {2017},
-	note = {Google-Books-ID: nG3vDQAAQBAJ},
-	keywords = {Computers / Data Processing, Computers / Databases / Data Mining, Computers / Programming Languages / Python},
-	file = {Kirk - 2017 - Thoughtful Machine Learning with Python A Test-Dr.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/99F4KZTN/Kirk - 2017 - Thoughtful Machine Learning with Python A Test-Dr.pdf:application/pdf}
-}
-
-@article{fan_mining_2013,
-	title = {Mining big data: current status, and forecast to the future},
+@article{corran_lifing_2007,
+	series = {{UK} {Technical} {Advisory} {Group} for {Structural} {Integrity} ({TAGSI}){Design} margins and safety factors relating to structural integrity},
+	title = {Lifing methods and safety criteria in aero gas turbines},
 	volume = {14},
-	issn = {1931-0145, 1931-0153},
-	shorttitle = {Mining big data},
-	url = {https://dl.acm.org/doi/10.1145/2481244.2481246},
-	doi = {10.1145/2481244.2481246},
-	abstract = {Big Data is a new term used to identify the datasets that due to their large size and complexity, we can not manage them with our current methodologies or data mining software tools. Big Data mining is the capability of extracting useful information from these large datasets or streams of data, that due to its volume, variability, and velocity, it was not possible before to do it. The Big Data challenge is becoming one of the most exciting opportunities for the next years. We present in this issue, a broad overview of the topic, its current status, controversy, and forecast to the future. We introduce four articles, written by inﬂuential scientists in the ﬁeld, covering the most interesting and state-of-the-art topics on Big Data mining.},
+	issn = {1350-6307},
+	url = {http://www.sciencedirect.com/science/article/pii/S1350630706001014},
+	doi = {10.1016/j.engfailanal.2005.08.010},
+	abstract = {Modern gas turbines engines concentrate high power into a relatively small machine, e.g. more than 50MW in each engine suspended from the aircraft wing in a large civil transport application. The rotational speed of the shafts reaches as high as 13,000rpm in large engines and even higher in smaller engines as used in helicopters. Hence there is both a concentration of thermal energy in the combustion process and kinetic energy in the rotating parts that presents issues for structural integrity. This paper describes the regulatory requirements that must be achieved to allow operation of engines in civil applications and at how these requirements are satisfied in practice. It concentrates on those parts whose failure can directly threaten the integrity of the airframe through the generation of hazardous effects. The main issues are associated with fatigue through cyclic operation of the engine and the ability of the engine to survive abnormal conditions in such a way that the aircraft can safely land and be brought to rest.},
 	language = {en},
-	number = {2},
-	urldate = {2020-04-17},
-	journal = {ACM SIGKDD Explorations Newsletter},
-	author = {Fan, Wei and Bifet, Albert},
+	number = {3},
+	urldate = {2020-03-18},
+	journal = {Engineering Failure Analysis},
+	author = {Corran, R. S. J. and Williams, S. J.},
 	month = apr,
-	year = {2013},
-	pages = {1--5},
-	file = {Fan and Bifet - 2013 - Mining big data current status, and forecast to t.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/5LI622CT/Fan and Bifet - 2013 - Mining big data current status, and forecast to t.pdf:application/pdf}
+	year = {2007},
+	keywords = {Aero engines, Critical Parts, New lifing correlation, Safe life},
+	pages = {518--528},
+	file = {Corran and Williams - 2007 - Lifing methods and safety criteria in aero gas tur.pdf:/home/samuel/Zotero/storage/XLEJE7HK/Corran and Williams - 2007 - Lifing methods and safety criteria in aero gas tur.pdf:application/pdf}
 }
 
-@article{chen_big_2014,
-	title = {Big {Data}: {A} {Survey}},
-	volume = {19},
-	issn = {1383-469X, 1572-8153},
-	shorttitle = {Big {Data}},
-	url = {http://link.springer.com/10.1007/s11036-013-0489-0},
-	doi = {10.1007/s11036-013-0489-0},
-	abstract = {In this paper, we review the background and state-of-the-art of big data. We first introduce the general background of big data and review related technologies, such as could computing, Internet of Things, data centers, and Hadoop. We then focus on the four phases of the value chain of big data, i.e., data generation, data acquisition, data storage, and data analysis. For each phase, we introduce the general background, discuss the technical challenges, and review the latest advances. We finally examine the several representative applications of big data, including enterprise management, Internet of Things, online social networks, medial applications, collective intelligence, and smart grid. These discussions aim to provide a comprehensive overview and big-picture to readers of this exciting area. This survey is concluded with a discussion of open problems and future directions.},
+@article{silva_speeding_2018,
+	title = {Speeding up similarity search under dynamic time warping by pruning unpromising alignments},
+	volume = {32},
+	issn = {1573-756X},
+	url = {https://doi.org/10.1007/s10618-018-0557-y},
+	doi = {10.1007/s10618-018-0557-y},
+	abstract = {Similarity search is the core procedure for several time series mining tasks. While different distance measures can be used for this purpose, there is clear evidence that the Dynamic Time Warping (DTW) is the most suitable distance function for a wide range of application domains. Despite its quadratic complexity, research efforts have proposed a significant number of pruning methods to speed up the similarity search under DTW. However, the search may still take a considerable amount of time depending on the parameters of the search, such as the length of the query and the warping window width. The main reason is that the current techniques for speeding up the similarity search focus on avoiding the costly distance calculation between as many pairs of time series as possible. Nevertheless, the few pairs of subsequences that were not discarded by the pruning techniques can represent a significant part of the entire search time. In this work, we adapt a recently proposed algorithm to improve the internal efficiency of the DTW calculation. Our method can speed up the UCR suite, considered the current fastest tool for similarity search under DTW. More important, the longer the time needed for the search, the higher the speedup ratio achieved by our method. We demonstrate that our method performs similarly to UCR suite for small queries and narrow warping constraints. However, it performs up to five times faster for long queries and large warping windows.},
 	language = {en},
-	number = {2},
-	urldate = {2020-04-16},
-	journal = {Mobile Networks and Applications},
-	author = {Chen, Min and Mao, Shiwen and Liu, Yunhao},
-	month = apr,
-	year = {2014},
-	pages = {171--209},
-	file = {Chen et al. - 2014 - Big Data A Survey.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/UY7RZDM6/Chen et al. - 2014 - Big Data A Survey.pdf:application/pdf}
-}
-
-@article{hilbert_worlds_2011,
-	title = {The {World}'s {Technological} {Capacity} to {Store}, {Communicate}, and {Compute} {Information}},
-	volume = {332},
-	issn = {0036-8075, 1095-9203},
-	url = {https://www.sciencemag.org/lookup/doi/10.1126/science.1200970},
-	doi = {10.1126/science.1200970},
-	language = {en},
-	number = {6025},
-	urldate = {2020-04-16},
-	journal = {Science},
-	author = {Hilbert, M. and Lopez, P.},
-	month = apr,
-	year = {2011},
-	pages = {60--65},
-	file = {Hilbert and Lopez - 2011 - The World's Technological Capacity to Store, Commu.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/PVT4FU5K/Hilbert and Lopez - 2011 - The World's Technological Capacity to Store, Commu.pdf:application/pdf}
-}
-
-@article{laney_3d_2001,
-	title = {{3D} data management: {Controlling} data volume, velocity and variety},
-	volume = {6},
-	shorttitle = {{3D} data management},
-	number = {70},
-	journal = {META group research note},
-	author = {Laney, Doug},
-	year = {2001},
-	pages = {1},
-	file = {Laney - 2001 - 3D data management Controlling data volume, veloc.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/BFI9KRUB/Laney - 2001 - 3D data management Controlling data volume, veloc.pdf:application/pdf}
-}
-
-@article{diebold_origins_2012,
-	title = {On the {Origin}(s) and {Development} of the {Term} '{Big} {Data}'},
-	issn = {1556-5068},
-	url = {http://www.ssrn.com/abstract=2152421},
-	doi = {10.2139/ssrn.2152421},
-	abstract = {I investigate the origins of the now-ubiquitous term “Big Data,” in industry and academics, in computer science and statistics/econometrics. Credit for coining the term must be shared. In particular, John Mashey and others at Silicon Graphics produced highlyrelevant (unpublished, non-academic) work in the mid-1990s. The ﬁrst signiﬁcant academic references (independent of each other and of Silicon Graphics) appear to be Weiss and Indurkhya (1998) in computer science and Diebold (2000) in statistics/econometrics. Douglas Laney of Gartner also produced insightful work (again unpublished and non-academic) slightly later. Big Data the term is now ﬁrmly entrenched, Big Data the phenomenon continues unabated, and Big Data the discipline is emerging.},
-	language = {en},
-	urldate = {2020-04-16},
-	journal = {SSRN Electronic Journal},
-	author = {Diebold, Francis X.},
-	year = {2012},
-	file = {Diebold - 2012 - On the Origin(s) and Development of the Term 'Big .pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/LKDRG7VS/Diebold - 2012 - On the Origin(s) and Development of the Term 'Big .pdf:application/pdf}
-}
-
-@book{schobeiri_gas_2018,
-	title = {Gas {Turbine} {Design}, {Components} and {System} {Design} {Integration}},
-	isbn = {978-3-319-86392-4},
-	url = {https://www.springer.com/gp/book/9783319863924},
-	abstract = {This book written by a world-renowned expert with more than forty years of active gas turbine R\&D experience comprehensively treats the design of gas turbine components and their integration into a complete system. Unlike many currently available gas turbine handbooks that provide the reader with an overview without in-depth treatment of the subject, the current book is concentrated on a detailed aero-thermodynamics, design and off-deign performance aspects of individual components as well as the system integration and its dynamic operation.This new book provides practicing gas turbine designers and young engineers working in the industry with design material that the manufacturers would keep proprietary. The book is also intended to provide instructors of turbomachinery courses around the world with a powerful tool to assign gas turbine components as project and individual modules that are integrated into a complete system. Quoting many statements by the gas turbine industry professionals, the young engineers graduated from the turbomachinery courses offered by the author, had the competency of engineers equivalent to three to four years of industrial experience.},
-	language = {en},
-	urldate = {2020-04-06},
-	publisher = {Springer International Publishing},
-	author = {Schobeiri, Meinhard T.},
+	number = {4},
+	urldate = {2020-03-18},
+	journal = {Data Mining and Knowledge Discovery},
+	author = {Silva, Diego F. and Giusti, Rafael and Keogh, Eamonn and Batista, Gustavo E. A. P. A.},
+	month = jul,
 	year = {2018},
-	doi = {10.1007/978-3-319-58378-5},
-	file = {Snapshot:/home/samuelob/snap/zotero-snap/common/Zotero/storage/R98C358I/9783319863924.html:text/html}
-}
-
-@misc{konig_br725stats_2018,
-	title = {{BR725Stats}},
-	publisher = {Rolls-Royce Deutschland Ltd \& Co KG},
-	author = {König, Jonas},
-	month = dec,
-	year = {2018}
-}
-
-@misc{reischl_br700-725a1-12_2014,
-	title = {{BR700}-{725A1}-12 {G650} {EHM} {SSRD} {EIS} {Engine} {Health} {Monitoring} ({EHM}) and {Engine} {E}-{TR0109} 09-{ISS10}},
-	shorttitle = {Technical {Report} {No}. {E}-{TR0109} 09-{ISS10}},
-	language = {English},
-	publisher = {Rolls-Royce Deutschland Ltd \& Co KG},
-	author = {Reischl, B and Müller, V.-D.},
-	month = oct,
-	year = {2014},
-	file = {Reischl and Müller - 2014 - BR700-725A1-12 G650 EHM SSRD EIS Engine Health Mon.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/UFDGJGNE/Reischl and Müller - 2014 - BR700-725A1-12 G650 EHM SSRD EIS Engine Health Mon.pdf:application/pdf}
+	pages = {988--1016},
+	file = {Springer Full Text PDF:/home/samuel/Zotero/storage/NTL5QX2E/Silva et al. - 2018 - Speeding up similarity search under dynamic time w.pdf:application/pdf}
 }
 
 @book{rolls-royce_plc_jet_2015,
@@ -294,191 +134,10 @@
 	abstract = {The Jet Engine provides a complete, accessible description of the working and underlying principles of the gas turbine. * Accessible, non-technical approach explaining the workings of jet engines, for readers of all levels * Full colour diagrams, cutaways and photographs throughout * Written by RR specialists in all the respective fields * Hugely popular and well-reviewed book, originally published in 2005 under Rolls Royce s own imprint},
 	language = {English},
 	publisher = {Wiley-Blackwell},
-	author = {Rolls-Royce plc},
+	author = {{Rolls-Royce plc}},
 	month = jul,
 	year = {2015},
-	file = {Royce - 2015 - The Jet Engine.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/H54P6FH6/Royce - 2015 - The Jet Engine.pdf:application/pdf}
-}
-
-@article{lines_time_nodate,
-	title = {Time {Series} {Classification} with {HIVE}-{COTE}: {The} {Hierarchical} {Vote} {Collective} of {Transformation}-based {Ensembles}},
-	language = {en},
-	author = {Lines, Jason and Taylor, Sarah and Bagnall, Anthony},
-	pages = {35},
-	file = {Lines et al. - Time Series Classification with HIVE-COTE The Hie.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/BMXMAH79/Lines et al. - Time Series Classification with HIVE-COTE The Hie.pdf:application/pdf}
-}
-
-@article{dau_ucr_2019,
-	title = {The {UCR} time series archive},
-	volume = {6},
-	issn = {2329-9274},
-	doi = {10.1109/JAS.2019.1911747},
-	abstract = {The UCR time series archive - introduced in 2002, has become an important resource in the time series data mining community, with at least one thousand published papers making use of at least one data set from the archive. The original incarnation of the archive had sixteen data sets but since that time, it has gone through periodic expansions. The last expansion took place in the summer of 2015 when the archive grew from 45 to 85 data sets. This paper introduces and will focus on the new data expansion from 85 to 128 data sets. Beyond expanding this valuable resource, this paper offers pragmatic advice to anyone who may wish to evaluate a new algorithm on the archive. Finally, this paper makes a novel and yet actionable claim: of the hundreds of papers that show an improvement over the standard baseline (1nearest neighbor classification), a fraction might be mis-attributing the reasons for their improvement. Moreover, the improvements claimed by these papers might have been achievable with a much simpler modification, requiring just a few lines of code.},
-	number = {6},
-	journal = {IEEE/CAA Journal of Automatica Sinica},
-	author = {Dau, Hoang Anh and Bagnall, Anthony and Kamgar, Kaveh and Yeh, Chin-Chia Michael and Zhu, Yan and Gharghabi, Shaghayegh and Ratanamahatana, Chotirat Ann and Keogh, Eamonn},
-	month = nov,
-	year = {2019},
-	note = {Conference Name: IEEE/CAA Journal of Automatica Sinica},
-	keywords = {Cameras, data expansion, data mining, Data mining, data sets, Error analysis, Euclidean distance, Microsoft Windows, pattern classification, time series, Time series analysis, time series data mining community, Training, UCR time series archive},
-	pages = {1293--1305},
-	file = {IEEE Xplore Abstract Record:/home/samuelob/snap/zotero-snap/common/Zotero/storage/6DVXB7BE/authors.html:text/html}
-}
-
-@article{bagnall_great_2017,
-	title = {The great time series classification bake off: a review and experimental evaluation of recent algorithmic advances},
-	volume = {31},
-	issn = {1384-5810, 1573-756X},
-	shorttitle = {The great time series classification bake off},
-	url = {http://link.springer.com/10.1007/s10618-016-0483-9},
-	doi = {10.1007/s10618-016-0483-9},
-	abstract = {In the last 5 years there have been a large number of new time series classiﬁcation algorithms proposed in the literature. These algorithms have been evaluated on subsets of the 47 data sets in the University of California, Riverside time series classiﬁcation archive. The archive has recently been expanded to 85 data sets, over half of which have been donated by researchers at the University of East Anglia. Aspects of previous evaluations have made comparisons between algorithms difﬁcult. For example, several different programming languages have been used, experiments involved a single train/test split and some used normalised data whilst others did not. The relaunch of the archive provides a timely opportunity to thoroughly evaluate algorithms on a larger number of datasets. We have implemented 18 recently proposed algorithms in a common Java framework and compared them against two standard benchmark classiﬁers (and each other) by performing 100 resampling experiments on each of the 85 datasets. We use these results to test several hypotheses relating to whether the algorithms are signiﬁcantly more accurate than the benchmarks and each other. Our results indicate that only nine of these algorithms are signiﬁcantly more accurate than both benchmarks and that one classiﬁer, the collective of transformation ensembles, is signiﬁcantly more accurate than all of the others. All of our experiments and results are reproducible: we release all of our code, results and experimental details and we hope these experiments form the basis for more robust testing of new algorithms in the future.},
-	language = {en},
-	number = {3},
-	urldate = {2020-03-26},
-	journal = {Data Mining and Knowledge Discovery},
-	author = {Bagnall, Anthony and Lines, Jason and Bostrom, Aaron and Large, James and Keogh, Eamonn},
-	month = may,
-	year = {2017},
-	pages = {606--660},
-	file = {Bagnall et al. - 2017 - The great time series classification bake off a r.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/D2TWPSKJ/Bagnall et al. - 2017 - The great time series classification bake off a r.pdf:application/pdf}
-}
-
-@article{yang_10_2006,
-	title = {10 {CHALLENGING} {PROBLEMS} {IN} {DATA} {MINING} {RESEARCH}},
-	volume = {05},
-	issn = {0219-6220, 1793-6845},
-	url = {https://www.worldscientific.com/doi/abs/10.1142/S0219622006002258},
-	doi = {10.1142/S0219622006002258},
-	abstract = {In October 2005, we took an initiative to identify 10 challenging problems in data mining research, by consulting some of the most active researchers in data mining and machine learning for their opinions on what are considered important and worthy topics for future research in data mining. We hope their insights will inspire new research efforts, and give young researchers (including PhD students) a high-level guideline as to where the hot problems are located in data mining.
-            Due to the limited amount of time, we were only able to send out our survey requests to the organizers of the IEEE ICDM and ACM KDD conferences, and we received an overwhelming response. We are very grateful for the contributions provided by these researchers despite their busy schedules. This short article serves to summarize the 10 most challenging problems of the 14 responses we have received from this survey. The order of the listing does not reflect their level of importance.},
-	language = {en},
-	number = {04},
-	urldate = {2020-03-26},
-	journal = {International Journal of Information Technology \& Decision Making},
-	author = {Yang, Qiang and Wu, Xindong},
-	month = dec,
-	year = {2006},
-	pages = {597--604},
-	file = {Yang and Wu - 2006 - 10 CHALLENGING PROBLEMS IN DATA MINING RESEARCH.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/FG9FSK5Q/Yang and Wu - 2006 - 10 CHALLENGING PROBLEMS IN DATA MINING RESEARCH.pdf:application/pdf}
-}
-
-@book{harrington_machine_2012,
-	address = {Shelter Island, N.Y},
-	title = {Machine learning in action},
-	isbn = {978-1-61729-018-3},
-	language = {en},
-	publisher = {Manning Publications Co},
-	author = {Harrington, Peter},
-	year = {2012},
-	note = {OCLC: ocn746834657},
-	keywords = {Handbooks, manuals, etc, Machine learning},
-	file = {Harrington - 2012 - Machine learning in action.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/XVLBQ6UI/Harrington - 2012 - Machine learning in action.pdf:application/pdf}
-}
-
-@book{kelleher_fundamentals_2015,
-	title = {Fundamentals of {Machine} {Learning} for {Predictive} {Data} {Analytics}: {Algorithms}, {Worked} {Examples}, and {Case} {Studies}},
-	isbn = {978-0-262-02944-5},
-	shorttitle = {Fundamentals of {Machine} {Learning} for {Predictive} {Data} {Analytics}},
-	abstract = {A comprehensive introduction to the most important machine learning approaches used in predictive data analytics, covering both theoretical concepts and practical applications.Machine learning is often used to build predictive models by extracting patterns from large datasets. These models are used in predictive data analytics applications including price prediction, risk assessment, predicting customer behavior, and document classification. This introductory textbook offers a detailed and focused treatment of the most important machine learning approaches used in predictive data analytics, covering both theoretical concepts and practical applications. Technical and mathematical material is augmented with explanatory worked examples, and case studies illustrate the application of these models in the broader business context.After discussing the trajectory from data to insight to decision, the book describes four approaches to machine learning: information-based learning, similarity-based learning, probability-based learning, and error-based learning. Each of these approaches is introduced by a nontechnical explanation of the underlying concept, followed by mathematical models and algorithms illustrated by detailed worked examples. Finally, the book considers techniques for evaluating prediction models and offers two case studies that describe specific data analytics projects through each phase of development, from formulating the business problem to implementation of the analytics solution. The book, informed by the authors' many years of teaching machine learning, and working on predictive data analytics projects, is suitable for use by undergraduates in computer science, engineering, mathematics, or statistics; by graduate students in disciplines with applications for predictive data analytics; and as a reference for professionals.},
-	language = {en},
-	publisher = {MIT Press},
-	author = {Kelleher, John D. and Namee, Brian Mac and D'Arcy, Aoife},
-	month = jul,
-	year = {2015},
-	note = {Google-Books-ID: uZxOCgAAQBAJ},
-	keywords = {Computers / Intelligence (AI) \& Semantics},
-	file = {Kelleher et al. - 2015 - Fundamentals of Machine Learning for Predictive Da.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/GYBLJ8NY/Kelleher et al. - 2015 - Fundamentals of Machine Learning for Predictive Da.pdf:application/pdf}
-}
-
-@article{mor-yosef_ranking_1990,
-	title = {Ranking the {Risk} {Factors} for {Cesarean}: {Logistic} {Regression} {Analysis} of a {Nationwide} {Study}},
-	volume = {75},
-	issn = {0029-7844},
-	shorttitle = {Ranking the {Risk} {Factors} for {Cesarean}},
-	url = {https://journals.lww.com/greenjournal/Abstract/1990/06000/Ranking_the_Risk_Factors_for_Cesarean__Logistic.11.aspx},
-	abstract = {The risk factors that influenced the decision to perform cesarean were ranked in a nationwide census of deliveries conducted in Israel. The study encompassed 22,815 women who gave birth between November 1, 1983 and January 31, 1984 in the 30 maternity departments in the country; 2179 deliveries were by emergency cesarean. Multivariate stepwise logistic regression technique indicated that the most important risk factors affecting the decision were the presentation of the fetus and the presence of a uterine scar, followed in descending order by placenta previa or abruptio placentae, maternal disease, primiparity, low birth weight, twins, and advanced maternal age. The mother's ethnic background and type of hospital played an insignificant role in the decision-making process. The specific statistical method applied in this work permits listing the indicators that constitute risk factors for cesarean and provides the net effect of each factor on the decision-making process.
-        
-        © 1990 The American College of Obstetricians and Gynecologists},
-	language = {en-US},
-	number = {6},
-	urldate = {2020-03-25},
-	journal = {Obstetrics \& Gynecology},
-	author = {Mor-Yosef, Shlomo and Samueloff, Arnon and Modan, Baruch and Navot, Daniel and Schenker, Joseph G.},
-	month = jun,
-	year = {1990},
-	pages = {944--947},
-	file = {Mor-Yosef et al. - 1990 - Ranking the Risk Factors for Cesarean Logistic Re.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/GPIRS88L/Mor-Yosef et al. - 1990 - Ranking the Risk Factors for Cesarean Logistic Re.pdf:application/pdf;Snapshot:/home/samuelob/snap/zotero-snap/common/Zotero/storage/JJJGINHG/Ranking_the_Risk_Factors_for_Cesarean__Logistic.11.html:text/html}
-}
-
-@book{goodfellow_deep_2016,
-	title = {Deep {Learning}},
-	isbn = {978-0-262-33737-3},
-	abstract = {An introduction to a broad range of topics in deep learning, covering mathematical and conceptual background, deep learning techniques used in industry, and research perspectives.“Written by three experts in the field, Deep Learning is the only comprehensive book on the subject.”—Elon Musk, cochair of OpenAI; cofounder and CEO of Tesla and SpaceXDeep learning is a form of machine learning that enables computers to learn from experience and understand the world in terms of a hierarchy of concepts. Because the computer gathers knowledge from experience, there is no need for a human computer operator to formally specify all the knowledge that the computer needs. The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones; a graph of these hierarchies would be many layers deep. This book introduces a broad range of topics in deep learning. The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and videogames. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models. Deep Learning can be used by undergraduate or graduate students planning careers in either industry or research, and by software engineers who want to begin using deep learning in their products or platforms. A website offers supplementary material for both readers and instructors.},
-	language = {en},
-	publisher = {MIT Press},
-	author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
-	month = nov,
-	year = {2016},
-	note = {Google-Books-ID: omivDQAAQBAJ},
-	keywords = {Computers / Intelligence (AI) \& Semantics, Computers / Computer Science},
-	annote = {{\textbackslash}url\{http://www.deeplearningbook.org\}},
-	file = {Goodfellow et al. - 2016 - Deep Learning.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/5GYJV758/Goodfellow et al. - 2016 - Deep Learning.pdf:application/pdf}
-}
-
-@article{he_deep_2015,
-	title = {Deep {Residual} {Learning} for {Image} {Recognition}},
-	url = {http://arxiv.org/abs/1512.03385},
-	abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers---8x deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \& COCO 2015 competitions, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.},
-	urldate = {2020-03-18},
-	journal = {arXiv:1512.03385 [cs]},
-	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
-	month = dec,
-	year = {2015},
-	note = {arXiv: 1512.03385},
-	keywords = {Computer Science - Computer Vision and Pattern Recognition},
-	annote = {Comment: Tech report},
-	file = {arXiv.org Snapshot:/home/samuelob/snap/zotero-snap/common/Zotero/storage/IYENDLBA/1512.html:text/html;arXiv Fulltext PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/BWXMYF3E/He et al. - 2015 - Deep Residual Learning for Image Recognition.pdf:application/pdf}
-}
-
-@inproceedings{krollner_financial_2010,
-	title = {Financial {Time} {Series} {Forecasting} with {Machine} {Learning} {Techniques}: {A} {Survey}},
-	shorttitle = {Financial {Time} {Series} {Forecasting} with {Machine} {Learning} {Techniques}},
-	abstract = {Stock index forecasting is vital for making informed investment decisions. This paper surveys recent literature in the domain of machine learning techniques and artificial intelligence used to forecast stock market movements. The publications are categorised according to the machine learning technique used, the forecasting timeframe, the input variables used, and the evaluation techniques employed. It is found that there is a consensus between researchers stressing the importance of stock index forecasting. Artificial Neural Networks (ANNs) are identified to be the dominant machine learning technique in this area. We conclude with possible future research directions.},
-	author = {Krollner, Bjoern and Vanstone, Bruce and Finnie, Gavin},
-	month = jan,
-	year = {2010},
-	file = {Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/YNTB6HGI/Krollner et al. - 2010 - Financial Time Series Forecasting with Machine Lea.pdf:application/pdf}
-}
-
-@article{deng_machine_2013,
-	title = {Machine {Learning} {Paradigms} for {Speech} {Recognition}: {An} {Overview}},
-	volume = {21},
-	issn = {1558-7924},
-	shorttitle = {Machine {Learning} {Paradigms} for {Speech} {Recognition}},
-	doi = {10.1109/TASL.2013.2244083},
-	abstract = {Automatic Speech Recognition (ASR) has historically been a driving force behind many machine learning (ML) techniques, including the ubiquitously used hidden Markov model, discriminative learning, structured sequence learning, Bayesian learning, and adaptive learning. Moreover, ML can and occasionally does use ASR as a large-scale, realistic application to rigorously test the effectiveness of a given technique, and to inspire new problems arising from the inherently sequential and dynamic nature of speech. On the other hand, even though ASR is available commercially for some applications, it is largely an unsolved problem - for almost all applications, the performance of ASR is not on par with human performance. New insight from modern ML methodology shows great promise to advance the state-of-the-art in ASR technology. This overview article provides readers with an overview of modern ML techniques as utilized in the current and as relevant to future ASR research and systems. The intent is to foster further cross-pollination between the ML and ASR communities than has occurred in the past. The article is organized according to the major ML paradigms that are either popular already or have potential for making significant contributions to ASR technology. The paradigms presented and elaborated in this overview include: generative and discriminative learning; supervised, unsupervised, semi-supervised, and active learning; adaptive and multi-task learning; and Bayesian learning. These learning paradigms are motivated and discussed in the context of ASR technology and applications. We finally present and analyze recent developments of deep learning and learning with sparse representations, focusing on their direct relevance to advancing ASR technology.},
-	number = {5},
-	journal = {IEEE Transactions on Audio, Speech, and Language Processing},
-	author = {Deng, Li and Li, Xiao},
-	month = may,
-	year = {2013},
-	note = {Conference Name: IEEE Transactions on Audio, Speech, and Language Processing},
-	keywords = {Training, Machine learning, Acoustics, active learning, adaptive, adaptive learning, ASR communities, ASR research, ASR systems, automatic speech recognition, Bayesian, Bayesian learning, Bayesian methods, cross-pollination, deep learning, discriminative, discriminative learning, dynamics, generative, generative learning, hidden Markov model, hidden Markov models, learning (artificial intelligence), machine learning paradigms, machine learning techniques, multitask learning, overview, semisupervised learning, Speech processing, speech recognition, Speech recognition, structured sequence learning, super vised, supervised learning, unsupervised, unsupervised learning},
-	pages = {1060--1089},
-	file = {Deng and Li - 2013 - Machine Learning Paradigms for Speech Recognition.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/LK9UR8LL/Deng and Li - 2013 - Machine Learning Paradigms for Speech Recognition.pdf:application/pdf;IEEE Xplore Abstract Record:/home/samuelob/snap/zotero-snap/common/Zotero/storage/QLNJHFFR/6423821.html:text/html}
-}
-
-@misc{rolls-royce_plc_airlines_2020,
-	title = {Airlines {CareServices}},
-	url = {https://www.rolls-royce.com/products-and-services/civil-aerospace/aftermarket-services/airlines.aspx},
-	abstract = {Airlines CareServices},
-	language = {en},
-	urldate = {2020-03-18},
-	author = {Rolls-Royce plc},
-	year = {2020},
-	note = {Library Catalog: www.rolls-royce.com},
-	file = {Snapshot:/home/samuelob/snap/zotero-snap/common/Zotero/storage/QFNB52U4/airlines.html:text/html}
+	file = {Royce - 2015 - The Jet Engine.pdf:/home/samuel/Zotero/storage/H54P6FH6/Royce - 2015 - The Jet Engine.pdf:application/pdf}
 }
 
 @misc{faa_guidance_2007,
@@ -488,8 +147,7 @@
 	urldate = {2020-03-18},
 	author = {FAA},
 	year = {2007},
-	note = {Library Catalog: link.library.in.gov},
-	file = {2007 - Guidance material for 14 CFR Section 33.75, safety.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/KEVJGZLU/2007 - Guidance material for 14 CFR Section 33.75, safety.pdf:application/pdf}
+	file = {2007 - Guidance material for 14 CFR Section 33.75, safety.pdf:/home/samuel/Zotero/storage/KEVJGZLU/2007 - Guidance material for 14 CFR Section 33.75, safety.pdf:application/pdf}
 }
 
 @misc{easa_certification_2015,
@@ -500,22 +158,19 @@
 	publisher = {European Union Aviation Safety Agency},
 	author = {EASA},
 	year = {2015},
-	note = {Library Catalog: www.easa.europa.eu},
-	file = {Certification Specifications for Engines (CS-E).pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/FB2NFX9A/Certification Specifications for Engines (CS-E).pdf:application/pdf}
+	file = {Certification Specifications for Engines (CS-E).pdf:/home/samuel/Zotero/storage/FB2NFX9A/Certification Specifications for Engines (CS-E).pdf:application/pdf}
 }
 
-@inproceedings{lee_diagnosis_2018,
-	title = {Diagnosis {Prediction} via {Medical} {Context} {Attention} {Networks} {Using} {Deep} {Generative} {Modeling}},
-	doi = {10.1109/ICDM.2018.00143},
-	abstract = {Predicting the clinical outcome of patients from the historical electronic health records (EHRs) is a fundamental research area in medical informatics. Although EHRs contain various records associated with each patient, the existing work mainly dealt with the diagnosis codes by employing recurrent neural networks (RNNs) with a simple attention mechanism. This type of sequence modeling often ignores the heterogeneity of EHRs. In other words, it only considers historical diagnoses and does not incorporate patient demographics, which correspond to clinically essential context, into the sequence modeling. To address the issue, we aim at investigating the use of an attention mechanism that is tailored to medical context to predict a future diagnosis. We propose a medical context attention (MCA)-based RNN that is composed of an attention-based RNN and a conditional deep generative model. The novel attention mechanism utilizes the derived individual patient information from conditional variational autoencoders (CVAEs). The CVAE models a conditional distribution of patient embeddings and his/her demographics to provide the measurement of patient's phenotypic difference due to illness. Experimental results showed the effectiveness of the proposed model.},
-	booktitle = {2018 {IEEE} {International} {Conference} on {Data} {Mining} ({ICDM})},
-	author = {Lee, Wonsung and Park, Sungrae and Joo, Weonyoung and Moon, Il-Chul},
-	month = nov,
-	year = {2018},
-	note = {ISSN: 1550-4786},
-	keywords = {Predictive models, recurrent neural nets, attention mechanism, Computer architecture, conditional deep generative model, conditional variational autoencoders, Context modeling, CVAE models, deep generative modeling, derived individual patient information, diagnosis codes, diagnosis prediction, EHRs, electronic health records, health care, healthcare informatics, historical diagnoses, historical electronic health records, medical context attention networks, medical context attention-based RNN, Medical diagnostic imaging, medical informatics, medical information systems, Medical services, patient care, patient demographics, patient diagnosis, recurrent neural networks, sequence modeling, Sequential diagnosis, sequential diagnosis prediction, variational autoencoders},
-	pages = {1104--1109},
-	file = {IEEE Xplore Abstract Record:/home/samuelob/snap/zotero-snap/common/Zotero/storage/QZPKMUW5/8594952.html:text/html}
+@misc{rolls-royce_plc_airlines_2020,
+	title = {Airlines {CareServices}},
+	url = {https://www.rolls-royce.com/products-and-services/civil-aerospace/aftermarket-services/airlines.aspx},
+	abstract = {Airlines CareServices},
+	language = {en},
+	urldate = {2020-03-18},
+	author = {{Rolls-Royce plc}},
+	year = {2020},
+	note = {Library Catalog: www.rolls-royce.com},
+	file = {Snapshot:/home/samuel/Zotero/storage/QFNB52U4/airlines.html:text/html}
 }
 
 @article{forestier_surgical_2018,
@@ -540,155 +195,504 @@ The proposed approach is an interesting addition to existing learning tools for 
 	year = {2018},
 	keywords = {Dynamic time warping, Surgery, Surgical process modelling, Temporal analysis},
 	pages = {3--11},
-	file = {Submitted Version:/home/samuelob/snap/zotero-snap/common/Zotero/storage/FZ5XMCQH/Forestier et al. - 2018 - Surgical motion analysis using discriminative inte.pdf:application/pdf;ScienceDirect Snapshot:/home/samuelob/snap/zotero-snap/common/Zotero/storage/9H4ZL7X3/S0933365717306681.html:text/html}
+	file = {ScienceDirect Snapshot:/home/samuel/Zotero/storage/9H4ZL7X3/S0933365717306681.html:text/html;Submitted Version:/home/samuel/Zotero/storage/FZ5XMCQH/Forestier et al. - 2018 - Surgical motion analysis using discriminative inte.pdf:application/pdf}
 }
 
-@article{silva_speeding_2018,
-	title = {Speeding up similarity search under dynamic time warping by pruning unpromising alignments},
-	volume = {32},
-	issn = {1573-756X},
-	url = {https://doi.org/10.1007/s10618-018-0557-y},
-	doi = {10.1007/s10618-018-0557-y},
-	abstract = {Similarity search is the core procedure for several time series mining tasks. While different distance measures can be used for this purpose, there is clear evidence that the Dynamic Time Warping (DTW) is the most suitable distance function for a wide range of application domains. Despite its quadratic complexity, research efforts have proposed a significant number of pruning methods to speed up the similarity search under DTW. However, the search may still take a considerable amount of time depending on the parameters of the search, such as the length of the query and the warping window width. The main reason is that the current techniques for speeding up the similarity search focus on avoiding the costly distance calculation between as many pairs of time series as possible. Nevertheless, the few pairs of subsequences that were not discarded by the pruning techniques can represent a significant part of the entire search time. In this work, we adapt a recently proposed algorithm to improve the internal efficiency of the DTW calculation. Our method can speed up the UCR suite, considered the current fastest tool for similarity search under DTW. More important, the longer the time needed for the search, the higher the speedup ratio achieved by our method. We demonstrate that our method performs similarly to UCR suite for small queries and narrow warping constraints. However, it performs up to five times faster for long queries and large warping windows.},
-	language = {en},
-	number = {4},
-	urldate = {2020-03-18},
-	journal = {Data Mining and Knowledge Discovery},
-	author = {Silva, Diego F. and Giusti, Rafael and Keogh, Eamonn and Batista, Gustavo E. A. P. A.},
-	month = jul,
+@inproceedings{lee_diagnosis_2018,
+	title = {Diagnosis {Prediction} via {Medical} {Context} {Attention} {Networks} {Using} {Deep} {Generative} {Modeling}},
+	doi = {10.1109/ICDM.2018.00143},
+	abstract = {Predicting the clinical outcome of patients from the historical electronic health records (EHRs) is a fundamental research area in medical informatics. Although EHRs contain various records associated with each patient, the existing work mainly dealt with the diagnosis codes by employing recurrent neural networks (RNNs) with a simple attention mechanism. This type of sequence modeling often ignores the heterogeneity of EHRs. In other words, it only considers historical diagnoses and does not incorporate patient demographics, which correspond to clinically essential context, into the sequence modeling. To address the issue, we aim at investigating the use of an attention mechanism that is tailored to medical context to predict a future diagnosis. We propose a medical context attention (MCA)-based RNN that is composed of an attention-based RNN and a conditional deep generative model. The novel attention mechanism utilizes the derived individual patient information from conditional variational autoencoders (CVAEs). The CVAE models a conditional distribution of patient embeddings and his/her demographics to provide the measurement of patient's phenotypic difference due to illness. Experimental results showed the effectiveness of the proposed model.},
+	booktitle = {2018 {IEEE} {International} {Conference} on {Data} {Mining} ({ICDM})},
+	author = {Lee, Wonsung and Park, Sungrae and Joo, Weonyoung and Moon, Il-Chul},
+	month = nov,
 	year = {2018},
-	pages = {988--1016},
-	file = {Springer Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/NTL5QX2E/Silva et al. - 2018 - Speeding up similarity search under dynamic time w.pdf:application/pdf}
+	note = {ISSN: 1550-4786},
+	keywords = {attention mechanism, Computer architecture, conditional deep generative model, conditional variational autoencoders, Context modeling, CVAE models, deep generative modeling, derived individual patient information, diagnosis codes, diagnosis prediction, EHRs, electronic health records, health care, healthcare informatics, historical diagnoses, historical electronic health records, medical context attention networks, medical context attention-based RNN, Medical diagnostic imaging, medical informatics, medical information systems, Medical services, patient care, patient demographics, patient diagnosis, Predictive models, recurrent neural nets, recurrent neural networks, sequence modeling, Sequential diagnosis, sequential diagnosis prediction, variational autoencoders},
+	pages = {1104--1109},
+	file = {IEEE Xplore Abstract Record:/home/samuel/Zotero/storage/QZPKMUW5/8594952.html:text/html}
 }
 
-@article{corran_lifing_2007,
-	series = {{UK} {Technical} {Advisory} {Group} for {Structural} {Integrity} ({TAGSI}){Design} margins and safety factors relating to structural integrity},
-	title = {Lifing methods and safety criteria in aero gas turbines},
-	volume = {14},
-	issn = {1350-6307},
-	url = {http://www.sciencedirect.com/science/article/pii/S1350630706001014},
-	doi = {10.1016/j.engfailanal.2005.08.010},
-	abstract = {Modern gas turbines engines concentrate high power into a relatively small machine, e.g. more than 50MW in each engine suspended from the aircraft wing in a large civil transport application. The rotational speed of the shafts reaches as high as 13,000rpm in large engines and even higher in smaller engines as used in helicopters. Hence there is both a concentration of thermal energy in the combustion process and kinetic energy in the rotating parts that presents issues for structural integrity. This paper describes the regulatory requirements that must be achieved to allow operation of engines in civil applications and at how these requirements are satisfied in practice. It concentrates on those parts whose failure can directly threaten the integrity of the airframe through the generation of hazardous effects. The main issues are associated with fatigue through cyclic operation of the engine and the ability of the engine to survive abnormal conditions in such a way that the aircraft can safely land and be brought to rest.},
+@article{deng_machine_2013,
+	title = {Machine {Learning} {Paradigms} for {Speech} {Recognition}: {An} {Overview}},
+	volume = {21},
+	issn = {1558-7924},
+	shorttitle = {Machine {Learning} {Paradigms} for {Speech} {Recognition}},
+	doi = {10.1109/TASL.2013.2244083},
+	abstract = {Automatic Speech Recognition (ASR) has historically been a driving force behind many machine learning (ML) techniques, including the ubiquitously used hidden Markov model, discriminative learning, structured sequence learning, Bayesian learning, and adaptive learning. Moreover, ML can and occasionally does use ASR as a large-scale, realistic application to rigorously test the effectiveness of a given technique, and to inspire new problems arising from the inherently sequential and dynamic nature of speech. On the other hand, even though ASR is available commercially for some applications, it is largely an unsolved problem - for almost all applications, the performance of ASR is not on par with human performance. New insight from modern ML methodology shows great promise to advance the state-of-the-art in ASR technology. This overview article provides readers with an overview of modern ML techniques as utilized in the current and as relevant to future ASR research and systems. The intent is to foster further cross-pollination between the ML and ASR communities than has occurred in the past. The article is organized according to the major ML paradigms that are either popular already or have potential for making significant contributions to ASR technology. The paradigms presented and elaborated in this overview include: generative and discriminative learning; supervised, unsupervised, semi-supervised, and active learning; adaptive and multi-task learning; and Bayesian learning. These learning paradigms are motivated and discussed in the context of ASR technology and applications. We finally present and analyze recent developments of deep learning and learning with sparse representations, focusing on their direct relevance to advancing ASR technology.},
+	number = {5},
+	journal = {IEEE Transactions on Audio, Speech, and Language Processing},
+	author = {Deng, Li and Li, Xiao},
+	month = may,
+	year = {2013},
+	note = {Conference Name: IEEE Transactions on Audio, Speech, and Language Processing},
+	keywords = {Acoustics, active learning, adaptive, adaptive learning, ASR communities, ASR research, ASR systems, automatic speech recognition, Bayesian, Bayesian learning, Bayesian methods, cross-pollination, deep learning, discriminative, discriminative learning, dynamics, generative, generative learning, hidden Markov model, hidden Markov models, learning (artificial intelligence), Machine learning, machine learning paradigms, machine learning techniques, multitask learning, overview, semisupervised learning, Speech processing, speech recognition, Speech recognition, structured sequence learning, super vised, supervised learning, Training, unsupervised, unsupervised learning},
+	pages = {1060--1089},
+	file = {IEEE Xplore Abstract Record:/home/samuel/Zotero/storage/QLNJHFFR/6423821.html:text/html;Deng and Li - 2013 - Machine Learning Paradigms for Speech Recognition.pdf:/home/samuel/Zotero/storage/LK9UR8LL/Deng and Li - 2013 - Machine Learning Paradigms for Speech Recognition.pdf:application/pdf}
+}
+
+@inproceedings{krollner_financial_2010,
+	title = {Financial {Time} {Series} {Forecasting} with {Machine} {Learning} {Techniques}: {A} {Survey}},
+	shorttitle = {Financial {Time} {Series} {Forecasting} with {Machine} {Learning} {Techniques}},
+	abstract = {Stock index forecasting is vital for making informed investment decisions. This paper surveys recent literature in the domain of machine learning techniques and artificial intelligence used to forecast stock market movements. The publications are categorised according to the machine learning technique used, the forecasting timeframe, the input variables used, and the evaluation techniques employed. It is found that there is a consensus between researchers stressing the importance of stock index forecasting. Artificial Neural Networks (ANNs) are identified to be the dominant machine learning technique in this area. We conclude with possible future research directions.},
+	author = {Krollner, Bjoern and Vanstone, Bruce and Finnie, Gavin},
+	month = jan,
+	year = {2010},
+	file = {Full Text PDF:/home/samuel/Zotero/storage/YNTB6HGI/Krollner et al. - 2010 - Financial Time Series Forecasting with Machine Lea.pdf:application/pdf}
+}
+
+@article{he_deep_2015,
+	title = {Deep {Residual} {Learning} for {Image} {Recognition}},
+	url = {http://arxiv.org/abs/1512.03385},
+	abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers---8x deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \& COCO 2015 competitions, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.},
+	urldate = {2020-03-18},
+	journal = {arXiv:1512.03385 [cs]},
+	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	month = dec,
+	year = {2015},
+	note = {arXiv: 1512.03385},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition},
+	annote = {Comment: Tech report},
+	file = {arXiv Fulltext PDF:/home/samuel/Zotero/storage/BWXMYF3E/He et al. - 2015 - Deep Residual Learning for Image Recognition.pdf:application/pdf;arXiv.org Snapshot:/home/samuel/Zotero/storage/IYENDLBA/1512.html:text/html}
+}
+
+@book{goodfellow_deep_2016,
+	title = {Deep {Learning}},
+	isbn = {978-0-262-33737-3},
+	abstract = {An introduction to a broad range of topics in deep learning, covering mathematical and conceptual background, deep learning techniques used in industry, and research perspectives.“Written by three experts in the field, Deep Learning is the only comprehensive book on the subject.”—Elon Musk, cochair of OpenAI; cofounder and CEO of Tesla and SpaceXDeep learning is a form of machine learning that enables computers to learn from experience and understand the world in terms of a hierarchy of concepts. Because the computer gathers knowledge from experience, there is no need for a human computer operator to formally specify all the knowledge that the computer needs. The hierarchy of concepts allows the computer to learn complicated concepts by building them out of simpler ones; a graph of these hierarchies would be many layers deep. This book introduces a broad range of topics in deep learning. The text offers mathematical and conceptual background, covering relevant concepts in linear algebra, probability theory and information theory, numerical computation, and machine learning. It describes deep learning techniques used by practitioners in industry, including deep feedforward networks, regularization, optimization algorithms, convolutional networks, sequence modeling, and practical methodology; and it surveys such applications as natural language processing, speech recognition, computer vision, online recommendation systems, bioinformatics, and videogames. Finally, the book offers research perspectives, covering such theoretical topics as linear factor models, autoencoders, representation learning, structured probabilistic models, Monte Carlo methods, the partition function, approximate inference, and deep generative models. Deep Learning can be used by undergraduate or graduate students planning careers in either industry or research, and by software engineers who want to begin using deep learning in their products or platforms. A website offers supplementary material for both readers and instructors.},
+	language = {en},
+	publisher = {MIT Press},
+	author = {Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+	month = nov,
+	year = {2016},
+	note = {Google-Books-ID: omivDQAAQBAJ},
+	keywords = {Computers / Computer Science, Computers / Intelligence (AI) \& Semantics},
+	annote = {{\textbackslash}url\{http://www.deeplearningbook.org\}},
+	file = {Goodfellow et al. - 2016 - Deep Learning.pdf:/home/samuel/Zotero/storage/5GYJV758/Goodfellow et al. - 2016 - Deep Learning.pdf:application/pdf}
+}
+
+@article{mor-yosef_ranking_1990,
+	title = {Ranking the {Risk} {Factors} for {Cesarean}: {Logistic} {Regression} {Analysis} of a {Nationwide} {Study}},
+	volume = {75},
+	issn = {0029-7844},
+	shorttitle = {Ranking the {Risk} {Factors} for {Cesarean}},
+	url = {https://journals.lww.com/greenjournal/Abstract/1990/06000/Ranking_the_Risk_Factors_for_Cesarean__Logistic.11.aspx},
+	abstract = {The risk factors that influenced the decision to perform cesarean were ranked in a nationwide census of deliveries conducted in Israel. The study encompassed 22,815 women who gave birth between November 1, 1983 and January 31, 1984 in the 30 maternity departments in the country; 2179 deliveries were by emergency cesarean. Multivariate stepwise logistic regression technique indicated that the most important risk factors affecting the decision were the presentation of the fetus and the presence of a uterine scar, followed in descending order by placenta previa or abruptio placentae, maternal disease, primiparity, low birth weight, twins, and advanced maternal age. The mother's ethnic background and type of hospital played an insignificant role in the decision-making process. The specific statistical method applied in this work permits listing the indicators that constitute risk factors for cesarean and provides the net effect of each factor on the decision-making process.
+
+        © 1990 The American College of Obstetricians and Gynecologists},
+	language = {en-US},
+	number = {6},
+	urldate = {2020-03-25},
+	journal = {Obstetrics \& Gynecology},
+	author = {Mor-Yosef, Shlomo and Samueloff, Arnon and Modan, Baruch and Navot, Daniel and Schenker, Joseph G.},
+	month = jun,
+	year = {1990},
+	pages = {944--947},
+	file = {Snapshot:/home/samuel/Zotero/storage/JJJGINHG/Ranking_the_Risk_Factors_for_Cesarean__Logistic.11.html:text/html;Mor-Yosef et al. - 1990 - Ranking the Risk Factors for Cesarean Logistic Re.pdf:/home/samuel/Zotero/storage/GPIRS88L/Mor-Yosef et al. - 1990 - Ranking the Risk Factors for Cesarean Logistic Re.pdf:application/pdf}
+}
+
+@book{kelleher_fundamentals_2015,
+	title = {Fundamentals of {Machine} {Learning} for {Predictive} {Data} {Analytics}: {Algorithms}, {Worked} {Examples}, and {Case} {Studies}},
+	isbn = {978-0-262-02944-5},
+	shorttitle = {Fundamentals of {Machine} {Learning} for {Predictive} {Data} {Analytics}},
+	abstract = {A comprehensive introduction to the most important machine learning approaches used in predictive data analytics, covering both theoretical concepts and practical applications.Machine learning is often used to build predictive models by extracting patterns from large datasets. These models are used in predictive data analytics applications including price prediction, risk assessment, predicting customer behavior, and document classification. This introductory textbook offers a detailed and focused treatment of the most important machine learning approaches used in predictive data analytics, covering both theoretical concepts and practical applications. Technical and mathematical material is augmented with explanatory worked examples, and case studies illustrate the application of these models in the broader business context.After discussing the trajectory from data to insight to decision, the book describes four approaches to machine learning: information-based learning, similarity-based learning, probability-based learning, and error-based learning. Each of these approaches is introduced by a nontechnical explanation of the underlying concept, followed by mathematical models and algorithms illustrated by detailed worked examples. Finally, the book considers techniques for evaluating prediction models and offers two case studies that describe specific data analytics projects through each phase of development, from formulating the business problem to implementation of the analytics solution. The book, informed by the authors' many years of teaching machine learning, and working on predictive data analytics projects, is suitable for use by undergraduates in computer science, engineering, mathematics, or statistics; by graduate students in disciplines with applications for predictive data analytics; and as a reference for professionals.},
+	language = {en},
+	publisher = {MIT Press},
+	author = {Kelleher, John D. and Namee, Brian Mac and D'Arcy, Aoife},
+	month = jul,
+	year = {2015},
+	note = {Google-Books-ID: uZxOCgAAQBAJ},
+	keywords = {Computers / Intelligence (AI) \& Semantics},
+	file = {Kelleher et al. - 2015 - Fundamentals of Machine Learning for Predictive Da.pdf:/home/samuel/Zotero/storage/GYBLJ8NY/Kelleher et al. - 2015 - Fundamentals of Machine Learning for Predictive Da.pdf:application/pdf}
+}
+
+@book{harrington_machine_2012,
+	address = {Shelter Island, N.Y},
+	title = {Machine learning in action},
+	isbn = {978-1-61729-018-3},
+	language = {en},
+	publisher = {Manning Publications Co},
+	author = {Harrington, Peter},
+	year = {2012},
+	note = {OCLC: ocn746834657},
+	keywords = {Machine learning, Handbooks, manuals, etc},
+	file = {Harrington - 2012 - Machine learning in action.pdf:/home/samuel/Zotero/storage/XVLBQ6UI/Harrington - 2012 - Machine learning in action.pdf:application/pdf}
+}
+
+@article{yang_10_2006,
+	title = {10 {CHALLENGING} {PROBLEMS} {IN} {DATA} {MINING} {RESEARCH}},
+	volume = {05},
+	issn = {0219-6220, 1793-6845},
+	url = {https://www.worldscientific.com/doi/abs/10.1142/S0219622006002258},
+	doi = {10.1142/S0219622006002258},
+	abstract = {In October 2005, we took an initiative to identify 10 challenging problems in data mining research, by consulting some of the most active researchers in data mining and machine learning for their opinions on what are considered important and worthy topics for future research in data mining. We hope their insights will inspire new research efforts, and give young researchers (including PhD students) a high-level guideline as to where the hot problems are located in data mining.
+            Due to the limited amount of time, we were only able to send out our survey requests to the organizers of the IEEE ICDM and ACM KDD conferences, and we received an overwhelming response. We are very grateful for the contributions provided by these researchers despite their busy schedules. This short article serves to summarize the 10 most challenging problems of the 14 responses we have received from this survey. The order of the listing does not reflect their level of importance.},
+	language = {en},
+	number = {04},
+	urldate = {2020-03-26},
+	journal = {International Journal of Information Technology \& Decision Making},
+	author = {Yang, Qiang and Wu, Xindong},
+	month = dec,
+	year = {2006},
+	pages = {597--604},
+	file = {Yang and Wu - 2006 - 10 CHALLENGING PROBLEMS IN DATA MINING RESEARCH.pdf:/home/samuel/Zotero/storage/FG9FSK5Q/Yang and Wu - 2006 - 10 CHALLENGING PROBLEMS IN DATA MINING RESEARCH.pdf:application/pdf}
+}
+
+@article{bagnall_great_2017,
+	title = {The great time series classification bake off: a review and experimental evaluation of recent algorithmic advances},
+	volume = {31},
+	issn = {1384-5810, 1573-756X},
+	shorttitle = {The great time series classification bake off},
+	url = {http://link.springer.com/10.1007/s10618-016-0483-9},
+	doi = {10.1007/s10618-016-0483-9},
+	abstract = {In the last 5 years there have been a large number of new time series classiﬁcation algorithms proposed in the literature. These algorithms have been evaluated on subsets of the 47 data sets in the University of California, Riverside time series classiﬁcation archive. The archive has recently been expanded to 85 data sets, over half of which have been donated by researchers at the University of East Anglia. Aspects of previous evaluations have made comparisons between algorithms difﬁcult. For example, several different programming languages have been used, experiments involved a single train/test split and some used normalised data whilst others did not. The relaunch of the archive provides a timely opportunity to thoroughly evaluate algorithms on a larger number of datasets. We have implemented 18 recently proposed algorithms in a common Java framework and compared them against two standard benchmark classiﬁers (and each other) by performing 100 resampling experiments on each of the 85 datasets. We use these results to test several hypotheses relating to whether the algorithms are signiﬁcantly more accurate than the benchmarks and each other. Our results indicate that only nine of these algorithms are signiﬁcantly more accurate than both benchmarks and that one classiﬁer, the collective of transformation ensembles, is signiﬁcantly more accurate than all of the others. All of our experiments and results are reproducible: we release all of our code, results and experimental details and we hope these experiments form the basis for more robust testing of new algorithms in the future.},
 	language = {en},
 	number = {3},
-	urldate = {2020-03-18},
-	journal = {Engineering Failure Analysis},
-	author = {Corran, R. S. J. and Williams, S. J.},
-	month = apr,
-	year = {2007},
-	keywords = {Aero engines, Critical Parts, New lifing correlation, Safe life},
-	pages = {518--528},
-	file = {Corran and Williams - 2007 - Lifing methods and safety criteria in aero gas tur.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/XLEJE7HK/Corran and Williams - 2007 - Lifing methods and safety criteria in aero gas tur.pdf:application/pdf}
+	urldate = {2020-03-26},
+	journal = {Data Mining and Knowledge Discovery},
+	author = {Bagnall, Anthony and Lines, Jason and Bostrom, Aaron and Large, James and Keogh, Eamonn},
+	month = may,
+	year = {2017},
+	pages = {606--660},
+	file = {Bagnall et al. - 2017 - The great time series classification bake off a r.pdf:/home/samuel/Zotero/storage/D2TWPSKJ/Bagnall et al. - 2017 - The great time series classification bake off a r.pdf:application/pdf}
 }
 
-@article{rajaraman_big_2016,
-	title = {Big data analytics},
-	volume = {21},
-	issn = {0973-712X},
-	url = {https://doi.org/10.1007/s12045-016-0376-7},
-	doi = {10.1007/s12045-016-0376-7},
-	abstract = {The volume and variety of data being generated using computers is doubling every two years. It is estimated that in 2015, 8 Zettabytes (Zetta=1021) were generated which consisted mostly of unstructured data such as emails, blogs, Twitter, Facebook posts, images, and videos. This is called big data. It is possible to analyse such huge data collections with clusters of thousands of inexpensive computers to discover patterns in the data that have many applications. But analysing massive amounts of data available in the Internet has the potential of impinging on our privacy. Inappropriate analysis of big data can lead to misleading conclusions. In this article, we explain what is big data, how it is analysed, and give some case studies illustrating the potentials and pitfalls of big data analytics.},
+@article{dau_ucr_2019,
+	title = {The {UCR} time series archive},
+	volume = {6},
+	issn = {2329-9274},
+	doi = {10.1109/JAS.2019.1911747},
+	abstract = {The UCR time series archive - introduced in 2002, has become an important resource in the time series data mining community, with at least one thousand published papers making use of at least one data set from the archive. The original incarnation of the archive had sixteen data sets but since that time, it has gone through periodic expansions. The last expansion took place in the summer of 2015 when the archive grew from 45 to 85 data sets. This paper introduces and will focus on the new data expansion from 85 to 128 data sets. Beyond expanding this valuable resource, this paper offers pragmatic advice to anyone who may wish to evaluate a new algorithm on the archive. Finally, this paper makes a novel and yet actionable claim: of the hundreds of papers that show an improvement over the standard baseline (1nearest neighbor classification), a fraction might be mis-attributing the reasons for their improvement. Moreover, the improvements claimed by these papers might have been achievable with a much simpler modification, requiring just a few lines of code.},
+	number = {6},
+	journal = {IEEE/CAA Journal of Automatica Sinica},
+	author = {Dau, Hoang Anh and Bagnall, Anthony and Kamgar, Kaveh and Yeh, Chin-Chia Michael and Zhu, Yan and Gharghabi, Shaghayegh and Ratanamahatana, Chotirat Ann and Keogh, Eamonn},
+	month = nov,
+	year = {2019},
+	note = {Conference Name: IEEE/CAA Journal of Automatica Sinica},
+	keywords = {Training, Cameras, data expansion, data mining, Data mining, data sets, Error analysis, Euclidean distance, Microsoft Windows, pattern classification, time series, Time series analysis, time series data mining community, UCR time series archive},
+	pages = {1293--1305},
+	file = {IEEE Xplore Abstract Record:/home/samuel/Zotero/storage/6DVXB7BE/authors.html:text/html}
+}
+
+@article{lines_time_nodate,
+	title = {Time {Series} {Classification} with {HIVE}-{COTE}: {The} {Hierarchical} {Vote} {Collective} of {Transformation}-based {Ensembles}},
 	language = {en},
-	number = {8},
-	urldate = {2020-03-18},
-	journal = {Resonance},
-	author = {Rajaraman, V.},
-	month = aug,
-	year = {2016},
-	pages = {695--716},
-	file = {Springer Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/MRCPNZB6/Rajaraman - 2016 - Big data analytics.pdf:application/pdf}
+	author = {Lines, Jason and Taylor, Sarah and Bagnall, Anthony},
+	pages = {35},
+	file = {Lines et al. - Time Series Classification with HIVE-COTE The Hie.pdf:/home/samuel/Zotero/storage/BMXMAH79/Lines et al. - Time Series Classification with HIVE-COTE The Hie.pdf:application/pdf}
 }
 
-@article{spittle_gas_2003,
-	title = {Gas turbine technology},
-	volume = {38},
-	issn = {0031-9120, 1361-6552},
-	url = {http://stacks.iop.org/0031-9120/38/i=6/a=002?key=crossref.5d4ad51e02e416f47faed1970f94d375},
-	doi = {10.1088/0031-9120/38/6/002},
-	abstract = {Gas turbine engines power most commercial ﬂights operating today. Yet many people are ignorant of the cutting-edge technologies used in the creation and operation of these engines. This article explains some of the principles involved with emphasis on the selection of materials for fan blades and turbine blades, which have to operate reliably in exceedingly hostile environments.},
+@misc{konig_br725stats_2018,
+	title = {{BR725Stats}},
+	publisher = {Rolls-Royce Deutschland Ltd \& Co KG},
+	author = {König, Jonas},
+	month = dec,
+	year = {2018}
+}
+
+@misc{reischl_br700-725a1-12_2014,
+	title = {{BR700}-{725A1}-12 {G650} {EHM} {SSRD} {EIS} {Engine} {Health} {Monitoring} ({EHM}) and {Engine} {E}-{TR0109} 09-{ISS10}},
+	shorttitle = {Technical {Report} {No}. {E}-{TR0109} 09-{ISS10}},
+	language = {English},
+	publisher = {Rolls-Royce Deutschland Ltd \& Co KG},
+	author = {Reischl, B and Müller, V.-D.},
+	month = oct,
+	year = {2014},
+	file = {Reischl and Müller - 2014 - BR700-725A1-12 G650 EHM SSRD EIS Engine Health Mon.pdf:/home/samuel/Zotero/storage/UFDGJGNE/Reischl and Müller - 2014 - BR700-725A1-12 G650 EHM SSRD EIS Engine Health Mon.pdf:application/pdf}
+}
+
+@book{schobeiri_gas_2018,
+	title = {Gas {Turbine} {Design}, {Components} and {System} {Design} {Integration}},
+	isbn = {978-3-319-86392-4},
+	url = {https://www.springer.com/gp/book/9783319863924},
+	abstract = {This book written by a world-renowned expert with more than forty years of active gas turbine R\&D experience comprehensively treats the design of gas turbine components and their integration into a complete system. Unlike many currently available gas turbine handbooks that provide the reader with an overview without in-depth treatment of the subject, the current book is concentrated on a detailed aero-thermodynamics, design and off-deign performance aspects of individual components as well as the system integration and its dynamic operation.This new book provides practicing gas turbine designers and young engineers working in the industry with design material that the manufacturers would keep proprietary. The book is also intended to provide instructors of turbomachinery courses around the world with a powerful tool to assign gas turbine components as project and individual modules that are integrated into a complete system. Quoting many statements by the gas turbine industry professionals, the young engineers graduated from the turbomachinery courses offered by the author, had the competency of engineers equivalent to three to four years of industrial experience.},
+	language = {en},
+	urldate = {2020-04-06},
+	publisher = {Springer International Publishing},
+	author = {Schobeiri, Meinhard T.},
+	year = {2018},
+	doi = {10.1007/978-3-319-58378-5},
+	file = {Snapshot:/home/samuel/Zotero/storage/R98C358I/9783319863924.html:text/html}
+}
+
+@article{diebold_origins_2012,
+	title = {On the {Origin}(s) and {Development} of the {Term} '{Big} {Data}'},
+	issn = {1556-5068},
+	url = {http://www.ssrn.com/abstract=2152421},
+	doi = {10.2139/ssrn.2152421},
+	abstract = {I investigate the origins of the now-ubiquitous term “Big Data,” in industry and academics, in computer science and statistics/econometrics. Credit for coining the term must be shared. In particular, John Mashey and others at Silicon Graphics produced highlyrelevant (unpublished, non-academic) work in the mid-1990s. The ﬁrst signiﬁcant academic references (independent of each other and of Silicon Graphics) appear to be Weiss and Indurkhya (1998) in computer science and Diebold (2000) in statistics/econometrics. Douglas Laney of Gartner also produced insightful work (again unpublished and non-academic) slightly later. Big Data the term is now ﬁrmly entrenched, Big Data the phenomenon continues unabated, and Big Data the discipline is emerging.},
+	language = {en},
+	urldate = {2020-04-16},
+	journal = {SSRN Electronic Journal},
+	author = {Diebold, Francis X.},
+	year = {2012},
+	file = {Diebold - 2012 - On the Origin(s) and Development of the Term 'Big .pdf:/home/samuel/Zotero/storage/LKDRG7VS/Diebold - 2012 - On the Origin(s) and Development of the Term 'Big .pdf:application/pdf}
+}
+
+@article{laney_3d_2001,
+	title = {{3D} data management: {Controlling} data volume, velocity and variety},
+	volume = {6},
+	shorttitle = {{3D} data management},
+	number = {70},
+	journal = {META group research note},
+	author = {Laney, Doug},
+	year = {2001},
+	pages = {1},
+	file = {Laney - 2001 - 3D data management Controlling data volume, veloc.pdf:/home/samuel/Zotero/storage/BFI9KRUB/Laney - 2001 - 3D data management Controlling data volume, veloc.pdf:application/pdf}
+}
+
+@article{hilbert_worlds_2011,
+	title = {The {World}'s {Technological} {Capacity} to {Store}, {Communicate}, and {Compute} {Information}},
+	volume = {332},
+	issn = {0036-8075, 1095-9203},
+	url = {https://www.sciencemag.org/lookup/doi/10.1126/science.1200970},
+	doi = {10.1126/science.1200970},
+	language = {en},
+	number = {6025},
+	urldate = {2020-04-16},
+	journal = {Science},
+	author = {Hilbert, M. and Lopez, P.},
+	month = apr,
+	year = {2011},
+	pages = {60--65},
+	file = {Hilbert and Lopez - 2011 - The World's Technological Capacity to Store, Commu.pdf:/home/samuel/Zotero/storage/PVT4FU5K/Hilbert and Lopez - 2011 - The World's Technological Capacity to Store, Commu.pdf:application/pdf}
+}
+
+@article{chen_big_2014,
+	title = {Big {Data}: {A} {Survey}},
+	volume = {19},
+	issn = {1383-469X, 1572-8153},
+	shorttitle = {Big {Data}},
+	url = {http://link.springer.com/10.1007/s11036-013-0489-0},
+	doi = {10.1007/s11036-013-0489-0},
+	abstract = {In this paper, we review the background and state-of-the-art of big data. We first introduce the general background of big data and review related technologies, such as could computing, Internet of Things, data centers, and Hadoop. We then focus on the four phases of the value chain of big data, i.e., data generation, data acquisition, data storage, and data analysis. For each phase, we introduce the general background, discuss the technical challenges, and review the latest advances. We finally examine the several representative applications of big data, including enterprise management, Internet of Things, online social networks, medial applications, collective intelligence, and smart grid. These discussions aim to provide a comprehensive overview and big-picture to readers of this exciting area. This survey is concluded with a discussion of open problems and future directions.},
+	language = {en},
+	number = {2},
+	urldate = {2020-04-16},
+	journal = {Mobile Networks and Applications},
+	author = {Chen, Min and Mao, Shiwen and Liu, Yunhao},
+	month = apr,
+	year = {2014},
+	pages = {171--209},
+	file = {Chen et al. - 2014 - Big Data A Survey.pdf:/home/samuel/Zotero/storage/UY7RZDM6/Chen et al. - 2014 - Big Data A Survey.pdf:application/pdf}
+}
+
+@article{fan_mining_2013,
+	title = {Mining big data: current status, and forecast to the future},
+	volume = {14},
+	issn = {1931-0145, 1931-0153},
+	shorttitle = {Mining big data},
+	url = {https://dl.acm.org/doi/10.1145/2481244.2481246},
+	doi = {10.1145/2481244.2481246},
+	abstract = {Big Data is a new term used to identify the datasets that due to their large size and complexity, we can not manage them with our current methodologies or data mining software tools. Big Data mining is the capability of extracting useful information from these large datasets or streams of data, that due to its volume, variability, and velocity, it was not possible before to do it. The Big Data challenge is becoming one of the most exciting opportunities for the next years. We present in this issue, a broad overview of the topic, its current status, controversy, and forecast to the future. We introduce four articles, written by inﬂuential scientists in the ﬁeld, covering the most interesting and state-of-the-art topics on Big Data mining.},
+	language = {en},
+	number = {2},
+	urldate = {2020-04-17},
+	journal = {ACM SIGKDD Explorations Newsletter},
+	author = {Fan, Wei and Bifet, Albert},
+	month = apr,
+	year = {2013},
+	pages = {1--5},
+	file = {Fan and Bifet - 2013 - Mining big data current status, and forecast to t.pdf:/home/samuel/Zotero/storage/5LI622CT/Fan and Bifet - 2013 - Mining big data current status, and forecast to t.pdf:application/pdf}
+}
+
+@book{kirk_thoughtful_2017,
+	title = {Thoughtful {Machine} {Learning} with {Python}: {A} {Test}-{Driven} {Approach}},
+	isbn = {978-1-4919-2410-5},
+	shorttitle = {Thoughtful {Machine} {Learning} with {Python}},
+	abstract = {Gain the confidence you need to apply machine learning in your daily work. With this practical guide, author Matthew Kirk shows you how to integrate and test machine learning algorithms in your code, without the academic subtext.Featuring graphs and highlighted code examples throughout, the book features tests with Python’s Numpy, Pandas, Scikit-Learn, and SciPy data science libraries. If you’re a software engineer or business analyst interested in data science, this book will help you:Reference real-world examples to test each algorithm through engaging, hands-on exercisesApply test-driven development (TDD) to write and run tests before you start codingExplore techniques for improving your machine-learning models with data extraction and feature developmentWatch out for the risks of machine learning, such as underfitting or overfitting dataWork with K-Nearest Neighbors, neural networks, clustering, and other algorithms},
+	language = {en},
+	publisher = {"O'Reilly Media, Inc."},
+	author = {Kirk, Matthew},
+	month = jan,
+	year = {2017},
+	note = {Google-Books-ID: nG3vDQAAQBAJ},
+	keywords = {Computers / Data Processing, Computers / Databases / Data Mining, Computers / Programming Languages / Python},
+	file = {Kirk - 2017 - Thoughtful Machine Learning with Python A Test-Dr.pdf:/home/samuel/Zotero/storage/99F4KZTN/Kirk - 2017 - Thoughtful Machine Learning with Python A Test-Dr.pdf:application/pdf}
+}
+
+@article{szegedy_going_2014,
+	title = {Going {Deeper} with {Convolutions}},
+	url = {http://arxiv.org/abs/1409.4842},
+	abstract = {We propose a deep convolutional neural network architecture codenamed "Inception", which was responsible for setting the new state of the art for classification and detection in the ImageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC 2014). The main hallmark of this architecture is the improved utilization of the computing resources inside the network. This was achieved by a carefully crafted design that allows for increasing the depth and width of the network while keeping the computational budget constant. To optimize quality, the architectural decisions were based on the Hebbian principle and the intuition of multi-scale processing. One particular incarnation used in our submission for ILSVRC 2014 is called GoogLeNet, a 22 layers deep network, the quality of which is assessed in the context of classification and detection.},
+	urldate = {2020-04-17},
+	journal = {arXiv:1409.4842 [cs]},
+	author = {Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew},
+	month = sep,
+	year = {2014},
+	note = {arXiv: 1409.4842},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition},
+	file = {arXiv Fulltext PDF:/home/samuel/Zotero/storage/F83Q4YPL/Szegedy et al. - 2014 - Going Deeper with Convolutions.pdf:application/pdf;arXiv.org Snapshot:/home/samuel/Zotero/storage/7XHXGZ2K/1409.html:text/html}
+}
+
+@book{braunling_flugzeugtriebwerke_2015,
+	title = {Flugzeugtriebwerke: {Grundlagen}, {Aero}-{Thermodynamik}, ideale und reale {Kreisprozesse}, {Thermische} {Turbomaschinen}, {Komponenten}, {Emissionen} und {Systeme}},
+	shorttitle = {Flugzeugtriebwerke},
+	publisher = {Springer-Verlag},
+	author = {Bräunling, Willy JG},
+	year = {2015},
+	file = {Bräunling - 2015 - Flugzeugtriebwerke Grundlagen, Aero-Thermodynamik.pdf:/home/samuel/Zotero/storage/DPMFVU3T/Bräunling - 2015 - Flugzeugtriebwerke Grundlagen, Aero-Thermodynamik.pdf:application/pdf}
+}
+
+@article{cheng_polynomial_2019,
+	title = {Polynomial {Regression} {As} an {Alternative} to {Neural} {Nets}},
+	url = {http://arxiv.org/abs/1806.06850},
+	abstract = {Despite the success of neural networks (NNs), there is still a concern among many over their “black box” nature. Why do they work? Yes, we have Universal Approximation Theorems, but these concern statistical consistency, a very weak property, not enough to explain the exceptionally strong performance reports of the method. Here we present a simple analytic argument that NNs are in fact essentially polynomial regression models (PR), with the eﬀective degree of the polynomial growing at each hidden layer. This view will have various implications for NNs, e.g. providing an explanation for why convergence problems arise in NNs, and it gives rough guidance on avoiding overﬁtting. In addition, we use this phenomenon to predict and conﬁrm a multicollinearity property of NNs not previously reported in the literature. Most importantly, this NN ↔ PR correspondence suggests routinely using polynomial models instead of NNs, thus avoiding some major problems of the latter, such as having to set many hyperparameters and deal with convergence issues. We present a number of empirical results; in all cases, the accuracy of the polynomial approach matches, and often exceeds, that of NN approaches. A many-featured, open-source software package, polyreg, is available.},
+	language = {en},
+	urldate = {2020-04-24},
+	journal = {arXiv:1806.06850 [cs, stat]},
+	author = {Cheng, Xi and Khomtchouk, Bohdan and Matloff, Norman and Mohanty, Pete},
+	month = apr,
+	year = {2019},
+	note = {arXiv: 1806.06850},
+	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
+	annote = {Comment: 23 pages, 1 figure, 13 tables},
+	file = {Cheng et al. - 2019 - Polynomial Regression As an Alternative to Neural .pdf:/home/samuel/Zotero/storage/D3DCI4A6/Cheng et al. - 2019 - Polynomial Regression As an Alternative to Neural .pdf:application/pdf}
+}
+
+@article{rosenblatt_perceptron_1958,
+	title = {The perceptron: {A} probabilistic model for information storage and organization in the brain.},
+	volume = {65},
+	issn = {1939-1471, 0033-295X},
+	shorttitle = {The perceptron},
+	url = {http://doi.apa.org/getdoi.cfm?doi=10.1037/h0042519},
+	doi = {10.1037/h0042519},
 	language = {en},
 	number = {6},
-	urldate = {2020-03-18},
-	journal = {Physics Education},
-	author = {Spittle, Peter},
-	month = nov,
-	year = {2003},
-	pages = {504--511},
-	file = {Spittle - 2003 - Gas turbine technology.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/AN65WWU3/Spittle - 2003 - Gas turbine technology.pdf:application/pdf}
+	urldate = {2020-04-26},
+	journal = {Psychological Review},
+	author = {Rosenblatt, F.},
+	year = {1958},
+	pages = {386--408},
+	file = {Rosenblatt - 1958 - The perceptron A probabilistic model for informat.pdf:/home/samuel/Zotero/storage/UASVSH3D/Rosenblatt - 1958 - The perceptron A probabilistic model for informat.pdf:application/pdf}
 }
 
-@article{boyd-lee_evaluation_2001,
-	title = {Evaluation of standard life assessment procedures and life extension methodologies for fracture-critical components},
-	volume = {23},
-	issn = {0142-1123},
-	url = {http://www.sciencedirect.com/science/article/pii/S0142112301001165},
-	doi = {10.1016/S0142-1123(01)00116-5},
-	abstract = {Endeavors to maximize the safe service lives of aeroengine components have led to a variety of life assessment methodologies. The following are reviewed in the paper: Life-to-first-crack, Databank Lifing, Damage Tolerance and Damage Mechanism based procedures. Their service implementation involves a variety of aspects of which the following are briefly discussed: stress analysis, defects and component life extension methods. Building on several of the concepts discussed, a lifing methodology based on risk regulation of inspection is then introduced. By varying the inspection intervals over time, the number of inspections can be minimized while ensuring that the risk of a failure does not exceed an acceptable level. Given inspection, it is shown that the actual safe service life of a component can be more strongly determined by the probability of crack detection than by the minimum detectable crack size.},
+@article{hahnloser_digital_2000,
+	title = {Digital selection and analogue ampli®cation coexist in a cortex-inspired silicon circuit},
+	volume = {405},
 	language = {en},
-	urldate = {2020-03-18},
-	journal = {International Journal of Fatigue},
-	author = {Boyd-Lee, A. D and Harrison, G. F and Henderson, M. B},
-	month = jan,
-	year = {2001},
-	keywords = {Inspection, Lifing methodologies, Risk assessment},
-	pages = {11--19},
-	file = {Boyd-Lee et al. - 2001 - Evaluation of standard life assessment procedures .pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/6KTDH74K/Boyd-Lee et al. - 2001 - Evaluation of standard life assessment procedures .pdf:application/pdf}
+	author = {Hahnloser, Richard H R and Sarpeshkar, Rahul and Mahowald, Misha A and Douglas, Rodney J and Seung, H Sebastian},
+	year = {2000},
+	pages = {5},
+	file = {Hahnloser et al. - 2000 - Digital selection and analogue ampli®cation coexis.pdf:/home/samuel/Zotero/storage/BEEX5HVL/Hahnloser et al. - 2000 - Digital selection and analogue ampli®cation coexis.pdf:application/pdf}
 }
 
-@article{fawaz_inceptiontime_2019,
-	title = {{InceptionTime}: {Finding} {AlexNet} for {Time} {Series} {Classification}},
-	shorttitle = {{InceptionTime}},
-	url = {http://arxiv.org/abs/1909.04939},
-	abstract = {Time series classiﬁcation (TSC) is the area of machine learning interested in learning how to assign labels to time series. The last few decades of work in this area have led to signiﬁcant progress in the accuracy of classiﬁers, with the state of the art now represented by the HIVE-COTE algorithm. While extremely accurate, HIVE-COTE is infeasible to use in many applications because of its very high training time complexity in O(N 2 · T 4) for a dataset with N time series of length T . For example, it takes HIVE-COTE more than 72,000s to learn from a small dataset with N = 700 time series of short length T = 46. Deep learning, on the other hand, has now received enormous attention because of its high scalability and state-of-the-art accuracy in computer vision and natural language processing tasks. Deep learning for TSC has only very recently started to be explored, with the ﬁrst few architectures developed over the last 3 years only. The accuracy of deep learning for TSC has been raised to a competitive level, but has not quite reached the level of HIVE-COTE. This is what this paper achieves: outperforming HIVE-COTE’s accuracy together with scalability. We take an important step towards ﬁnding the AlexNet network for TSC by presenting InceptionTime—an ensemble of deep Convolutional Neural Network (CNN) models, inspired by the Inception-v4 architecture. Our experiments show that InceptionTime slightly outperforms HIVE-COTE with a win/draw/loss on the UCR archive of 40/6/39. Not only is InceptionTime more accurate, but it is much faster: InceptionTime learns from that same dataset with 700 time series in 2,300s but can also learn from a dataset with 8M time series in 13 hours, a quantity of data that is fully out of reach of HIVE-COTE.},
+@inproceedings{jarrett_what_2009,
+	address = {Kyoto},
+	title = {What is the best multi-stage architecture for object recognition?},
+	isbn = {978-1-4244-4420-5},
+	url = {http://ieeexplore.ieee.org/document/5459469/},
+	doi = {10.1109/ICCV.2009.5459469},
+	abstract = {In many recent object recognition systems, feature extraction stages are generally composed of a ﬁlter bank, a non-linear transformation, and some sort of feature pooling layer. Most systems use only one stage of feature extraction in which the ﬁlters are hard-wired, or two stages where the ﬁlters in one or both stages are learned in supervised or unsupervised mode. This paper addresses three questions: 1. How does the non-linearities that follow the ﬁlter banks inﬂuence the recognition accuracy? 2. does learning the ﬁlter banks in an unsupervised or supervised manner improve the performance over random ﬁlters or hardwired ﬁlters? 3. Is there any advantage to using an architecture with two stages of feature extraction, rather than one? We show that using non-linearities that include rectiﬁcation and local contrast normalization is the single most important ingredient for good accuracy on object recognition benchmarks. We show that two stages of feature extraction yield better accuracy than one. Most surprisingly, we show that a two-stage system with random ﬁlters can yield almost 63\% recognition rate on Caltech-101, provided that the proper non-linearities and pooling layers are used. Finally, we show that with supervised reﬁnement, the system achieves state-of-the-art performance on NORB dataset (5.6\%) and unsupervised pre-training followed by supervised reﬁnement produces good accuracy on Caltech-101 ({\textgreater} 65\%), and the lowest known error rate on the undistorted, unprocessed MNIST dataset (0.53\%).},
 	language = {en},
-	urldate = {2020-03-18},
-	journal = {arXiv:1909.04939 [cs, stat]},
-	author = {Fawaz, Hassan Ismail and Lucas, Benjamin and Forestier, Germain and Pelletier, Charlotte and Schmidt, Daniel F. and Weber, Jonathan and Webb, Geoffrey I. and Idoumghar, Lhassane and Muller, Pierre-Alain and Petitjean, François},
+	urldate = {2020-04-26},
+	booktitle = {2009 {IEEE} 12th {International} {Conference} on {Computer} {Vision}},
+	publisher = {IEEE},
+	author = {Jarrett, Kevin and Kavukcuoglu, Koray and Ranzato, Marc' Aurelio and LeCun, Yann},
 	month = sep,
-	year = {2019},
-	note = {arXiv: 1909.04939},
-	keywords = {Computer Science - Machine Learning, Statistics - Machine Learning},
-	file = {Fawaz et al. - 2019 - InceptionTime Finding AlexNet for Time Series Cla.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/8KZGK62T/Fawaz et al. - 2019 - InceptionTime Finding AlexNet for Time Series Cla.pdf:application/pdf}
+	year = {2009},
+	pages = {2146--2153},
+	file = {Jarrett et al. - 2009 - What is the best multi-stage architecture for obje.pdf:/home/samuel/Zotero/storage/F7RV3VW7/Jarrett et al. - 2009 - What is the best multi-stage architecture for obje.pdf:application/pdf}
 }
 
-@article{ismail_fawaz_deep_2019,
-	title = {Deep learning for time series classification: a review},
-	volume = {33},
-	issn = {1573-756X},
-	shorttitle = {Deep learning for time series classification},
-	url = {https://doi.org/10.1007/s10618-019-00619-1},
-	doi = {10.1007/s10618-019-00619-1},
-	abstract = {Time Series Classification (TSC) is an important and challenging problem in data mining. With the increase of time series data availability, hundreds of TSC algorithms have been proposed. Among these methods, only a few have considered Deep Neural Networks (DNNs) to perform this task. This is surprising as deep learning has seen very successful applications in the last years. DNNs have indeed revolutionized the field of computer vision especially with the advent of novel deeper architectures such as Residual and Convolutional Neural Networks. Apart from images, sequential data such as text and audio can also be processed with DNNs to reach state-of-the-art performance for document classification and speech recognition. In this article, we study the current state-of-the-art performance of deep learning algorithms for TSC by presenting an empirical study of the most recent DNN architectures for TSC. We give an overview of the most successful deep learning applications in various time series domains under a unified taxonomy of DNNs for TSC. We also provide an open source deep learning framework to the TSC community where we implemented each of the compared approaches and evaluated them on a univariate TSC benchmark (the UCR/UEA archive) and 12 multivariate time series datasets. By training 8730 deep learning models on 97 time series datasets, we propose the most exhaustive study of DNNs for TSC to date.},
+@incollection{navathe_deep_2016,
+	address = {Cham},
+	title = {Deep {Convolutional} {Neural} {Network} {Based} {Regression} {Approach} for {Estimation} of {Remaining} {Useful} {Life}},
+	volume = {9642},
+	isbn = {978-3-319-32024-3 978-3-319-32025-0},
+	url = {http://link.springer.com/10.1007/978-3-319-32025-0_14},
+	abstract = {Prognostics technique aims to accurately estimate the Remaining Useful Life (RUL) of a subsystem or a component using sensor data, which has many real world applications. However, many of the existing algorithms are based on linear models, which cannot capture the complex relationship between the sensor data and RUL. Although Multilayer Perceptron (MLP) has been applied to predict RUL, it cannot learn salient features automatically, because of its network structure. A novel deep Convolutional Neural Network (CNN) based regression approach for estimating the RUL is proposed in this paper. Although CNN has been applied on tasks such as computer vision, natural language processing, speech recognition etc, this is the ﬁrst attempt to adopt CNN for RUL estimation in prognostics. Different from the existing CNN structure for computer vision, the convolution and pooling ﬁlters in our approach are applied along the temporal dimension over the multi-channel sensor data to incorporate automated feature learning from raw sensor signals in a systematic way. Through the deep architecture, the learned features are the higher-level abstract representation of low-level raw sensor signals. Furthermore, feature learning and RUL estimation are mutually enhanced by the supervised feedback. We compared with several state-of-the-art algorithms on two publicly available data sets to evaluate the effectiveness of this proposed approach. The encouraging results demonstrate that our proposed deep convolutional neural network based regression approach for RUL estimation is not only more efﬁcient but also more accurate.},
 	language = {en},
-	number = {4},
-	urldate = {2020-03-18},
-	journal = {Data Mining and Knowledge Discovery},
-	author = {Ismail Fawaz, Hassan and Forestier, Germain and Weber, Jonathan and Idoumghar, Lhassane and Muller, Pierre-Alain},
-	month = jul,
-	year = {2019},
-	pages = {917--963},
-	file = {Springer Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/F5HAV6JC/Ismail Fawaz et al. - 2019 - Deep learning for time series classification a re.pdf:application/pdf}
-}
-
-@article{kyprianidis_future_2011,
-	title = {Future {Aero} {Engine} {Designs}: {An} {Evolving} {Vision}},
-	language = {en},
-	author = {Kyprianidis, Konstantinos G},
-	year = {2011},
-	pages = {23},
-	file = {Kyprianidis - Future Aero Engine Designs An Evolving Vision.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/WPEZV8XS/Kyprianidis - Future Aero Engine Designs An Evolving Vision.pdf:application/pdf}
-}
-
-@book{vanderplas_python_2016,
-	title = {Python {Data} {Science} {Handbook}},
-	isbn = {978-1-4919-1205-8},
-	url = {http://shop.oreilly.com/product/0636920034919.do},
-	abstract = {For many researchers, Python is a first-class tool mainly because of its libraries for storing, manipulating, and gaining insight from data. Several resources exist for individual pieces of this data science stack, but only with the Python Data...},
-	language = {en},
-	urldate = {2020-05-08},
-	author = {VanderPlas, Jake},
+	urldate = {2020-04-27},
+	booktitle = {Database {Systems} for {Advanced} {Applications}},
+	publisher = {Springer International Publishing},
+	author = {Sateesh Babu, Giduthuri and Zhao, Peilin and Li, Xiao-Li},
+	editor = {Navathe, Shamkant B. and Wu, Weili and Shekhar, Shashi and Du, Xiaoyong and Wang, X. Sean and Xiong, Hui},
 	year = {2016},
-	file = {Snapshot:/home/samuelob/snap/zotero-snap/common/Zotero/storage/IE9X55RY/0636920034919.html:text/html;VanderPlas - Python Data Science Handbook.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/57DEGU9E/VanderPlas - Python Data Science Handbook.pdf:application/pdf}
+	doi = {10.1007/978-3-319-32025-0_14},
+	note = {Series Title: Lecture Notes in Computer Science},
+	pages = {214--228},
+	file = {Sateesh Babu et al. - 2016 - Deep Convolutional Neural Network Based Regression.pdf:/home/samuel/Zotero/storage/MDF6JMQ2/Sateesh Babu et al. - 2016 - Deep Convolutional Neural Network Based Regression.pdf:application/pdf}
+}
+
+@article{shaohua_kevin_zhou_visual_2004,
+	title = {Visual tracking and recognition using appearance-adaptive models in particle filters},
+	volume = {13},
+	issn = {1941-0042},
+	doi = {10.1109/TIP.2004.836152},
+	abstract = {We present an approach that incorporates appearance-adaptive models in a particle filter to realize robust visual tracking and recognition algorithms. Tracking needs modeling interframe motion and appearance changes, whereas recognition needs modeling appearance changes between frames and gallery images. In conventional tracking algorithms, the appearance model is either fixed or rapidly changing, and the motion model is simply a random walk with fixed noise variance. Also, the number of particles is typically fixed. All these factors make the visual tracker unstable. To stabilize the tracker, we propose the following modifications: an observation model arising from an adaptive appearance model, an adaptive velocity motion model with adaptive noise variance, and an adaptive number of particles. The adaptive-velocity model is derived using a first-order linear predictor based on the appearance difference between the incoming observation and the previous particle configuration. Occlusion analysis is implemented using robust statistics. Experimental results on tracking visual objects in long outdoor and indoor video sequences demonstrate the effectiveness and robustness of our tracking algorithm. We then perform simultaneous tracking and recognition by embedding them in a particle filter. For recognition purposes, we model the appearance changes between frames and gallery images by constructing the intra- and extrapersonal spaces. Accurate recognition is achieved when confronted by pose and view variations.},
+	number = {11},
+	journal = {IEEE Transactions on Image Processing},
+	author = {Shaohua Kevin Zhou and Chellappa, R. and Moghaddam, B.},
+	month = nov,
+	year = {2004},
+	note = {Conference Name: IEEE Transactions on Image Processing},
+	keywords = {Predictive models, adaptive filters, adaptive noise variance, Algorithms, appearance-adaptive model, Artificial Intelligence, Cluster Analysis, Computer Graphics, Computer Simulation, Feedback, Filtering, first-order linear predictor, hidden feature removal, Humans, Image Enhancement, Image Interpretation, Computer-Assisted, image recognition, Image recognition, Information Storage and Retrieval, Kinematics, Laboratories, Male, Models, Biological, Models, Statistical, Motion, Movement, Noise robustness, Numerical Analysis, Computer-Assisted, occlusion analysis, Particle filters, Particle tracking, Pattern Recognition, Automated, Reproducibility of Results, robust statistics, Sensitivity and Specificity, Signal Processing, Computer-Assisted, State estimation, statistical analysis, Subtraction Technique, tracking, Training data, visual recognition, visual tracking},
+	pages = {1491--1506},
+	file = {IEEE Xplore Full Text PDF:/home/samuel/Zotero/storage/X8EZ3WEL/Shaohua Kevin Zhou et al. - 2004 - Visual tracking and recognition using appearance-a.pdf:application/pdf;IEEE Xplore Abstract Record:/home/samuel/Zotero/storage/T6P7PSLB/1344039.html:text/html}
+}
+
+@inproceedings{zhou_computation_1988,
+	title = {Computation of optical flow using a neural network},
+	doi = {10.1109/ICNN.1988.23914},
+	abstract = {A method for computing optical flow using a neural network is presented. Usually, the measurement primitives used for computing optical flow from successive image frames are the image-intensity values and their spatial and temporal derivatives, and tokens such as edges, corners, and linear features. Conventional methods based on such primitives suffer from edge sparsity, noise distortion, or sensitivity to rotation. The authors first fit a 2-D polynomial to find a smooth continuous image-intensity function in a window and estimate the subpixel intensity values and their principal curvatures. Under the local rigidity assumption and smoothness constraints, a neural network is then used to implement the computing procedure based on the estimated intensity values and their principal curvatures. Owing to the dense measured primitives, a dense optical flow with subpixel accuracy is obtained with only a few iterations. Since intensity values and their principle curvatures are rotation-invariant, this method can detect both rotating and translating objects in the scene. Experimental results using synthetic image sequences demonstrate the efficacy of the method.{\textless}{\textgreater}},
+	booktitle = {{IEEE} 1988 {International} {Conference} on {Neural} {Networks}},
+	author = {Zhou and Chellappa},
+	month = jul,
+	year = {1988},
+	keywords = {2-D polynomial, computerised picture processing, Image processing, neural nets, neural network, Neural networks, optical flow, smooth continuous image-intensity function, synthetic image sequences},
+	pages = {71--78 vol.2},
+	file = {IEEE Xplore Full Text PDF:/home/samuel/Zotero/storage/LXHHAA3C/Zhou and Chellappa - 1988 - Computation of optical flow using a neural network.pdf:application/pdf;IEEE Xplore Abstract Record:/home/samuel/Zotero/storage/N49MCGKG/23914.html:text/html}
+}
+
+@article{barbounis_long-term_2006,
+	title = {Long-term wind speed and power forecasting using local recurrent neural network models},
+	volume = {21},
+	issn = {1558-0059},
+	doi = {10.1109/TEC.2005.847954},
+	abstract = {This paper deals with the problem of long-term wind speed and power forecasting based on meteorological information. Hourly forecasts up to 72-h ahead are produced for a wind park on the Greek island of Crete. As inputs our models use the numerical forecasts of wind speed and direction provided by atmospheric modeling system SKIRON for four nearby positions up to 30 km away from the wind turbine cluster. Three types of local recurrent neural networks are employed as forecasting models, namely, the infinite impulse response multilayer perceptron (IIR-MLP), the local activation feedback multilayer network (LAF-MLN), and the diagonal recurrent neural network (RNN). These networks contain internal feedback paths, with the neuron connections implemented by means of IIR synaptic filters. Two novel and optimal on-line learning schemes are suggested for the update of the recurrent network's weights based on the recursive prediction error algorithm. The methods assure continuous stability of the network during the learning phase and exhibit improved performance compared to the conventional dynamic back propagation. Extensive experimentation is carried out where the three recurrent networks are additionally compared to two static models, a finite-impulse response NN (FIR-NN) and a conventional static-MLP network. Simulation results demonstrate that the recurrent models, trained by the suggested methods, outperform the static ones while they exhibit significant improvement over the persistent method.},
+	number = {1},
+	journal = {IEEE Transactions on Energy Conversion},
+	author = {Barbounis, T.G. and Theocharis, J.B. and Alexiadis, M.C. and Dokopoulos, P.S.},
+	month = mar,
+	year = {2006},
+	note = {Conference Name: IEEE Transactions on Energy Conversion},
+	keywords = {Predictive models, recurrent neural nets, Atmospheric modeling, atmospheric modeling system, diagonal recurrent neural network, FIR filters, IIR filters, infinite impulse response multilayer perceptron, load forecasting, local activation feedback multilayer network, local recurrent neural network models, Local recurrent neural networks, long-term wind power forecasting, long-term wind speed numerical forecasting, meteorological information, Meteorology, multilayer perceptrons, Neurofeedback, nonlinear recursive least square learning, Numerical models, optimal online learning schemes, power engineering computing, power forecasting, real time learning, Recurrent neural networks, recursive prediction error algorithm, turbine cluster, Weather forecasting, Wind forecasting, wind park, Wind speed, wind turbines},
+	pages = {273--284},
+	file = {IEEE Xplore Full Text PDF:/home/samuel/Zotero/storage/DT28Q3M4/Barbounis et al. - 2006 - Long-term wind speed and power forecasting using l.pdf:application/pdf;IEEE Xplore Abstract Record:/home/samuel/Zotero/storage/PM68RKS7/1597347.html:text/html}
+}
+
+@article{russakovsky_imagenet_2015,
+	title = {{ImageNet} {Large} {Scale} {Visual} {Recognition} {Challenge}},
+	url = {http://arxiv.org/abs/1409.0575},
+	abstract = {The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classiﬁcation and detection on hundreds of object categories and millions of images. The challenge has been run annually from 2010 to present, attracting participation from more than ﬁfty institutions.},
+	language = {en},
+	urldate = {2020-05-12},
+	journal = {arXiv:1409.0575 [cs]},
+	author = {Russakovsky, Olga and Deng, Jia and Su, Hao and Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and Huang, Zhiheng and Karpathy, Andrej and Khosla, Aditya and Bernstein, Michael and Berg, Alexander C. and Fei-Fei, Li},
+	month = jan,
+	year = {2015},
+	note = {arXiv: 1409.0575},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition, I.4.8, I.5.2},
+	annote = {Comment: 43 pages, 16 figures. v3 includes additional comparisons with PASCAL VOC (per-category comparisons in Table 3, distribution of localization difficulty in Fig 16), a list of queries used for obtaining object detection images (Appendix C), and some additional references},
+	file = {Russakovsky et al. - 2015 - ImageNet Large Scale Visual Recognition Challenge.pdf:/home/samuel/Zotero/storage/4HUYXY83/Russakovsky et al. - 2015 - ImageNet Large Scale Visual Recognition Challenge.pdf:application/pdf}
+}
+
+@article{keogh_locally_2002,
+	title = {Locally {Adaptive} {Dimensionality} {Reduction} for {Indexing} {Large} {Time} {Series} {Databases}},
+	abstract = {Similarity search in large time series databases has attracted much research interest recently. It is a difficult problem because of the typically high dimensionality of the data.. The most promising solutions involve performing dimensionality reduction on the data, then indexing the reduced data with a multidimensional index structure. Many dimensionality reduction techniques have been proposed, including Singular Value Decomposition (SVD), the Discrete Fourier transform (DFT), and the Discrete Wavelet Transform (DWT). In this work we introduce a new dimensionality reduction technique which we call Adaptive Piecewise Constant Approximation (APCA). While previous techniques (e.g., SVD, DFT and DWT) choose a common representation for all the items in the database that minimizes the global reconstruction error, APCA approximates each time series by a set of constant value segments of varying lengths such that their individual reconstruction errors are minimal. We show how APCA can be indexed using a multidimensional index structure. We propose two distance measures in the indexed space that exploit the high fidelity of APCA for fast searching: a lower bounding Euclidean distance approximation, and a non-lower bounding, but very tight Euclidean distance approximation and show how they can support fast exact searching, and even faster approximate searching on the same index structure. We theoretically and empirically compare APCA to all the other techniques and demonstrate its superiority.},
+	language = {en},
+	author = {Keogh, Eamonn and Chakrabarti, Kaushik and Mehrotra, Sharad and Pazzani, Michael},
+	year = {2002},
+	pages = {12},
+	file = {Keogh et al. - Locally Adaptive Dimensionality Reduction for Inde.pdf:/home/samuel/Zotero/storage/YMPQ5XYS/Keogh et al. - Locally Adaptive Dimensionality Reduction for Inde.pdf:application/pdf}
+}
+
+@article{palmgren_lebensdauer_1924,
+	title = {Die {Lebensdauer} van {Kugellagern}},
+	volume = {68},
+	journal = {VDI Zeitschrifft},
+	author = {Palmgren, A.},
+	year = {1924}
 }
 
 @inproceedings{miner_cumulative_1956,
@@ -706,39 +710,45 @@ The proposed approach is an interesting addition to existing learning tools for 
 	year = {1956},
 	keywords = {Aircraft Designer, Cumulative Damage, Endurance Curve, Lower Stress Level, Stress Level},
 	pages = {149--164},
-	file = {Springer Full Text PDF:/home/samuelob/snap/zotero-snap/common/Zotero/storage/V93UEMXJ/Wilkins - 1956 - Cumulative damage in fatigue.pdf:application/pdf}
+	file = {Springer Full Text PDF:/home/samuel/Zotero/storage/V93UEMXJ/Wilkins - 1956 - Cumulative damage in fatigue.pdf:application/pdf}
 }
 
-@article{palmgren_lebensdauer_1924,
-	title = {Die {Lebensdauer} van {Kugellagern}},
-	volume = {68},
-	journal = {VDI Zeitschrifft},
-	author = {Palmgren, A.},
-	year = {1924}
-}
-
-@article{keogh_locally_2002,
-	title = {Locally {Adaptive} {Dimensionality} {Reduction} for {Indexing} {Large} {Time} {Series} {Databases}},
-	abstract = {Similarity search in large time series databases has attracted much research interest recently. It is a difficult problem because of the typically high dimensionality of the data.. The most promising solutions involve performing dimensionality reduction on the data, then indexing the reduced data with a multidimensional index structure. Many dimensionality reduction techniques have been proposed, including Singular Value Decomposition (SVD), the Discrete Fourier transform (DFT), and the Discrete Wavelet Transform (DWT). In this work we introduce a new dimensionality reduction technique which we call Adaptive Piecewise Constant Approximation (APCA). While previous techniques (e.g., SVD, DFT and DWT) choose a common representation for all the items in the database that minimizes the global reconstruction error, APCA approximates each time series by a set of constant value segments of varying lengths such that their individual reconstruction errors are minimal. We show how APCA can be indexed using a multidimensional index structure. We propose two distance measures in the indexed space that exploit the high fidelity of APCA for fast searching: a lower bounding Euclidean distance approximation, and a non-lower bounding, but very tight Euclidean distance approximation and show how they can support fast exact searching, and even faster approximate searching on the same index structure. We theoretically and empirically compare APCA to all the other techniques and demonstrate its superiority.},
+@book{vanderplas_python_2016,
+	title = {Python {Data} {Science} {Handbook}},
+	isbn = {978-1-4919-1205-8},
+	url = {http://shop.oreilly.com/product/0636920034919.do},
+	abstract = {For many researchers, Python is a first-class tool mainly because of its libraries for storing, manipulating, and gaining insight from data. Several resources exist for individual pieces of this data science stack, but only with the Python Data...},
 	language = {en},
-	author = {Keogh, Eamonn and Chakrabarti, Kaushik and Mehrotra, Sharad and Pazzani, Michael},
-	year = {2002},
-	pages = {12},
-	file = {Keogh et al. - Locally Adaptive Dimensionality Reduction for Inde.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/YMPQ5XYS/Keogh et al. - Locally Adaptive Dimensionality Reduction for Inde.pdf:application/pdf}
+	urldate = {2020-05-08},
+	author = {VanderPlas, Jake},
+	year = {2016},
+	file = {VanderPlas - Python Data Science Handbook.pdf:/home/samuel/Zotero/storage/57DEGU9E/VanderPlas - Python Data Science Handbook.pdf:application/pdf;Snapshot:/home/samuel/Zotero/storage/IE9X55RY/0636920034919.html:text/html}
 }
 
-@article{russakovsky_imagenet_2015,
-	title = {{ImageNet} {Large} {Scale} {Visual} {Recognition} {Challenge}},
-	url = {http://arxiv.org/abs/1409.0575},
-	abstract = {The ImageNet Large Scale Visual Recognition Challenge is a benchmark in object category classiﬁcation and detection on hundreds of object categories and millions of images. The challenge has been run annually from 2010 to present, attracting participation from more than ﬁfty institutions.},
+@article{kyprianidis_future_2011,
+	title = {Future {Aero} {Engine} {Designs}: {An} {Evolving} {Vision}},
 	language = {en},
-	urldate = {2020-05-12},
-	journal = {arXiv:1409.0575 [cs]},
-	author = {Russakovsky, Olga and Deng, Jia and Su, Hao and Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and Huang, Zhiheng and Karpathy, Andrej and Khosla, Aditya and Bernstein, Michael and Berg, Alexander C. and Fei-Fei, Li},
-	month = jan,
-	year = {2015},
-	note = {arXiv: 1409.0575},
-	keywords = {Computer Science - Computer Vision and Pattern Recognition, I.4.8, I.5.2},
-	annote = {Comment: 43 pages, 16 figures. v3 includes additional comparisons with PASCAL VOC (per-category comparisons in Table 3, distribution of localization difficulty in Fig 16), a list of queries used for obtaining object detection images (Appendix C), and some additional references},
-	file = {Russakovsky et al. - 2015 - ImageNet Large Scale Visual Recognition Challenge.pdf:/home/samuelob/snap/zotero-snap/common/Zotero/storage/4HUYXY83/Russakovsky et al. - 2015 - ImageNet Large Scale Visual Recognition Challenge.pdf:application/pdf}
+	author = {Kyprianidis, Konstantinos G},
+	year = {2011},
+	pages = {23},
+	file = {Kyprianidis - Future Aero Engine Designs An Evolving Vision.pdf:/home/samuel/Zotero/storage/WPEZV8XS/Kyprianidis - Future Aero Engine Designs An Evolving Vision.pdf:application/pdf}
+}
+
+@misc{noauthor_63_nodate,
+	title = {6.3. {Preprocessing} data — scikit-learn 0.23.1 documentation},
+	url = {https://scikit-learn.org/stable/modules/preprocessing.html},
+	urldate = {2020-05-25},
+	file = {6.3. Preprocessing data — scikit-learn 0.23.1 documentation:/home/samuel/Zotero/storage/AI4RAU3M/preprocessing.html:text/html}
+}
+
+@article{scikit-learn,
+ title={Scikit-learn: Machine Learning in {P}ython},
+ author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal={Journal of Machine Learning Research},
+ volume={12},
+ pages={2825--2830},
+ year={2011}
 }

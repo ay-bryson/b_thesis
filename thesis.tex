@@ -3,51 +3,41 @@
                pagesize,               %
                headings=normal,        %
                bibliography=totoc,     %
-               cleardoublepage=plain,  %
+               % cleardoublepage=plain,  %
                fleqn,                  %
             %    numbers=noendperiod     %
-               ]{scrbook}
+            ]{scrreprt}
 
 \input{sections/preamble}
 \input{sty/layout}
 \input{sections/abbrv}
 
 \begin{document}
-
-\tmatter
+% \frontmatter
 \input{sections/00_title-page}
 
-% \restoregeometry
-\fmatter
-\onehalfspacing
-\input{sections/01_erklaerung}
-% \newpage
+\cleardoubleoddpage
+\pagenumbering{Roman}
+
+% \input{sections/01_erklaerung}
+\includepdf{pdf_input/erklaerung}
 \includepdf{pdf_input/aufgabenstellung_bryson}
-% \newpage
 
 \tableofcontents
-% \newpage
+
 % \printacronyms[name=List of Abbreviations]
-% \newpage
-
-\mmatter
+% \mainmatter
+\cleardoubleoddpage
+\pagenumbering{arabic}
 \input{sections/02_intro}
-% \newpage
 \input{sections/03_theory}
-% \newpage
 \input{sections/04_data}
-% \newpage
 \input{sections/05_practical}
-% \newpage
 \input{sections/06_discussion}
-% \newpage
 \input{sections/07_conclusion}
-% \newpage
-% \input{sections/08_thanks}
-% \newpage
+\input{sections/08_thanks}
 
-
-\bmatter
+% \backmatter
 \bibliographystyle{apacann}
 \bibliography{sources}
 

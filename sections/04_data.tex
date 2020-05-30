@@ -6,25 +6,23 @@ The research was carried out on \ac{ehm} data. This data was recorded by sensors
 
 The BR725 is used in the Gulfstream G650, a business jet built for up to 18 passengers. Each G650 has two engines; to minimise the amount of data used, the values used in this thesis were taken from the left engine only.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{length_hist}
     \caption{\label{fig:flight_len} A histogram of the lengths of 14\,045 flights}
 \end{figure}
 
-The flights range in length from 1\,013 to 57\,062 seconds (approximately 0.28 to 15.85 hours), with a mean length of 10\,182.82 seconds (see Figure \ref{fig:flight_len}).
-s
-Each flight is summarised in a CSV file with 216 columns, comprising one timestamp and 215 values for each second of recording time.
+The flights range in length from 1\,000 to 57\,000 seconds (0.28 to 15.83 hours), with a mean length of 10\,200 seconds\footnote{To protect intellectual property, all values named in this section are approximate} (see Figure \ref{fig:flight_len}). Each flight is summarised in a CSV file with 216 columns, comprising one timestamp and 215 values for each second of recording time.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{0815}
-    \caption{\label{fig:flight_example} ALT, NH, P30 and T30 of a randomly selected flight, Flight 0815. All parameter values normalised.}
+    \caption{\label{fig:flight_example} ALT, NH, P30 and T30 of a randomly selected flight, Flight 0815. All parameter values are normalised.}
 \end{figure}
 
-The four flight parameters extracted from these \ac{csv} files were altitude (ALT), rotational speed of the high-pressure shaft (NH), and pressure and temperature of air exiting the compressor (P30 and T30, respectively). These values are shown (normalised) for one randomly selected flight, hereinafter referred to as \textit{Flight 0815}, in Figure \ref{fig:flight_example}.
+The four flight parameters extracted from these CSV files were altitude (ALT), rotational speed of the high-pressure shaft (NH), and pressure and temperature of air exiting the compressor (P30 and T30, respectively). These values are shown (normalised) for one randomly selected flight, hereinafter referred to as \textit{Flight 0815}, in Figure \ref{fig:flight_example}.
 
-NH is measured in rotations per minute, and recorded as a percentage of the maximum rotational speed defined for the engine. It therefore takes any value between 0 and 100. ALT is measured in feet; the maximum altitude across all flights was 51\,148 feet, or 15\,590 metres. P30 is measured in PSIA, and ranges between 5.3 and 385.8 across all flights. The units of T30 are degrees Celsius and the values range from -12.0\textdegree{C} to 590.5\textdegree{C}.
+NH is measured in rotations per minute, and recorded as a percentage of the maximum rotational speed defined for the engine. It therefore takes any value between 0 and 100. ALT is measured in feet; the maximum altitude across all flights was 51\,000 feet, or 15\,545 metres. P30 is measured in PSIA, and ranges between 5 and 390 (0.34 to 26.9 bar) across all flights. The units of T30 are degrees Celsius and the values range from -10.0\textdegree{C} to 600\textdegree{C}.
 
 \section{Flight Phases} \label{sec:phases}
 A flight can be split into several phases: preflight, taxi out, take-off, climb, cruise, descent, reverse thrust and taxi in. These phases were extracted using internal Rolls-Royce software \cite[]{konig_br725stats_2018} that combined the flight mode parameter from \ac{ehm} data \cite[]{reischl_br700-725a1-12_2014} and custom conditions for optimisation. The conditions are summarised in Table \ref{tab:flight_phases}.
@@ -33,58 +31,58 @@ The \ac{fm} often makes use of the parameter \ac{wow}, a boolean parameter with 
 
 \begin{table}
     \begin{center}
-        \caption{\label{tab:flight_phases} Summary of flight phases, corresponding lengths after downsampling (Section \ref{sec:downsample}), and conditions at which they begin \cite[]{konig_br725stats_2018}. \ac{fm} conditions in accordance with \citet{reischl_br700-725a1-12_2014}.}
+        \caption{\label{tab:flight_phases} Summary of flight phases, corresponding lengths after downsampling (Section \ref{sec:downsample}), and conditions at which they begin \cite[]{konig_br725stats_2018}. \ac{fm} conditions are in accordance with \citet{reischl_br700-725a1-12_2014}.}
         \begin{tabular}{ c c l }
             \multirow{2}{*}{\textbf{Phase}} & \textbf{Downsampled} & \multirow{2}{*}{\textbf{Conditions}} \\
             & \textbf{length} & \\
             \midrule
             Preflight & 1 & \ac{fm} \(= 2\) \\
-            Taxi out & 5 & left or right engine is switched on \\
+            Taxi out & 5 & Left or right engine is switched on \\
             Take-off & 10 & \ac{fm} \(= 4\) \\
             % & \ac{wow} \(= 1\) \\
             % & \ac{tra} \(> 20^{\circ}\) for both engines \\
             % & ground speed \(> 28\) knots \\
             Climb & 20 & \ac{wow} \(= 0\) \\
-            & & intertial vertical speed \(> 500\) \(\text{ft} / \text{min}\) \\
-            & & altitude at least \(1500 \) m greater than at take-off \\
+            & & Intertial vertical speed \(> 500\) \(\text{ft} / \text{min}\) \\
+            & & Altitude at least \(1500 \) m greater than at take-off \\
             Cruise & 20 & \ac{fm} \(= 6\) \\
-            & & altitude greater than 85\% of maximum altitude \\
+            & & Altitude greater than 85\% of maximum altitude \\
             Descent & 10 & \ac{fm} \(= 7\) or \ac{fm} \(= 8\) \\
             & & \ac{tra} \(< 20^{\circ} \) for both engines \\
             & & Time to destination \(< 45\) \(\text{min}\) \\
             Reverse thrust & 10 & \ac{fm} \(= 9\) \\
-            Taxi in & 5 & reverse thrust phase ended
+            Taxi in & 5 & Reverse thrust phase ended
         \end{tabular}
     \end{center}
 \end{table}
 
-% \begin{figure}
+% \begin{figure}[tb!]
 %     \centering
 %     \includegraphics[width=\textwidth]{6008_20150409074414_NH_phases}
 %     \caption{\label{fig:phases_example} Phase boundaries of NH indicated on Flight 0815}
 % \end{figure}
 
-Figure \ref{fig:0815_ds} shows the T30 parameter from Flight 0815 in two forms; dashed vertical lines represent phase boundaries.
+In figures depicting flight data in this thesis, dashed vertical lines represent phase boundaries.
 
 \section{Features} \label{sec:features}
-Seven features of the \ac{hpt} disk were selected as points of interest for the research (see locations in Figure \ref{fig:hpt1}). The features were selected as critical points on the disk at which damage was expected to be highest, based on stress curves from previously computed \ac{fe} models. The seven features included three pairs with similar stress curves and resulting damage values: features 1 and 2 are both located in the bore; 4 and 5 are located under the front and rear drive arms, respectively; 6 and 7 are thermally sensitive features located in the seal fin and the air hole, respectively.
+Seven features of the \ac{hpt} disk were selected as points of interest for the research (see Figure \ref{fig:hpt1} for their locations). The features were selected as critical points on the disk at which damage was expected to be highest, based on stress curves from previously computed \ac{fe} models.
 
-\begin{figure}
+The seven features included three pairs with similar stress curves and resulting damage values: features 1 and 2 are both located in the bore; 4 and 5 are located under the front and rear drive arms, respectively; 6 and 7 are thermally sensitive features located in the seal fin and the air hole, respectively. The features were selected in pairs to investigate the possibility of using a small number of damage values from various locations on the disk to predict damage in others, in case models based on flight data alone turned out not to be feasible.
+
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=0.5\textwidth]{hpt1_draw}
     \caption{\label{fig:hpt1} Location of features 1 to 7 on a cross-section of the \ac{hpt} disk. (The disk was scaled and sheared to protect intellectual property.)}
 \end{figure}
 
-The features were selected in pairs to investigate the possibility of using a small number of damage values from various locations on the disk to predict damage in others, in case models based on flight data alone turned out not to be feasible.
-
-Due to their location within the bore with no direct contact to the hot, pressurised air, features 1 and 2 are not expected to be sensitive to temperature or pressure. Therefore, changes in these parameters during the flight should not influence damage in these features. Rotational speed should have the greatest effect on these features.
+Due to their location within the bore with no direct contact to the hot, pressurised air, features 1 and 2 are not expected to be sensitive to temperature or pressure. Therefore, changes in these parameters during the flight should have minimal influence on damage in these features. Rotational speed should have the greatest effect on these features.
 
 Features 4 and 5, on the other hand, are expected to be sensitive to pressure due to their contact with high-pressure air, but not to temperature due to a lack of direct contact with hot air from the combustion chamber. Features 6 and 7, critical points with direct contact to the hot air, are expected to be highly sensitive to temperature.
 
-\section{Cycle Counter} \label{sec:cyclecounter}
-The \ac{ehm} data was processed using the company's internal Cycle Counter software to determine the number of cycles consumed by each feature during each flight. Figures \ref{fig:dmg_dist_low} and \ref{fig:dmg_dist_high} show the distribution of damage data (98\,315 values across 7 features from 14\,045 flights) computed by the Cycle Counter. For clarity in illustration and comparison, the distributions were split at a damage of 2.0 cycles: Figure \ref{fig:dmg_dist_low} contains all damage values between 0 and 2 cycles, with the overwhelming majority of the values (97\,868, 99.5\%) falling within this range; Figure \ref{fig:dmg_dist_high} contains all values above 2 cycles (with a maximum damage of 14.1 cycles), containing only 447 data points, or 0.05\%, of the total.
+\section{SA66} \label{sec:cyclecounter}
+The \ac{ehm} data was processed using the company's internal software, SA66, to determine the number of cycles consumed by each feature during each flight. Figures \ref{fig:dmg_dist_low} and \ref{fig:dmg_dist_high} show the distribution of damage data across 7 features from 14\,045 flights, as computed by SA66. For clarity in illustration and comparison, the distributions were split at a damage of 2.0 cycles: Figure \ref{fig:dmg_dist_low} contains all damage values between 0 and 2 cycles, with the overwhelming majority of the values (99.5\%) falling within this range; Figure \ref{fig:dmg_dist_high} contains all values above 2 cycles (with a maximum damage of 14.1 cycles), containing only 0.5\% of the data points.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{distribution_low_2}
     \caption{\label{fig:dmg_dist_low} \ac{kde} plot displaying the distribution of damage cycles consumed by the seven features over 99.5\% of all 14\,045 flights (with damage of up to two cycles)}
@@ -92,26 +90,26 @@ The \ac{ehm} data was processed using the company's internal Cycle Counter softw
 
 It should be noted that, in Figure \ref{fig:dmg_dist_low}, there are clear pairwise similarities in the distributions of the pairs mentioned in Section \ref{sec:features}. This is of no surprise, but could be highly valuable if a supervised machine learning model can be trained to extrapolate this (and other) information to further features.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{distribution_high_2}
     \caption{\label{fig:dmg_dist_high} Strip plot showing the distribution of damage cycles consumed by the seven features across 0.5\% of all 14\,045 flights (with damage of two cycles and above). Each dot represents the damage from one flight. No flight caused damage of more than 2 cycles in features 4 and 5.}
 \end{figure}
 
 \section{Time Series Approximation} \label{sec:downsample}
-The input layer of an \ac{mlp} requires a fixed number of input values in order to be able to train weights and biases. As shown in Figure \ref{fig:flight_len}, the 14\,045 flights differed greatly in length. In order to enter the flight data into the neural network models, each parameter of each flight had to be approximated in a fixed-length representation. (This approximation is also referred to as downsampling.) For its suitability to generating fixed-length representations and for its superiority in minimising global reconstruction error (see Section \ref{sec:recon_err}) in comparison to others, the \ac{apca} algorithm \cite[]{keogh_locally_2002} was selected and implemented.
+All \ac{ml} and \ac{dl} models require a fixed number of input values in order to be able to train weights and biases. As was seen in Figure \ref{fig:flight_len}, the 14\,045 flights differed greatly in length. In order to enter the flight data into the neural network models, each parameter of each flight had to be approximated in a fixed-length representation. (This approximation is also referred to as downsampling.) For its suitability to generating fixed-length representations and for its superiority in minimising global reconstruction error (Section \ref{sec:recon_err}) in comparison to others, the \ac{apca} algorithm \cite[]{keogh_locally_2002} was selected and implemented.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
-    \includegraphics[width=\textwidth]{0815_ds}
-    \caption{\label{fig:0815_ds} \textbf{Left:} Downsampled parameter T30 of Flight 0815 (81 data points) compared to the original time series (10\,466 data points). \textbf{Right:} Downsampled values alone with equal spacing in the \(x\)-direction. All parameter values normalised.}
+    \includegraphics[width=\textwidth]{0815_ds_labs}
+    \caption{\label{fig:0815_ds} \textbf{Left:} Downsampled parameter T30 of Flight 0815 (81 data points) compared to the original time series (10\,466 data points). \textbf{Right:} Downsampled values alone with equal spacing in the \(x\)-direction. All parameter values are normalised.}
 \end{figure}
 
-The second reason for downsampling data is the computational benefit of having significantly less information to process. Downsampling can help to remove noise from data which is otherwise computationally costly while offering no additional information of value. In total, the volume of flight data was reduced by 99.2\%, which enabled an equivalent improvement in computation time for models with a complexity of \(O(n)\) (where \(n\) is the number of input values), such as those based on InceptionTime \cite[]{fawaz_inceptiontime_2019}.
+The second reason for downsampling data is the computational benefit of having significantly less information to process. Downsampling can help to remove noise from data which is otherwise computationally costly while offering no additional information of value. In total, the volume of flight data was reduced by 99.2\%, which enabled an equivalent improvement in computation time for models whose training time increases proportionally to the number of input values, such as those based on InceptionTime \cite[]{fawaz_inceptiontime_2019}.
 
 Each channel of each flight's \ac{mts} was approximated to fixed-length flight phases. The output for each channel was a time series of 81 values that approximate the flight parameter with minimal reconstruction error. The flight phases described in Table \ref{tab:flight_phases} were reduced to the corresponding number of values from the column `Downsampled length'. These values were determined based on a combination of the corresponding phase's relevance to damage (e.g. take-off generally contains peak values that have a great influence on damage) and its average length relative to the rest of the flight (e.g. cruise).
 
-Two visualisations of the downsampled T30 time series from Flight 0815 is shown in Figure \ref{fig:0815_ds}.
+Two visualisations of the downsampled T30 time series from Flight 0815 are shown in Figure \ref{fig:0815_ds}.
 
 \subsection{Reconstruction Error} \label{sec:recon_err}
 The term \textit{reconstruction error} refers to the amount of information lost due to downsampling. This can be quantified in several ways, but is essentially some form of distance between the original data and its approximation.
@@ -134,92 +132,94 @@ These values are shown in Figure \ref{fig:recon_err}. In order to calculate the 
 \end{align}
 Now, the mean of the absolute element-wise difference between \(Q\) and \(R'\) can be determined (Equation \ref{eq:recon_err}). The output is the reconstruction error which in this case amounts to 0.757.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{recon_err}
     \caption{\label{fig:recon_err} A fictive dataset with its downsampled approximation. The reconstruction error according to Equation \ref{eq:recon_err} is the mean length of the red dashed lines.}
 \end{figure}
 
-Based on this measure, the reconstruction error of the downsampled flight data is 1.2\%, representing an average deviation of 0.012 from the original per data point, which is not expected to cause issues in terms of data loss. However, particularly during the descent phase, as is visible in Figure \ref{fig:0815_ds}, many of the peaks and troughs are lost to the algorithm. Since these occur within a low range relative to the maximum where impact on damage is less significant, it is not expected that the information lost be of great value.
+Based on this measure, the reconstruction error of the downsampled flight data is 1.2\%, representing an average deviation from the original of 0.012 per data point, which is not expected to cause issues in terms of data loss. However, particularly during the descent phase, as is visible in Figure \ref{fig:0815_ds}, many of the peaks and troughs are lost to the algorithm. Since the range of these fluctuations is the basis for calculating the Exchange Rate, this loss of information would be of significance. However, the Exchange Rate values used in the practical part of this thesis were calculated from the original, full-length flight data. For this reason, and since the fluctuations occur within a low range (relative to the flight's maximum) where impact on damage is less significant, it is not expected that the information lost be of great value.
 
 \subsection{Visualisation}
 With the flights in a uniform, downsampled representation, some characteristics of the data begin to become more apparent.
 
+To produce the line plots in this section, for each feature, the downsampled flights were ordered by damage, and the 250 most damaging and 250 least damaging flights were extracted; for each of the four flight parameters, these 500 flights were plotted at low opacity over one another, with red lines representing flights with the highest damage and green lines those with the lowest. This resulted in 28 plots. Finally, for each flight parameter, one plot was selected based on the clarity of the contrast between high- and low-damage flights.
+
 \paragraph*{NH} \label{sec:data:nh}
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f3_NH_high_low_dmg_500}
-    \caption{\label{fig:high_low_dmg_NH} Line plot showing NH from 500 flights, coloured according to their damage to feature 3. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values normalised.}
+    \caption{\label{fig:high_low_dmg_NH} Line plot showing NH from 500 flights, coloured according to their damage to feature 3. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values are normalised.}
 \end{figure}
 
-To create Figure \ref{fig:high_low_dmg_NH}, the flights were ordered by damage at feature 3. From these, the 250 flights with the lowest damage (fewer than 0.53 cycles) and the 250 with the highest damage (more than 1.15 cycles) were extracted. The NH curves of these 500 flights were plotted at low opacity over one another.
+Figure \ref{fig:high_low_dmg_NH} shows the highest- and lowest-damage flights for feature 3.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f3_NH_high_low_dmg_500_dist_t7}
-    \caption{\label{fig:dmg_violin_NH} Violin plot showing the distribution of NH values at downsampled time point 7, coloured according damage to feature 3. All parameter values normalised.}
+    \caption{\label{fig:dmg_violin_NH} Violin plot showing the distribution of NH values at downsampled time point 7, coloured according damage to feature 3. All parameter values are normalised.}
 \end{figure}
 
 This representation shows a clear (albeit unsurprising) separation of high- and low-damage flights across the entire range, with a particularly clear gap around downsampled time point 7 --- an early point during the take-off phase where NH generally peaks --- and gives an idea of one type of characteristic that the neural networks should be able to learn. Figure \ref{fig:dmg_violin_NH} shows the distribution of NH values at time point 7 for feature 3. The boxplots contained within the so-called violins show that the majority of these flights could be categorised correctly as high- or low-damage based on this single time point. If the NH value towards the beginning of take-off is below 0.94, it is most likely to be a low-damage flight; if above, a high-damage flight.
 
 \paragraph*{ALT}
-Figure \ref{fig:high_low_dmg_ALT} shows the sensitivity of feature 2 to altitude. The higher the flight altitude, the higher the damage. The reason for this is atmospheric pressure: At high altitudes, the rotational speed of the fan must be increased to compensate for the lack of air (and therefore oxygen) for combustion. This claim is supported by the sensitivity of features 1 and 2 to altitude (Figures \ref{fig:dmg_violin_ALT_f1} and \ref{fig:dmg_violin_ALT_f2}) as these were expected to be sensitive to NH (Section \ref{sec:features}). This is a strong contrast to the relative indifference to altitude of, for example, feature 6 (Figure \ref{fig:dmg_violin_ALT_f6}).
+Figure \ref{fig:high_low_dmg_ALT} shows the sensitivity of feature 2 to altitude. The higher the flight altitude, the higher the damage. This can be explained by atmospheric pressure: At high altitudes, the rotational speed of the fan must be increased to compensate for the lack of air (and therefore oxygen) for combustion. This claim is supported by the sensitivity of features 1 and 2 to altitude (Figures \ref{fig:dmg_violin_ALT_f1} and \ref{fig:dmg_violin_ALT_f2}) as these were expected to be sensitive to NH (Section \ref{sec:features}). This is in stark contrast to the relative indifference to altitude of, for example, feature 6 (Figure \ref{fig:dmg_violin_ALT_f6}) during the cruise phase.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f2_ALT_high_low_dmg_500}
-    \caption{\label{fig:high_low_dmg_ALT} Line plot showing ALT from 500 flights, coloured according to their damage to feature 1. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values normalised.}
+    \caption{\label{fig:high_low_dmg_ALT} Line plot showing ALT from 500 flights, coloured according to their damage to feature 1. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values are normalised.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f1_ALT_high_low_dmg_500_dist_t50}
-    \caption{\label{fig:dmg_violin_ALT_f1} Violin plot showing the distribution of ALT values at downsampled time point 50 (middle of cruise phase), coloured according to damage to feature 1. All parameter values normalised.}
+    \caption{\label{fig:dmg_violin_ALT_f1} Violin plot showing the distribution of ALT values at downsampled time point 50 (middle of cruise phase), coloured according to damage to feature 1. All parameter values are normalised.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f2_ALT_high_low_dmg_500_dist_t50}
-    \caption{\label{fig:dmg_violin_ALT_f2} Violin plot showing the distribution of ALT values at downsampled time point 50 (middle of cruise phase), coloured according to damage to feature 2. All parameter values normalised.}
+    \caption{\label{fig:dmg_violin_ALT_f2} Violin plot showing the distribution of ALT values at downsampled time point 50 (middle of cruise phase), coloured according to damage to feature 2. All parameter values are normalised.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f6_ALT_high_low_dmg_500_dist_t50}
-    \caption{\label{fig:dmg_violin_ALT_f6} Violin plot showing the distribution of ALT values at downsampled time point 50 (middle of cruise phase), coloured according to damage to feature 6. All parameter values normalised.}
+    \caption{\label{fig:dmg_violin_ALT_f6} Violin plot showing the distribution of ALT values at downsampled time point 50 (middle of cruise phase), coloured according to damage to feature 6. All parameter values are normalised.}
 \end{figure}
 
 \paragraph*{P30}
-Figure \ref{fig:high_low_dmg_P30} shows P30 values for feature 5. As expected, a higher peak pressure during the take-off phase causes a higher consumption of service life. During the cruise phase, a vague tendency in the opposite direction --- lower pressure, higher damage --- is visible. This, as with altitude, can be attributed to altitude, where a lower atmospheric pressure causes an increase in rotational speed.
+Figure \ref{fig:high_low_dmg_P30} shows P30 values for feature 5. As expected, a higher peak pressure during the take-off phase causes a higher consumption of service life. During the cruise phase, a vague tendency in the opposite direction --- lower pressure, higher damage --- is visible. This can be attributed to altitude, where a lower atmospheric pressure causes an increase in rotational speed.
 
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f5_P30_high_low_dmg_500}
-    \caption{\label{fig:high_low_dmg_P30} Line plot showing P30 from 500 flights, coloured according to their damage to feature 5. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values normalised.}
+    \caption{\label{fig:high_low_dmg_P30} Line plot showing P30 from 500 flights, coloured according to their damage to feature 5. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values are normalised.}
 \end{figure}
 
 % Figure \ref{fig:f1_dmg_violin} shows a violin plot of P30 values at time point 36 --- the first point of the cruise phase. While the difference in distribution here is not as significant as in Figure \ref{fig:f3_dmg_violin} (as shown by the overlapping inner quantiles of the boxplots), there
 
-% \begin{figure}
+% \begin{figure}[tb!]
 %     \centering
 %     \includegraphics[width=\textwidth]{high_low_dmg/P30/f1_P30_high_low_dmg_500_dist_t36}
-%     \caption{\label{fig:f1_dmg_violin} Violin plot showing the distribution of P30 values at downsampled time point 36, coloured according damage to feature 1. All parameter values normalised.}
+%     \caption{\label{fig:f1_dmg_violin} Violin plot showing the distribution of P30 values at downsampled time point 36, coloured according damage to feature 1. All parameter values are normalised.}
 % \end{figure}
 
 % T30
 \paragraph*{T30}
-\begin{figure}
+\begin{figure}[tb!]
     \centering
     \includegraphics[width=\textwidth]{f6_T30_high_low_dmg_500}
-    \caption{\label{fig:high_low_dmg_T30} Line plot showing T30 from 500 flights, coloured according to their damage to feature 6. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values normalised.}
+    \caption{\label{fig:high_low_dmg_T30} Line plot showing T30 from 500 flights, coloured according to their damage to feature 6. Red lines represent the 250 flights with the most damage to this feature, green the 250 with the least. All parameter values are normalised.}
 \end{figure}
 
-As well as the expected influence of peak temperature at during take-off, Figure \ref{fig:high_low_dmg_T30} shows a tendency during the climb phase for high damage if large fluctuations are present, as shown by the sharp, red, V-shaped lines between T30 values of approximately 0.4 and 0.85. Since this flight characteristic can occur at any point during the climb, this is the type of value progression that should be picked up by filters in a \ac{cnn}.
+As well as the expected influence of peak temperature at during take-off, Figure \ref{fig:high_low_dmg_T30} shows a tendency during the climb phase for high damage if large fluctuations are present, as shown by the sharp, red, V-shaped lines between T30 values of approximately 0.4 and 0.85. Since this flight characteristic can occur at any point during the climb, this is the type of value sequence that filters in a \ac{cnn} should be able to recognise.
 
 \section{Representation for Classification} \label{sec:data:classification_rep}
 For the classification models, the flights were categorised by their damage values into one of a number of ordinal classes. Iterating through each feature, the flights were first ordered by damage and split into a number (\(n\)) of equally sized groups. These groups were then given labels \(0\) (least damaging) to \(n-1\) (most damaging).
 
-The boundaries between classes, determined by this method, are summarised in Table \ref{tab:tsc_boundaries}. Class 0 contains damage values between 0 and the class boundary 0 --- 1; class 3 contains all damage values greater than or equal to the class boundary 2 --- 3.
+The boundaries between classes, determined by this method, are summarised in \mbox{Table \ref{tab:tsc_boundaries}}. Class 0 contains damage values between 0 and the class boundary 0 --- 1; class 3 contains all damage values greater than or equal to the class boundary 2 --- 3.
 
 \begin{table}
     \begin{center}
@@ -243,16 +243,16 @@ With its damage values in features 1 to 7 of
 \]
 the classes assigned to Flight 0815 were \(\left[2,\,2,\,2,\,0,\,0,\,0,\,0\right]\). These values were converted to an array of seven so-called \textit{one-hot} arrays in which the index of the value 1 represents the class number:
 \[
-    \left[ \left[ 0,\,0,\,1,\,0 \right],\,\left[ 0,\,0,\,1,\,0 \right],\,\left[ 0,\,0,\,1,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right]\right].
+    \big[ \left[ 0,\,0,\,1,\,0 \right],\,\left[ 0,\,0,\,1,\,0 \right],\,\left[ 0,\,0,\,1,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right],\,\left[ 1,\,0,\,0,\,0 \right]\big].
 \]
-These one-hot arrays were then concatenated to create an array of 28 values, containing 21 \textit{0}s and 7 \textit{1}s.
+To achieve a format suitable for input into a neural network, these one-hot arrays were then concatenated to create an array of 28 values containing 21 \textit{0}s and 7 \textit{1}s.
 
-The output of the network is therefore also a array of length 28 containing probabilities between 0 and 1 that the corresponding class is `hot'. These are reshaped into an \(\left(7,\,4\right)\)-array and, using the \texttt{numpy.argmax()} function to locate the highest probability per feature, converted back into seven classes with values 0 to 3.
+The output of the network was therefore also an array of length 28 containing probabilities between 0 and 1 that the corresponding class is `hot'. These were rearranged into a \mbox{\(\left(7,\,4\right)\)-array} and, using the \texttt{numpy.argmax()} function to locate the highest probability per feature, converted back into seven classes with values 0 to 3.
 
 \section{Dataset Reduction} \label{sec:data_sizes}
-The complete dataset consists of \ac{ehm} data for 14\,045 flights, as well as seven Cycle Counter output values for each flight. Since scalability is an important factor in the research, the dataset was separated into two further datasets of 4\,213 and 1\,211 flights in order to test model performance on smaller training datasets. (These three datasets will hereinafter be referred to as `complete', `reduced' and `greatly reduced', respectively.)
+The complete dataset consists of \ac{ehm} data for 14\,045 flights, as well as seven SA66 output values for each flight. Since scalability is an important factor in the research, the dataset was separated into two further datasets of 4\,213 and 1\,211 flights in order to test model performance on smaller training datasets. (These three datasets will hereinafter be referred to as `complete', `reduced' and `minimal', respectively.)
 
-These datasets were further split into training and validation subsets at a ratio of 3:1 (before rounding). The complete dataset therefore consisted of 10\,534 training and 3\,511 validation flights, the reduced dataset 3\,160 and 1\,053, and the greatly reduced dataset 909 and 302. The flights numbers in each set and subset were kept constant throughout all models to avoid skewing the data.
+These datasets were further split into training and validation subsets at a ratio of 3:1. The complete dataset therefore consisted of 10\,534 training and 3\,511 validation flights, the reduced dataset 3\,160 and 1\,053, and the minimal dataset 909 and 302. The flights in each set and each subset were kept constant throughout all models to avoid skewing the data.
 
 % \section{Optional: Case Studies}
 
